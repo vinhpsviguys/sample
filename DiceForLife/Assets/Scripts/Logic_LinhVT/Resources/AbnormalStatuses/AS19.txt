@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": -0.2,
+      "index": "magical_defense_percent",
+      "enemy": "true"
+    },
+    {
+      "delta": -0.2,
+      "index": "physical_defense_percent",
+      "enemy": "true"
+    }
+  ],
+  "name": "disease",
+  "type": "abnormalstatus",
+  "duration": "2",
+   "idInit":19,
+  "sprite": "Buff_19"
+}

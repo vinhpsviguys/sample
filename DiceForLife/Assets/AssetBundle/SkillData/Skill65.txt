@@ -1,0 +1,25 @@
+{
+  "lines": [
+    {
+      "delta": "0.11 * successful_hits + 0.01 * ( Skill65_level - 1 ) * successful_hits",
+      "index": "magical_damage_percent"
+    },
+    {
+      "delta": "0.11 * successful_hits + 0.01 * ( Skill65_level - 1 ) * successful_hits",
+      "index": "dodge_chance"
+    }
+  ],
+  "name": "Raze",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "16/18/22/30/40/52/66/82/100/120",
+  "class": "Wizard",
+  "cooldown": 4,
+  "duration": 1,
+  "aps": 8,
+  "description": "You perform a devastating energy that inflicts heavy damage on enemy. With each successful hit, you grow in power",
+  "value": "Magic damage increase each successful hit/11/1/%;Dodge chance increase each successful hit/11/1/%",
+  "sprite": "Skill_65",
+  "idInit": 65,
+  "prefEffect": "MagicBuffBlue"
+}

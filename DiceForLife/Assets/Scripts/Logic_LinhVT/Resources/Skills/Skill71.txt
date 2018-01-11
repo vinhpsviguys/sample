@@ -1,0 +1,27 @@
+{
+  "lines": [
+    {
+      "delta": "0.032 * maxhealth + 0.002 * ( Skill71_level - 1 ) * maxhealth",
+      "index": "health_buff",
+      "duration": 1
+    },
+    {
+      "delta": "-0.12 - 0.02 * ( Skill71_level - 1 )",
+      "index": "physical_damage_percent",
+      "enemy": true
+    }
+  ],
+  "name": "Vigilant",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "4/6/10/18/28/40/54/70/88/108",
+  "class": "Wizard",
+  "cooldown": 3,
+  "duration": 1,
+  "aps": 4,
+  "description": "Increases HP regeneration and decreases all Physical damage taken by 20%",
+  "value": "Maximum HP recover/3.2/0.2/%";"Physical damage taken decrease/12/2/%",
+  "sprite": "Skill_71",
+  "idInit": 71,
+  "prefEffect": "MagicBuffBlue"
+}

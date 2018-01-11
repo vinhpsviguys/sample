@@ -1,0 +1,7 @@
+{
+  "name": "freezing",
+  "type": "abnormalstatus",
+  "duration": "1",
+   "idInit":16,
+  "sprite": "Buff_16"
+}

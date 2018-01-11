@@ -1,0 +1,34 @@
+{
+  "lines": [
+    {
+      "delta": "-0.28 + 0.02 * ( Skill34_level - 1 )",
+      "index": "physical_damage_percent",
+      "duration": 1
+    },
+    {
+      "delta": 2,
+      "index": "successive_attacks",
+      "duration": 1
+    },
+    {
+      "delta": "0.05 * total_damage + 0.05 * ( Skill34_level - 1 ) * total_damage",
+      "index": "total_damage",
+      "condition": "when_e_is_abnormal",
+      "duration": 1
+    }
+  ],
+  "name": "Double stab",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "13/15/19/27/37/49/63/79/97/117",
+  "class": "Paladin",
+  "cooldown": 2,
+  "duration": 0,
+  "aps": 4,
+  "description": "Stabbing the upper or middle part of a subject gives greater damages especially when the target subject is under abnormal status. The enemy gets a serious blow when his weak spot is attacked",
+  "value": "Physical damage decrease/28/-2/%;Successive attacks times/2/0/float;Abnormal status damage increase/5/5/%",
+  "sprite": "Skill_34",
+  "idInit": 34,
+  "isMove": true,
+  "prefEffect": "PortalPurple"
+}

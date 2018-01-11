@@ -1,0 +1,146 @@
+
+AssassinINgame.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 30
+  size: 185, 224
+  orig: 185, 224
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: true
+  xy: 590, 53
+  size: 56, 57
+  orig: 56, 57
+  offset: 0, 0
+  index: -1
+Canh tay trai
+  rotate: true
+  xy: 707, 74
+  size: 35, 54
+  orig: 35, 54
+  offset: 0, 0
+  index: -1
+Chan phai
+  rotate: true
+  xy: 453, 44
+  size: 53, 84
+  orig: 53, 84
+  offset: 0, 0
+  index: -1
+Chan trai
+  rotate: true
+  xy: 453, 6
+  size: 36, 91
+  orig: 36, 91
+  offset: 0, 0
+  index: -1
+Dui phai
+  rotate: true
+  xy: 346, 26
+  size: 71, 105
+  orig: 71, 105
+  offset: 0, 0
+  index: -1
+Dui trai
+  rotate: true
+  xy: 189, 4
+  size: 66, 101
+  orig: 66, 101
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: true
+  xy: 292, 2
+  size: 68, 19
+  orig: 68, 19
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 607, 111
+  size: 162, 143
+  orig: 162, 143
+  offset: 0, 0
+  index: -1
+Giay phai
+  rotate: false
+  xy: 991, 80
+  size: 27, 29
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+Giay trai
+  rotate: true
+  xy: 313, 37
+  size: 33, 29
+  orig: 33, 29
+  offset: 0, 0
+  index: -1
+Hong phai
+  rotate: false
+  xy: 649, 64
+  size: 56, 45
+  orig: 56, 45
+  offset: 0, 0
+  index: -1
+Hong trai
+  rotate: true
+  xy: 546, 52
+  size: 46, 42
+  orig: 46, 42
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 189, 72
+  size: 155, 182
+  orig: 155, 182
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 346, 193
+  size: 259, 61
+  orig: 259, 61
+  offset: 0, 0
+  index: -1
+Tay phai
+  rotate: false
+  xy: 771, 110
+  size: 149, 144
+  orig: 149, 144
+  offset: 0, 0
+  index: -1
+Tay trai
+  rotate: false
+  xy: 346, 99
+  size: 193, 92
+  orig: 193, 92
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 922, 111
+  size: 96, 143
+  orig: 96, 143
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: true
+  xy: 541, 100
+  size: 91, 47
+  orig: 91, 47
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: false
+  xy: 922, 71
+  size: 67, 38
+  orig: 67, 38
+  offset: 0, 0
+  index: -1

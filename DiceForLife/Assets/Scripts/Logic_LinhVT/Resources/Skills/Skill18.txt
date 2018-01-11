@@ -1,0 +1,29 @@
+{
+  "lines": [
+    {
+      "delta": "0.26 + 0.06 * ( Skill18_level - 1 )",
+      "index": "critical_chance",
+      "duration": 1
+    },
+    {
+      "delta": "-0.01 * maxhealth - 0.01 * ( Skill18_level - 1 ) * maxhealth",
+      "index": "health_active",
+      "duration": 1
+    }
+  ],
+  "name": "Furious",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "5/7/11/19/29/41/55/71/89/109",
+  "class": "Assassin",
+  "cooldown": 1,
+  "duration": 0,
+  "aps": 2,
+  "condition": "health > 0.01 * maxhealth + 0.01 * ( Skill18_level - 1 ) * maxhealth",
+  "value": "Critical chance increase/26/6/%;Lost Maximum HP/1/1/%",
+  "description": "Rush forward knocking back and inflicting a Critical hit to enemy along your path",
+  "sprite": "Skill_18",
+  "idInit": 18,
+  "isMove": true,
+  "prefEffect": "MagicWaveBlastBlue"
+}

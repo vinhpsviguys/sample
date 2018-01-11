@@ -1,0 +1,132 @@
+
+BarbarianINgame.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ban chan phai
+  rotate: false
+  xy: 994, 477
+  size: 28, 33
+  orig: 28, 33
+  offset: 0, 0
+  index: -1
+Ban chan trai
+  rotate: true
+  xy: 799, 352
+  size: 45, 31
+  orig: 45, 31
+  offset: 0, 0
+  index: -1
+Ban tay trai
+  rotate: false
+  xy: 237, 2
+  size: 62, 46
+  orig: 62, 46
+  offset: 0, 0
+  index: -1
+Bap chan phai
+  rotate: false
+  xy: 348, 144
+  size: 88, 94
+  orig: 88, 94
+  offset: 0, 0
+  index: -1
+Bap chan trai
+  rotate: false
+  xy: 840, 412
+  size: 98, 98
+  orig: 98, 98
+  offset: 0, 0
+  index: -1
+Bap tay trai
+  rotate: true
+  xy: 163, 2
+  size: 46, 72
+  orig: 46, 72
+  offset: 0, 0
+  index: -1
+Bap vai phai
+  rotate: false
+  xy: 163, 50
+  size: 104, 91
+  orig: 104, 91
+  offset: 0, 0
+  index: -1
+Cang chan phai
+  rotate: false
+  xy: 747, 269
+  size: 43, 54
+  orig: 43, 54
+  offset: 0, 0
+  index: -1
+Cang chan trai
+  rotate: false
+  xy: 940, 452
+  size: 52, 58
+  orig: 52, 58
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: false
+  xy: 654, 250
+  size: 91, 73
+  orig: 91, 73
+  offset: 0, 0
+  index: -1
+Co tay trai
+  rotate: false
+  xy: 269, 99
+  size: 50, 42
+  orig: 50, 42
+  offset: 0, 0
+  index: -1
+Dai hong
+  rotate: false
+  xy: 654, 325
+  size: 143, 72
+  orig: 143, 72
+  offset: 0, 0
+  index: -1
+Dai nguc
+  rotate: false
+  xy: 163, 143
+  size: 183, 95
+  orig: 183, 95
+  offset: 0, 0
+  index: -1
+Dau
+  rotate: false
+  xy: 2, 27
+  size: 159, 211
+  orig: 159, 211
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: false
+  xy: 840, 401
+  size: 79, 9
+  orig: 79, 9
+  offset: 0, 0
+  index: -1
+Ria
+  rotate: false
+  xy: 438, 208
+  size: 78, 30
+  orig: 78, 30
+  offset: 0, 0
+  index: -1
+Riu
+  rotate: false
+  xy: 2, 240
+  size: 650, 270
+  orig: 650, 270
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 654, 399
+  size: 184, 111
+  orig: 184, 111
+  offset: 0, 0
+  index: -1

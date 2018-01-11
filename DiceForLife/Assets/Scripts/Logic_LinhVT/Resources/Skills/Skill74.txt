@@ -1,0 +1,35 @@
+{
+  "lines": [
+    {
+      "delta": "0.1 * Skill74_level",
+      "index": "magical_damage_percent",
+      "duration": 1
+    },
+    {
+      "delta": "-0.05 * Skill74_level",
+      "index": "magical_defense_percent",
+      "enemy": true,
+      "duration": 1
+    },
+    {
+      "delta": "-0.2 * maxhealth - 0.02 * ( Skill74_level - 1 ) * maxhealth",
+      "index": "health_active",
+      "duration": 1
+    }
+  ],
+  "name": "Life Control",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "13/15/19/27/37/49/63/79/97/117",
+  "class": "Wizard",
+  "cooldown": 2,
+  "duration": 0,
+  "aps": 4,
+  "condition": "health > 0.2 * maxhealth",
+  "description": "Using some of your vitality, making amplified energy by fastly circulating within the body. Maximum HP decreases for a certain period of time, but magical damage increases according to your loss",
+  "value": "Magical damage increase/10/10/%;Enemy Magical defense decrease/5/5/%;Your Maximum HP lost/2/2/%",
+  "sprite": "Skill_74",
+  "idInit": 74,
+  "prefEffect": "Wizard_Active7",
+  "typeDisplayEffect": "center"
+}

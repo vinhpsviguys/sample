@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3866973445
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c32329d61ad306a1945cea0ad116f29b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/XMLs/Armor.xml
+- Assets/AssetBundle/XMLs/AttributeItem.xml
+- Assets/AssetBundle/XMLs/Equipment.xml
+Dependencies: []

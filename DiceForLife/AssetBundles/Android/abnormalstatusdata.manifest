@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 2249640694
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ace235a0ba7399a5d39bd760dbff221e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/AbnormalStatusData/AS11.txt
+- Assets/AssetBundle/AbnormalStatusData/AS1.txt
+- Assets/AssetBundle/AbnormalStatusData/AS15.txt
+- Assets/AssetBundle/AbnormalStatusData/AS14.txt
+- Assets/AssetBundle/AbnormalStatusData/AS9.txt
+- Assets/AssetBundle/AbnormalStatusData/AS5.txt
+- Assets/AssetBundle/AbnormalStatusData/AS13.txt
+- Assets/AssetBundle/AbnormalStatusData/AS10.txt
+- Assets/AssetBundle/AbnormalStatusData/AS16.txt
+- Assets/AssetBundle/AbnormalStatusData/AS4.txt
+- Assets/AssetBundle/AbnormalStatusData/AS2.txt
+- Assets/AssetBundle/AbnormalStatusData/AS6.txt
+- Assets/AssetBundle/AbnormalStatusData/AS7.txt
+- Assets/AssetBundle/AbnormalStatusData/AS12.txt
+- Assets/AssetBundle/AbnormalStatusData/AS17.txt
+- Assets/AssetBundle/AbnormalStatusData/AS8.txt
+- Assets/AssetBundle/AbnormalStatusData/AS18.txt
+- Assets/AssetBundle/AbnormalStatusData/AS3.txt
+- Assets/AssetBundle/AbnormalStatusData/AS19.txt
+- Assets/AssetBundle/AbnormalStatusData/AS20.txt
+Dependencies: []

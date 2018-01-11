@@ -1,0 +1,139 @@
+
+ClericINgame.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 230
+  size: 228, 272
+  orig: 228, 272
+  offset: 0, 0
+  index: -1
+Ban tay trai
+  rotate: true
+  xy: 920, 335
+  size: 115, 91
+  orig: 115, 91
+  offset: 0, 0
+  index: -1
+Ellipse 1
+  rotate: false
+  xy: 742, 452
+  size: 268, 50
+  orig: 268, 50
+  offset: 0, 0
+  index: -1
+Gay go
+  rotate: true
+  xy: 543, 321
+  size: 181, 197
+  orig: 181, 197
+  offset: 0, 0
+  index: -1
+Giay phai
+  rotate: false
+  xy: 2, 2
+  size: 78, 46
+  orig: 78, 46
+  offset: 0, 0
+  index: -1
+Giay trai
+  rotate: false
+  xy: 163, 10
+  size: 70, 38
+  orig: 70, 38
+  offset: 0, 0
+  index: -1
+Khien
+  rotate: true
+  xy: 232, 155
+  size: 117, 126
+  orig: 117, 126
+  offset: 0, 0
+  index: -1
+Long may
+  rotate: true
+  xy: 454, 176
+  size: 96, 26
+  orig: 96, 26
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: true
+  xy: 742, 313
+  size: 137, 176
+  orig: 137, 176
+  offset: 0, 0
+  index: -1
+Mat phai
+  rotate: false
+  xy: 493, 294
+  size: 47, 41
+  orig: 47, 41
+  offset: 0, 0
+  index: -1
+Mat trai
+  rotate: false
+  xy: 920, 317
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+Ria
+  rotate: true
+  xy: 303, 43
+  size: 110, 58
+  orig: 110, 58
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 232, 274
+  size: 259, 61
+  orig: 259, 61
+  offset: 0, 0
+  index: -1
+Tay ao trai
+  rotate: false
+  xy: 360, 173
+  size: 92, 99
+  orig: 92, 99
+  offset: 0, 0
+  index: -1
+Than 1
+  rotate: false
+  xy: 2, 50
+  size: 224, 178
+  orig: 224, 178
+  offset: 0, 0
+  index: -1
+Toc
+  rotate: true
+  xy: 232, 337
+  size: 165, 309
+  orig: 165, 309
+  offset: 0, 0
+  index: -1
+Vai ao phai
+  rotate: true
+  xy: 363, 56
+  size: 115, 55
+  orig: 115, 55
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: false
+  xy: 228, 50
+  size: 73, 103
+  orig: 73, 103
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: false
+  xy: 82, 10
+  size: 79, 38
+  orig: 79, 38
+  offset: 0, 0
+  index: -1

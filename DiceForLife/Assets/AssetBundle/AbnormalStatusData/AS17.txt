@@ -1,0 +1,7 @@
+{
+  "name": "glamour",
+  "type": "abnormalstatus",
+  "duration": "1",
+   "idInit":17,
+  "sprite": "Buff_17"
+}

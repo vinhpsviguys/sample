@@ -1,0 +1,42 @@
+{
+  "level": 1,
+  "map": 1,
+  "type": 0,
+  "str": 1,
+  "int": 1,
+  "vit": 1,
+  "hp": 300,
+  "phy_dmg_min": 51.0,
+  "phy_dmg_max": 56.1,
+  "mag_dmg_min": 51.0,
+  "mag_dmg_max": 51.0,
+  "crit_chance": 0.05,
+  "multicast_chance": 0,
+  "phy_rein_min": 0.050,
+  "phy_rein_max": 0.055,
+  "mag_rein_min": 0.0525,
+  "mag_rein_max": 0.0578,
+  "atk_rate_min": 28.5,
+  "atk_rate_max": 34.2,
+  "phy_def_min": 25.7,
+  "phy_def_max": 28.3,
+  "mag_def_min": 27.0,
+  "mag_def_max": 29.7,
+  "phy_red_min": 0.0067,
+  "phy_red_max": 0.0074,
+  "mag_red_min": 0.0070,
+  "mag_red_max": 0.0077,
+  "parry_rate_min": 28.5,
+  "parry_rate_max": 0,
+  "block": 0,
+  "gold": 60,
+  "exp": 20,
+  "sp": 1,
+  "skills": [
+    {
+      "idskill": 240,
+      "level": 1
+    }
+    ],
+  "typemonster": "normal"
+}

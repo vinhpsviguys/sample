@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": -0.1,
+      "index": magical_damage_percent,
+      "enemy": "true"
+    },
+    {
+      "delta": "0.2 * total_damage",
+      "index": "poison_damage",
+      "enemy": "false"
+    }
+  ],
+  "name": "poisoning",
+  "type": "abnormalstatus",
+  "duration": "5",
+   "idInit":12,
+  "sprite": "Buff_12"
+}

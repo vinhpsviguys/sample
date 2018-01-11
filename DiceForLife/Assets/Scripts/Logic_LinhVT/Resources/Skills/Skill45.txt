@@ -1,0 +1,21 @@
+{
+  "lines": [
+    {
+      "delta": "0.33 + 0.03 * ( Skill45_level - 1 )",
+      "index": "remove_all_abnormal_chance"
+    }
+  ],
+  "name": "Holy shield",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "16/18/22/30/40/52/66/82/100/120",
+  "class": "Cleric",
+  "cooldown": 4,
+  "duration": 1,
+  "aps": 8,
+  "description": "By infusing the holy energy into the shield, decreasing the duration of 1 randomly abnormal status",
+  "value": "Chance to remove all abnormal status/33/3/%",
+  "sprite": "Skill_45",
+  "idInit": 45,
+  "prefEffect": "MagicBuffBlue"
+}

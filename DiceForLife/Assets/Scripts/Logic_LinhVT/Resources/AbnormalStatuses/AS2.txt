@@ -1,0 +1,7 @@
+{
+  "name": "hypnotic",
+  "type": "abnormalstatus",
+  "duration": "1",
+   "idInit":2,
+  "sprite": "Buff_2"
+}

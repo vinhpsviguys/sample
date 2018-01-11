@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 2085990652
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0c42650e14aec5270e5167417cabf1b2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4774d6da9b606debf00b5a5d61c4487c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/Gems/19.png
+- Assets/AssetBundle/Gems/14.png
+- Assets/AssetBundle/Gems/20.png
+- Assets/AssetBundle/Gems/18.png
+- Assets/AssetBundle/Gems/21.png
+- Assets/AssetBundle/Gems/2.png
+- Assets/AssetBundle/Gems/9.png
+- Assets/AssetBundle/Gems/15.png
+- Assets/AssetBundle/Gems/12.png
+- Assets/AssetBundle/Gems/23.jpg
+- Assets/AssetBundle/Gems/1.png
+- Assets/AssetBundle/Gems/3.png
+- Assets/AssetBundle/Gems/10.png
+- Assets/AssetBundle/Gems/13.png
+- Assets/AssetBundle/Gems/4.png
+- Assets/AssetBundle/Gems/6.png
+- Assets/AssetBundle/Gems/16.png
+- Assets/AssetBundle/Gems/7.png
+- Assets/AssetBundle/Gems/17.png
+- Assets/AssetBundle/Gems/22.png
+- Assets/AssetBundle/Gems/11.png
+- Assets/AssetBundle/Gems/8.png
+Dependencies: []

@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": "0.001 * maxhealth * Skill63_level",
+      "index": "health_active",
+      "condition": "when_is_hit"
+    }
+  ],
+  "name": "Energy Absorption",
+  "type": "passive",
+  "level": 1,
+  "levelrequired": "20/24/28/32/36/40/44/48/52/56",
+  "class": "Wizard",
+  "description": "Recovers your HP by a large amount whenever you are dealt damage",
+  "value": "Maximum HP recover whenever you taken damage/0.1/0.1/%",
+  "sprite": "Skill_63",
+  "idInit": 63,
+  "prefEffect": "\"\""
+}

@@ -1,0 +1,125 @@
+
+Concept_char_anim.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 111
+  size: 334, 399
+  orig: 334, 399
+  offset: 0, 0
+  index: -1
+Ban tay trai
+  rotate: true
+  xy: 628, 98
+  size: 169, 134
+  orig: 169, 134
+  offset: 0, 0
+  index: -1
+Gay go
+  rotate: true
+  xy: 338, 2
+  size: 265, 288
+  orig: 265, 288
+  offset: 0, 0
+  index: -1
+Giay phai
+  rotate: false
+  xy: 1125, 257
+  size: 113, 68
+  orig: 113, 68
+  offset: 0, 0
+  index: -1
+Giay trai
+  rotate: false
+  xy: 1588, 416
+  size: 104, 55
+  orig: 104, 55
+  offset: 0, 0
+  index: -1
+Khien
+  rotate: false
+  xy: 1125, 327
+  size: 171, 183
+  orig: 171, 183
+  offset: 0, 0
+  index: -1
+Long may
+  rotate: false
+  xy: 1588, 473
+  size: 140, 37
+  orig: 140, 37
+  offset: 0, 0
+  index: -1
+Mat phai
+  rotate: true
+  xy: 1240, 255
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1
+Mat trai
+  rotate: true
+  xy: 1298, 327
+  size: 35, 23
+  orig: 35, 23
+  offset: 0, 0
+  index: -1
+Ria
+  rotate: false
+  xy: 628, 12
+  size: 103, 84
+  orig: 103, 84
+  offset: 0, 0
+  index: -1
+Tay trai
+  rotate: false
+  xy: 1298, 364
+  size: 136, 146
+  orig: 136, 146
+  offset: 0, 0
+  index: -1
+Than 1
+  rotate: false
+  xy: 796, 249
+  size: 327, 261
+  orig: 327, 261
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: false
+  xy: 2, 28
+  size: 169, 81
+  orig: 169, 81
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: false
+  xy: 173, 54
+  size: 114, 55
+  orig: 114, 55
+  offset: 0, 0
+  index: -1
+dau
+  rotate: true
+  xy: 338, 269
+  size: 241, 456
+  orig: 241, 456
+  offset: 0, 0
+  index: -1
+ria 1
+  rotate: true
+  xy: 1730, 448
+  size: 62, 69
+  orig: 62, 69
+  offset: 0, 0
+  index: -1
+tay phai
+  rotate: true
+  xy: 1436, 402
+  size: 108, 150
+  orig: 108, 150
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,8 @@
+{
+  "name": "immobilization",
+  "type": "abnormalstatus",
+  "duration": "1",
+  "condition": "when_melee",
+   "idInit":14,
+  "sprite": "Buff_14"
+}

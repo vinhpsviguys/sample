@@ -1,0 +1,118 @@
+
+mechan.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Group 3 copy
+  rotate: false
+  xy: 2, 1228
+  size: 370, 780
+  orig: 370, 780
+  offset: 0, 0
+  index: -1
+Layer 26
+  rotate: false
+  xy: 2, 133
+  size: 59, 89
+  orig: 59, 89
+  offset: 0, 0
+  index: -1
+Layer 26 copy 2
+  rotate: true
+  xy: 374, 1352
+  size: 154, 70
+  orig: 154, 70
+  offset: 0, 0
+  index: -1
+Layer 27
+  rotate: false
+  xy: 1880, 1976
+  size: 124, 32
+  orig: 124, 32
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00000
+  rotate: false
+  xy: 876, 1508
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00002
+  rotate: false
+  xy: 1378, 1508
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00004
+  rotate: false
+  xy: 2, 726
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00008
+  rotate: false
+  xy: 2, 224
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00012
+  rotate: false
+  xy: 504, 1006
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00014
+  rotate: false
+  xy: 504, 504
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00016
+  rotate: false
+  xy: 1006, 1006
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00020
+  rotate: false
+  xy: 1006, 504
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00023
+  rotate: false
+  xy: 1508, 1006
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00024
+  rotate: false
+  xy: 1508, 504
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00028
+  rotate: false
+  xy: 504, 2
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fx/Energy 060 Up Ray MIX_00030
+  rotate: false
+  xy: 374, 1508
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1

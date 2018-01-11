@@ -1,0 +1,22 @@
+{
+  "lines": [
+    {
+      "delta": "0.04 * total_damage + ( Skill3_level - 1 ) * 0.04",
+      "index": "poison_damage"
+    },
+    {
+      "delta": 2,
+      "index": "poisoning_duration"
+    }
+  ],
+  "name": "Toxicology",
+  "type": "passive",
+  "level": 1,
+  "levelrequired": "20/24/28/32/36/40/44/48/52/56",
+  "class": "Assassin",
+  "value": "Poison damage increase/4/4/%;Poisoning duration increase/1/0/float",
+  "description": "Increases poison damage and poison duration by studying and better understanding various kinds of poison",
+  "sprite": "Skill_3",
+  "idInit": 3,
+  "prefEffect": "\"\""
+}

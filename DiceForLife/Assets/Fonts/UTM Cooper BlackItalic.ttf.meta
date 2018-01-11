@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 14e6ec0fc9e1acc4cafef12722a772e0
+timeCreated: 1512371814
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: UTM Cooper Black
+  fontNames:
+  - UTM Cooper Black
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8f9fc07a431cd044394f2fbad6b864c7, type: 3}
+  - {fileID: 12800000, guid: 51b69f0e6253c2f409d5c40f55a66f37, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

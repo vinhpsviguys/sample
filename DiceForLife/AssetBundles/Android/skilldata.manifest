@@ -1,0 +1,95 @@
+ManifestFileVersion: 0
+CRC: 4183845115
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8c90dcd3d817f81d0ef47f1826eeaa3d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/SkillData/Skill80.txt
+- Assets/AssetBundle/SkillData/Skill4.txt
+- Assets/AssetBundle/SkillData/Skill2.txt
+- Assets/AssetBundle/SkillData/Skill26.txt
+- Assets/AssetBundle/SkillData/Skill71.txt
+- Assets/AssetBundle/SkillData/Skill40.txt
+- Assets/AssetBundle/SkillData/Skill30.txt
+- Assets/AssetBundle/SkillData/Skill15.txt
+- Assets/AssetBundle/SkillData/Skill23.txt
+- Assets/AssetBundle/SkillData/Skill74.txt
+- Assets/AssetBundle/SkillData/Skill10.txt
+- Assets/AssetBundle/SkillData/Skill3.txt
+- Assets/AssetBundle/SkillData/Skill36.txt
+- Assets/AssetBundle/SkillData/Skill29.txt
+- Assets/AssetBundle/SkillData/Skill17.txt
+- Assets/AssetBundle/SkillData/Skill35.txt
+- Assets/AssetBundle/SkillData/Skill28.txt
+- Assets/AssetBundle/SkillData/Skill47.txt
+- Assets/AssetBundle/SkillData/Skill60.txt
+- Assets/AssetBundle/SkillData/Skill25.txt
+- Assets/AssetBundle/SkillData/Skill68.txt
+- Assets/AssetBundle/SkillData/Skill14.txt
+- Assets/AssetBundle/SkillData/Skill21.txt
+- Assets/AssetBundle/SkillData/Skill13.txt
+- Assets/AssetBundle/SkillData/Skill48.txt
+- Assets/AssetBundle/SkillData/Skill57.txt
+- Assets/AssetBundle/SkillData/Skill6.txt
+- Assets/AssetBundle/SkillData/Skill31.txt
+- Assets/AssetBundle/SkillData/Skill27.txt
+- Assets/AssetBundle/SkillData/Skill11.txt
+- Assets/AssetBundle/SkillData/Skill73.txt
+- Assets/AssetBundle/SkillData/Skill37.txt
+- Assets/AssetBundle/SkillData/Skill55.txt
+- Assets/AssetBundle/SkillData/Skill56.txt
+- Assets/AssetBundle/SkillData/Skill62.txt
+- Assets/AssetBundle/SkillData/Skill58.txt
+- Assets/AssetBundle/SkillData/Skill75.txt
+- Assets/AssetBundle/SkillData/Skill32.txt
+- Assets/AssetBundle/SkillData/Skill5.txt
+- Assets/AssetBundle/SkillData/Skill1.txt
+- Assets/AssetBundle/SkillData/Skill77.txt
+- Assets/AssetBundle/SkillData/Skill59.txt
+- Assets/AssetBundle/SkillData/Skill34.txt
+- Assets/AssetBundle/SkillData/Skill24.txt
+- Assets/AssetBundle/SkillData/Skill54.txt
+- Assets/AssetBundle/SkillData/Skill63.txt
+- Assets/AssetBundle/SkillData/Skill64.txt
+- Assets/AssetBundle/SkillData/Skill38.txt
+- Assets/AssetBundle/SkillData/Skill7.txt
+- Assets/AssetBundle/SkillData/Skill51.txt
+- Assets/AssetBundle/SkillData/Skill20.txt
+- Assets/AssetBundle/SkillData/Skill19.txt
+- Assets/AssetBundle/SkillData/Skill16.txt
+- Assets/AssetBundle/SkillData/Skill53.txt
+- Assets/AssetBundle/SkillData/Skill61.txt
+- Assets/AssetBundle/SkillData/Skill66.txt
+- Assets/AssetBundle/SkillData/Skill76.txt
+- Assets/AssetBundle/SkillData/Skill43.txt
+- Assets/AssetBundle/SkillData/Skill79.txt
+- Assets/AssetBundle/SkillData/Skill42.txt
+- Assets/AssetBundle/SkillData/Skill70.txt
+- Assets/AssetBundle/SkillData/Skill22.txt
+- Assets/AssetBundle/SkillData/Skill69.txt
+- Assets/AssetBundle/SkillData/Skill52.txt
+- Assets/AssetBundle/SkillData/Skill41.txt
+- Assets/AssetBundle/SkillData/Skill46.txt
+- Assets/AssetBundle/SkillData/Skill49.txt
+- Assets/AssetBundle/SkillData/Skill44.txt
+- Assets/AssetBundle/SkillData/Skill12.txt
+- Assets/AssetBundle/SkillData/Skill18.txt
+- Assets/AssetBundle/SkillData/Skill9.txt
+- Assets/AssetBundle/SkillData/Skill50.txt
+- Assets/AssetBundle/SkillData/Skill45.txt
+- Assets/AssetBundle/SkillData/Skill33.txt
+- Assets/AssetBundle/SkillData/Skill72.txt
+- Assets/AssetBundle/SkillData/Skill67.txt
+- Assets/AssetBundle/SkillData/Skill8.txt
+- Assets/AssetBundle/SkillData/Skill78.txt
+- Assets/AssetBundle/SkillData/Skill65.txt
+- Assets/AssetBundle/SkillData/Skill39.txt
+Dependencies: []

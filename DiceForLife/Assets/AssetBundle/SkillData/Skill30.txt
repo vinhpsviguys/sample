@@ -1,0 +1,22 @@
+{
+  "lines": [
+    {
+      "delta": "1.25 * shield_block_chance + 0.05 * ( Skill30_level - 1 ) * shield_block_chance",
+      "index": "physical_defense"
+    }
+  ],
+  "name": "Divine Fortress",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "6/8/12/20/30/42/56/72/90/110",
+  "class": "Paladin",
+  "cooldown": 2,
+  "duration": 1,
+  "aps": 3,
+  "description": "Physical defense is increased by a percent equal to your shield's block chance.",
+  "value": "Physical defense increase by percent of shield's blocking chance/125/5/%",
+  "sprite": "Skill_30",
+  "idInit": 30,
+  "isMove": false,
+  "prefEffect": "MagicBuffBlue"
+}
