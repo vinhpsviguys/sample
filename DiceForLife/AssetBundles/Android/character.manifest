@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 104901123
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a0c824ed23108b10b090a0bccb5db93d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4774d6da9b606debf00b5a5d61c4487c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/Character/Hero3.png
+- Assets/AssetBundle/Character/Hero4.png
+- Assets/AssetBundle/Character/Hero7.png
+- Assets/AssetBundle/Character/Hero2.png
+- Assets/AssetBundle/Character/Hero1.png
+- Assets/AssetBundle/Character/Hero0.png
+- Assets/AssetBundle/Character/Hero6.png
+- Assets/AssetBundle/Character/Hero5.png
+Dependencies: []

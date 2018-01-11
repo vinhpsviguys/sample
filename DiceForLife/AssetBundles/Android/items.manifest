@@ -1,0 +1,94 @@
+ManifestFileVersion: 0
+CRC: 4123524179
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dbc705c616642d38e304a77d10cd4c39
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4774d6da9b606debf00b5a5d61c4487c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundle/Items/ItemUIRare6.png
+- Assets/AssetBundle/Items/64.png
+- Assets/AssetBundle/Items/ItemUIRare7.png
+- Assets/AssetBundle/Items/18.png
+- Assets/AssetBundle/Items/33.png
+- Assets/AssetBundle/Items/2.png
+- Assets/AssetBundle/Items/67.png
+- Assets/AssetBundle/Items/22.png
+- Assets/AssetBundle/Items/16.png
+- Assets/AssetBundle/Items/3.png
+- Assets/AssetBundle/Items/17.png
+- Assets/AssetBundle/Items/74.png
+- Assets/AssetBundle/Items/13.png
+- Assets/AssetBundle/Items/60.png
+- Assets/AssetBundle/Items/10.png
+- Assets/AssetBundle/Items/ItemUIRare4.png
+- Assets/AssetBundle/Items/66.png
+- Assets/AssetBundle/Items/34.png
+- Assets/AssetBundle/Items/69.png
+- Assets/AssetBundle/Items/28.png
+- Assets/AssetBundle/Items/73.png
+- Assets/AssetBundle/Items/58.png
+- Assets/AssetBundle/Items/72.png
+- Assets/AssetBundle/Items/11.png
+- Assets/AssetBundle/Items/59.png
+- Assets/AssetBundle/Items/ItemUIRare1.png
+- Assets/AssetBundle/Items/40.png
+- Assets/AssetBundle/Items/24.png
+- Assets/AssetBundle/Items/4.png
+- Assets/AssetBundle/Items/6.png
+- Assets/AssetBundle/Items/57.png
+- Assets/AssetBundle/Items/15.png
+- Assets/AssetBundle/Items/70.png
+- Assets/AssetBundle/Items/20.png
+- Assets/AssetBundle/Items/43.png
+- Assets/AssetBundle/Items/71.png
+- Assets/AssetBundle/Items/39.png
+- Assets/AssetBundle/Items/7.png
+- Assets/AssetBundle/Items/23.png
+- Assets/AssetBundle/Items/ItemUIRare5.png
+- Assets/AssetBundle/Items/ItemUIRare2.png
+- Assets/AssetBundle/Items/14.png
+- Assets/AssetBundle/Items/63.png
+- Assets/AssetBundle/Items/62.png
+- Assets/AssetBundle/Items/38.png
+- Assets/AssetBundle/Items/12.png
+- Assets/AssetBundle/Items/27.png
+- Assets/AssetBundle/Items/9.png
+- Assets/AssetBundle/Items/75.png
+- Assets/AssetBundle/Items/21.png
+- Assets/AssetBundle/Items/5.png
+- Assets/AssetBundle/Items/41.png
+- Assets/AssetBundle/Items/31.png
+- Assets/AssetBundle/Items/46.png
+- Assets/AssetBundle/Items/19.png
+- Assets/AssetBundle/Items/36.png
+- Assets/AssetBundle/Items/77.png
+- Assets/AssetBundle/Items/32.png
+- Assets/AssetBundle/Items/78.png
+- Assets/AssetBundle/Items/45.png
+- Assets/AssetBundle/Items/8.png
+- Assets/AssetBundle/Items/26.png
+- Assets/AssetBundle/Items/48.png
+- Assets/AssetBundle/Items/79.png
+- Assets/AssetBundle/Items/65.png
+- Assets/AssetBundle/Items/68.png
+- Assets/AssetBundle/Items/44.png
+- Assets/AssetBundle/Items/42.png
+- Assets/AssetBundle/Items/1.png
+- Assets/AssetBundle/Items/ItemUIRare3.png
+- Assets/AssetBundle/Items/37.png
+- Assets/AssetBundle/Items/61.png
+- Assets/AssetBundle/Items/29.png
+- Assets/AssetBundle/Items/30.png
+- Assets/AssetBundle/Items/76.png
+- Assets/AssetBundle/Items/35.png
+- Assets/AssetBundle/Items/47.png
+Dependencies: []
