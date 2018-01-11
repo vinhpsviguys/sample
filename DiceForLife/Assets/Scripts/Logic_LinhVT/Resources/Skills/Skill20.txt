@@ -1,0 +1,28 @@
+{
+  "lines": [
+    {
+      "delta": "0.02 + 0.02 * ( Skill20_level - 1 )",
+      "index": "physical_damage_percent",
+      "duration": 1
+    },
+    {
+      "delta": "0.12 + 0.02 * ( Skill20_level - 1 )",
+      "index": "critical_chance",
+      "duration": 1
+    }
+  ],
+  "name": "Shadow Walk",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "1/3/7/15/25/37/51/67/85/105",
+  "class": "Assassin",
+  "cooldown": 1,
+  "duration": 0,
+  "aps": 1,
+  "description": "A sudden attack gives Assassin a chance to inflict Critical hit on this attack",
+  "value": "Physical damage increase/2/2/%;Critical chance increase/12/2/%",
+  "sprite": "Skill_20",
+  "idInit": 20,
+  "isMove": true,
+  "prefEffect": "PortalPurple"
+}

@@ -1,0 +1,50 @@
+<Skills>
+  <Skill id="1" class="Assassin" name="Critical chance" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="1,2" actionpoint="5" sprite="Skill_0" prefabeff="" />
+  <Skill id="2" class="Assassin" name="Reduces Physical Armor" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="3,4" actionpoint="5" sprite="Skill_1" prefabeff="" />
+  <Skill id="3" class="Assassin" name="Counter Attack" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_2" prefabeff="" />
+  <Skill id="4" class="Assassin" name="Crazy status" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="1,2" actionpoint="5" sprite="Skill_3" prefabeff="" />
+  <Skill id="5" class="Assassin" name="Critical chance" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="3,4" actionpoint="5" sprite="Skill_4" prefabeff="" />
+  <Skill id="6" class="Assassin" name="Blind Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_5" prefabeff="" />
+  <Skill id="7" class="Paladin" name="Block chance" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="7" actionpoint="5" sprite="Skill_6" prefabeff="" />
+  <Skill id="8" class="Paladin" name="Physical damage Reflection" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="1,2" actionpoint="5" sprite="Skill_7" prefabeff="" />
+  <Skill id="9" class="Paladin" name="Remove Bad status" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="3,4" actionpoint="5" sprite="Skill_8" prefabeff="" />
+  <Skill id="10" class="Paladin" name="Bind Status Physical damage" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_9" prefabeff="" />
+  <Skill id="11" class="Paladin" name="Rot Status" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_10" prefabeff="" />
+  <Skill id="12" class="Zealot" name="Freeze attack" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_11" prefabeff="" />
+  <Skill id="13" class="Zealot" name="Increases Physical Armor" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_12" prefabeff="" />
+  <Skill id="14" class="Zealot" name="Glamour Status" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_13" prefabeff="" />
+  <Skill id="15" class="Zealot" name="Pain Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_14" prefabeff="" />
+  <Skill id="16" class="Zealot" name="Burn attackm" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_15" prefabeff="" />
+  <Skill id="17" class="Zealot" name="Attack twice chance" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_16" prefabeff="" />
+  <Skill id="18" class="Sorceress" name="Poisoning attack" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_17" prefabeff="" />
+  <Skill id="19" class="Sorceress" name="Parry rate" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_18" prefabeff="" />
+  <Skill id="20" class="Sorceress" name="Disease Status" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_19" prefabeff="" />
+  <Skill id="21" class="Sorceress" name="Hypnotic Status" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_20" prefabeff="" />
+  <Skill id="22" class="Sorceress" name="Increases Regeneration" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_21" prefabeff="" />
+  <Skill id="23" class="Sorceress" name="Max HP" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_22" prefabeff="" />
+  <Skill id="24" class="Wizard" name="Electric Attack" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_23" prefabeff="" />
+  <Skill id="25" class="Wizard" name="Increases Physical damage" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_0" prefabeff="" />
+  <Skill id="26" class="Wizard" name="Sleep Status" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_1" prefabeff="" />
+  <Skill id="27" class="Wizard" name="Fear Status" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_2" prefabeff="" />
+  <Skill id="28" class="Wizard" name="Increases Magical damage" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_3" prefabeff="" />
+  <Skill id="29" class="Wizard" name="Reduces Magical Armor" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_4" prefabeff="" />
+  <Skill id="30" class="Marksman" name="Stole Health" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_5" prefabeff="" />
+  <Skill id="31" class="Marksman" name="Magical damage absorb" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_6" prefabeff="" />
+  <Skill id="32" class="Marksman" name="Attack rate" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_7" prefabeff="" />
+  <Skill id="33" class="Marksman" name="Blood Thirst Status" description="Deal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_8" prefabeff="" />
+  <Skill id="34" class="Marksman" name="Physical damage reflection" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_9" prefabeff="" />
+  <Skill id="35" class="Marksman" name="Knock back Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_10" prefabeff="" />
+  <Skill id="36" class="Org" name="Block Bad Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_11" prefabeff="" />
+  <Skill id="37" class="Org" name="Damage amplification" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_12" prefabeff="" />
+  <Skill id="38" class="Org" name="Magical armor" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_13" prefabeff="" />
+  <Skill id="39" class="Org" name="Bleed Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_14" prefabeff="" />
+  <Skill id="40" class="Org" name="Dodge attacks" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_15" prefabeff="" />
+  <Skill id="41" class="Org" name="Impotent Status" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_16" prefabeff="" />
+  <Skill id="42" class="Barbarian" name="Increases Critical Strike chance" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_17" prefabeff="" />
+  <Skill id="43" class="Barbarian" name="Break armor" description="eal 300 damage to enemy, root and healing" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_18" prefabeff="" />
+  <Skill id="44" class="Barbarian" name="Prevents opponent" description="Deal 300 damage to enemy, buring and increase physic damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_19" prefabeff="" />
+  <Skill id="45" class="Barbarian" name="Stun Status" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_20" prefabeff="" />
+  <Skill id="46" class="Barbarian" name="Magical damage reflection" description="Deal 300 damage to enemy, increase mage damage" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_21" prefabeff="" />
+  <Skill id="47" class="Barbarian" name="Dementia Status" description="Deal 300 damage to enemy, stun and silent" level="1" damage="300" effect="5,6" actionpoint="5" sprite="Skill_22" prefabeff="" />
+  
+</Skills>

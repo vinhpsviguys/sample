@@ -1,0 +1,35 @@
+
+{
+  "lines": [
+    {
+      "delta": "-0.27 + 0.03 * ( Skill37_level - 1 )",
+      "index": "physical_damage_percent",
+      "duration": 1
+    },
+    {
+      "delta": 2,
+      "index": "successive_attacks",
+      "duration": 1
+    },
+    {
+      "delta": "-0.015 * maxhealth - 0.015 * ( Skill37_level - 1 ) * maxhealth",
+      "index": "health_active",
+      "duration": 1
+    }
+  ],
+  "name": "Daredevil",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "7/9/13/21/31/43/57/73/91/111",
+  "class": "Paladin",
+  "cooldown": 1,
+  "duration": 0,
+  "condition": "health > 0.15 * maxhealth",
+  "aps": 3,
+  "description": "Awakes vicious madness like the devil by consuming own HP, and wields the one-hand sword twice as if drawing a circle at the enemy. This skill cannot be used when HP is  below 10%",
+  "value": "Physical damage decrease/27/-3/%;Successive attacks time/2/0/float;Lost Maximum HP/1.5/1.5/%",
+  "sprite": "Skill_37",
+  "idInit": 37,
+  "isMove": true,
+  "prefEffect": "LightningStrikeTall"
+}

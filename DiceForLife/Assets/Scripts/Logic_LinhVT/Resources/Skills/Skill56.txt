@@ -1,0 +1,35 @@
+{
+  "lines": [
+    {
+      "delta": "0.23 + 0.03 * ( Skill56_level - 1 )",
+      "index": "magical_damage_percent",
+      "duration": 1
+    },
+    {
+      "delta": "0.05 * total_damamge + 0.05 * ( Skill56_level - 1 ) * total_damamge",
+      "index": "total_damamge",
+      "condition": "when_e_is_abnormal",
+      "duration": 1
+    },
+    {
+      "delta": "-0.01 * maxhealth - 0.01 * ( Skill56_level - 1 ) * maxhealth",
+      "index": "health",
+      "duration": 1
+    }
+  ],
+  "name": "Heavenly Wand",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "9/11/15/23/33/45/59/75/93/113",
+  "class": "Cleric",
+  "cooldown": 1,
+  "duration": 0,
+  "aps": 2,
+  "condition": "health > 0.1 * maxhealth",
+  "description": "Sweep your weapon in a large motion to attack the enemy",
+  "value": "Weapon damage increase/23/3/%;Abnormal status damage increase/5/5/%;Lost Maximum HP/1/1/%",
+  "sprite": "Skill_56",
+  "idInit": 56,
+  "prefEffect": "Cleric_Active5",
+  "typeDisplayEffect": "enemy"
+}

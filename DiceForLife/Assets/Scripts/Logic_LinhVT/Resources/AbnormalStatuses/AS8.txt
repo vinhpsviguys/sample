@@ -1,0 +1,7 @@
+{
+  "name": "stun",
+  "type": "abnormalstatus",
+  "duration": "1",
+   "idInit":8,
+  "sprite": "Buff_8"
+}

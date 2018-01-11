@@ -1,0 +1,25 @@
+{
+  "lines": [
+    {
+      "delta": "-0.5 * aps",
+      "index": "aps",
+      "condition": "health < 0.2 * maxhealth"
+    },
+    {
+      "delta": "-0.02 * total_damage - 0.02 * ( Skill41_level - 1 ) * total_damage",
+      "index": "total_damage",
+      "enemy": true,
+      "condition": "when_hit && ( e_health < 0.2 * e_maxhealth )"
+    }
+  ],
+  "name": "Relentless",
+  "type": "passive",
+  "level": 1,
+  "levelrequired": "60/64/68/72/76/80/84/88/92/96",
+  "class": "Cleric",
+  "description": "When HP is below 20%, all skills cost less Action Point, and all damage taken are decreased",
+  "value": "Action point cost decrease when below 20% HP/50/0/%;All damage taken decrease when below 20% HP/2/2/%",
+  "sprite": "Skill_41",
+  "idInit": 41,
+  "prefEffect": "\"\""
+}

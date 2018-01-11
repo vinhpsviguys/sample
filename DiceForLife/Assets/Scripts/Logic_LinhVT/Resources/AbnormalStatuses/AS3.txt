@@ -1,0 +1,14 @@
+{
+  "lines": [
+    {
+      "delta": "-0.4",
+      "index": “physical_defense_percent”,
+      "enemy": true
+    }
+  ],
+  "name": "rot",
+  "type": "abnormalstatus",
+  "duration": "2",
+   "idInit":3,
+  "sprite": "Buff_3"
+}

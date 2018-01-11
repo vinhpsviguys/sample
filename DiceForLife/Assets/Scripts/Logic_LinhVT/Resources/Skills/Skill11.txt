@@ -1,0 +1,22 @@
+{
+  "lines": [
+    {
+      "delta": "0.22 * total_damage + 0.02 * ( Skill11_level - 1 ) * total_damage",
+      "index": "poison_damage"
+    }
+  ],
+  "name": "Venomous agent",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "4/6/10/18/28/40/54/70/88/108",
+  "class": "Assassin",
+  "cooldown": 4,
+  "duration": 2,
+  "aps": 6,
+  "value": "Poison damage increase/22/2/%",
+  "description": "You smear your daggers with a venomous agent. If an enemy is under poison status, he will take more damage overtime",
+  "sprite": "Skill_11",
+  "idInit": 11,
+  "isMove": false,
+  "prefEffect": "MagicBuffBlue"
+}

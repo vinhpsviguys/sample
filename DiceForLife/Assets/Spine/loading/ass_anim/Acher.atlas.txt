@@ -1,0 +1,132 @@
+
+Acher.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 167
+  size: 270, 327
+  orig: 270, 327
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: false
+  xy: 697, 199
+  size: 83, 83
+  orig: 83, 83
+  offset: 0, 0
+  index: -1
+Canh tay trai
+  rotate: true
+  xy: 542, 132
+  size: 52, 79
+  orig: 52, 79
+  offset: 0, 0
+  index: -1
+Chan phai
+  rotate: false
+  xy: 287, 45
+  size: 78, 123
+  orig: 78, 123
+  offset: 0, 0
+  index: -1
+Chan trai
+  rotate: true
+  xy: 274, 170
+  size: 53, 132
+  orig: 53, 132
+  offset: 0, 0
+  index: -1
+Dui phai
+  rotate: false
+  xy: 909, 341
+  size: 103, 153
+  orig: 103, 153
+  offset: 0, 0
+  index: -1
+Dui trai
+  rotate: true
+  xy: 548, 186
+  size: 96, 147
+  orig: 96, 147
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 2, 2
+  size: 99, 27
+  orig: 99, 27
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 274, 225
+  size: 272, 269
+  orig: 272, 269
+  offset: 0, 0
+  index: -1
+Giay phai
+  rotate: false
+  xy: 367, 126
+  size: 39, 42
+  orig: 39, 42
+  offset: 0, 0
+  index: -1
+Giay trai
+  rotate: true
+  xy: 367, 74
+  size: 50, 41
+  orig: 50, 41
+  offset: 0, 0
+  index: -1
+Hong phai
+  rotate: false
+  xy: 782, 216
+  size: 83, 67
+  orig: 83, 67
+  offset: 0, 0
+  index: -1
+Hong trai
+  rotate: false
+  xy: 623, 122
+  size: 67, 62
+  orig: 67, 62
+  offset: 0, 0
+  index: -1
+Tay phai
+  rotate: false
+  xy: 548, 284
+  size: 217, 210
+  orig: 217, 210
+  offset: 0, 0
+  index: -1
+Tay trai
+  rotate: false
+  xy: 2, 31
+  size: 283, 134
+  orig: 283, 134
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 767, 285
+  size: 140, 209
+  orig: 140, 209
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: false
+  xy: 408, 154
+  size: 132, 69
+  orig: 132, 69
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: false
+  xy: 909, 283
+  size: 98, 56
+  orig: 98, 56
+  offset: 0, 0
+  index: -1

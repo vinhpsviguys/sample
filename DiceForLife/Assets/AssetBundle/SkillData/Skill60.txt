@@ -1,0 +1,23 @@
+{
+  "lines": [
+    {
+      "delta": "11 * player_level + ( Skill60_level - 1 ) * player_level",
+      "index": "pure_damage",
+	  "duration": 1
+    }
+  ],
+  "name": "Shield of Light",
+  "type": "active",
+  "level": 1,
+  "levelrequired": "1/3/7/15/25/37/51/67/85/105",
+  "class": "Cleric",
+  "cooldown": 1,
+  "duration": 0,
+  "aps": 2,
+  "description": "Summons a shield of light made from the anger at dawn, around yourself at a fixed time. The shield damages enemies and ignores their defense during the time it is summoned",
+  "value": "Inflict pure damage multiple times with your level/11/1/float",
+  "sprite": "Skill_60",
+  "idInit": 60,
+  "prefEffect": "Cleric_Active1",
+  "typeDisplayEffect": "enemy"
+}

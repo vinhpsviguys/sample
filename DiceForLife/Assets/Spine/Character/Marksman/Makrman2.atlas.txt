@@ -1,0 +1,132 @@
+
+Makrman2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 147
+  size: 227, 361
+  orig: 227, 361
+  offset: 0, 0
+  index: -1
+Ban chan phai
+  rotate: false
+  xy: 360, 24
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Bap tay phai
+  rotate: false
+  xy: 172, 3
+  size: 43, 65
+  orig: 43, 65
+  offset: 0, 0
+  index: -1
+Cang chan phai
+  rotate: false
+  xy: 463, 243
+  size: 30, 87
+  orig: 30, 87
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: true
+  xy: 392, 52
+  size: 37, 79
+  orig: 37, 79
+  offset: 0, 0
+  index: -1
+Chan trai
+  rotate: false
+  xy: 463, 332
+  size: 43, 88
+  orig: 43, 88
+  offset: 0, 0
+  index: -1
+Cung
+  rotate: false
+  xy: 231, 218
+  size: 230, 290
+  orig: 230, 290
+  offset: 0, 0
+  index: -1
+Dui phai
+  rotate: false
+  xy: 463, 422
+  size: 47, 86
+  orig: 47, 86
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 217, 13
+  size: 49, 8
+  orig: 49, 8
+  offset: 0, 0
+  index: -1
+Face
+  rotate: true
+  xy: 2, 2
+  size: 143, 168
+  orig: 143, 168
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 392, 91
+  size: 76, 62
+  orig: 76, 62
+  offset: 0, 0
+  index: -1
+Layer 2
+  rotate: false
+  xy: 470, 131
+  size: 40, 22
+  orig: 40, 22
+  offset: 0, 0
+  index: -1
+Layer 2 copy
+  rotate: true
+  xy: 293, 18
+  size: 33, 65
+  orig: 33, 65
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: false
+  xy: 172, 70
+  size: 55, 75
+  orig: 55, 75
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 231, 155
+  size: 259, 61
+  orig: 259, 61
+  offset: 0, 0
+  index: -1
+Than
+  rotate: true
+  xy: 231, 53
+  size: 100, 159
+  orig: 100, 159
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: false
+  xy: 217, 23
+  size: 74, 28
+  orig: 74, 28
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: true
+  xy: 492, 200
+  size: 41, 18
+  orig: 41, 18
+  offset: 0, 0
+  index: -1

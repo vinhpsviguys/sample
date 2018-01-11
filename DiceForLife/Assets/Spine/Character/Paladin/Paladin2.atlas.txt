@@ -1,0 +1,146 @@
+
+Paladin2.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ao choang
+  rotate: false
+  xy: 2, 50
+  size: 221, 227
+  orig: 221, 227
+  offset: 0, 0
+  index: -1
+Ban chan phai
+  rotate: true
+  xy: 430, 184
+  size: 47, 31
+  orig: 47, 31
+  offset: 0, 0
+  index: -1
+Ban tay trai
+  rotate: true
+  xy: 579, 219
+  size: 90, 95
+  orig: 90, 95
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 584, 311
+  size: 199, 209
+  orig: 199, 209
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: false
+  xy: 325, 233
+  size: 151, 99
+  orig: 151, 99
+  offset: 0, 0
+  index: -1
+Canh tay trai
+  rotate: false
+  xy: 935, 392
+  size: 66, 118
+  orig: 66, 118
+  offset: 0, 0
+  index: -1
+Chan phai
+  rotate: true
+  xy: 2, 14
+  size: 34, 74
+  orig: 34, 74
+  offset: 0, 0
+  index: -1
+Chan trai
+  rotate: true
+  xy: 676, 242
+  size: 67, 116
+  orig: 67, 116
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: true
+  xy: 1003, 451
+  size: 59, 16
+  orig: 59, 16
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 795, 346
+  size: 138, 164
+  orig: 138, 164
+  offset: 0, 0
+  index: -1
+Goi phai
+  rotate: true
+  xy: 794, 220
+  size: 71, 100
+  orig: 71, 100
+  offset: 0, 0
+  index: -1
+Goi trai
+  rotate: true
+  xy: 358, 19
+  size: 71, 91
+  orig: 71, 91
+  offset: 0, 0
+  index: -1
+Hong
+  rotate: false
+  xy: 795, 293
+  size: 126, 51
+  orig: 126, 51
+  offset: 0, 0
+  index: -1
+Khien
+  rotate: false
+  xy: 325, 334
+  size: 257, 176
+  orig: 257, 176
+  offset: 0, 0
+  index: -1
+Kiem
+  rotate: false
+  xy: 2, 279
+  size: 321, 231
+  orig: 321, 231
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 935, 361
+  size: 51, 29
+  orig: 51, 29
+  offset: 0, 0
+  index: -1
+Shadows
+  rotate: true
+  xy: 225, 18
+  size: 259, 61
+  orig: 259, 61
+  offset: 0, 0
+  index: -1
+Tay khien
+  rotate: true
+  xy: 478, 217
+  size: 115, 99
+  orig: 115, 99
+  offset: 0, 0
+  index: -1
+Vai phai
+  rotate: false
+  xy: 288, 92
+  size: 140, 139
+  orig: 140, 139
+  offset: 0, 0
+  index: -1
+Vai trai
+  rotate: false
+  xy: 288, 2
+  size: 68, 88
+  orig: 68, 88
+  offset: 0, 0
+  index: -1

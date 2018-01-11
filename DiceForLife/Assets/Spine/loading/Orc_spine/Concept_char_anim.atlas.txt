@@ -1,0 +1,104 @@
+
+Concept_char_anim.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ba vai phai
+  rotate: false
+  xy: 739, 170
+  size: 149, 119
+  orig: 149, 119
+  offset: 0, 0
+  index: -1
+Ban chan phai
+  rotate: true
+  xy: 958, 350
+  size: 70, 58
+  orig: 70, 58
+  offset: 0, 0
+  index: -1
+Ban chan trai
+  rotate: false
+  xy: 280, 69
+  size: 110, 45
+  orig: 110, 45
+  offset: 0, 0
+  index: -1
+Bap chan phai
+  rotate: true
+  xy: 958, 422
+  size: 87, 61
+  orig: 87, 61
+  offset: 0, 0
+  index: -1
+Bap chan trai
+  rotate: false
+  xy: 280, 2
+  size: 87, 65
+  orig: 87, 65
+  offset: 0, 0
+  index: -1
+Bap vai trai
+  rotate: false
+  xy: 594, 109
+  size: 140, 150
+  orig: 140, 150
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: true
+  xy: 890, 145
+  size: 144, 118
+  orig: 144, 118
+  offset: 0, 0
+  index: -1
+Canh tay trai
+  rotate: false
+  xy: 736, 74
+  size: 145, 94
+  orig: 145, 94
+  offset: 0, 0
+  index: -1
+Dau
+  rotate: false
+  xy: 2, 116
+  size: 394, 393
+  orig: 394, 393
+  offset: 0, 0
+  index: -1
+Giap vai
+  rotate: false
+  xy: 398, 103
+  size: 194, 156
+  orig: 194, 156
+  offset: 0, 0
+  index: -1
+Hong
+  rotate: false
+  xy: 2, 10
+  size: 276, 104
+  orig: 276, 104
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: false
+  xy: 883, 117
+  size: 139, 26
+  orig: 139, 26
+  offset: 0, 0
+  index: -1
+Riu
+  rotate: false
+  xy: 739, 291
+  size: 217, 218
+  orig: 217, 218
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 398, 261
+  size: 339, 248
+  orig: 339, 248
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,24 @@
+{
+  "lines": [
+    {
+      "delta": 0.3,
+      "index": "physical_damage_percent",
+      "condition": "health < 0.21 * maxhealth + 0.01 * ( Skill21_level - 1 ) * maxhealth"
+    },
+    {
+      "delta": 0.3,
+      "index": "magical_damage_percent",
+      "condition": "health < 0.21 * maxhealth + 0.01 * ( Skill21_level - 1 ) * maxhealth"
+    }
+  ],
+  "name": "Firm Faith",
+  "type": "passive",
+  "level": 1,
+  "levelrequired": "60/64/68/72/76/80/84/88/92/96",
+  "class": "Paladin",
+  "description": "Increases 30% Weapon damage if current HP  below a certain HP threshold",
+  "value": "HP threshold of maximum HP/21/1/%",
+  "sprite": "Skill_21",
+  "idInit": 21,
+  "prefEffect": "\"\""
+}

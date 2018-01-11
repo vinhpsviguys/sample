@@ -1,0 +1,18 @@
+{
+  "lines": [
+    {
+      "delta": "0.01 + 0.01 * ( Skill24_level - 1 )",
+      "index": "block_chance"
+    }
+  ],
+  "name": "Blockade",
+  "type": "passive",
+  "level": 1,
+  "levelrequired": "0/4/8/12/16/20/24/28/32/36",
+  "class": "Paladin",
+  "description": "Enhances your Block chance by learning how to effectively handle an one-handed sword and the shield in your respective hands",
+  "value": "Blocking chance increase/1/1/%",
+  "sprite": "Skill_24",
+  "idInit": 24,
+  "prefEffect": "\"\""
+}

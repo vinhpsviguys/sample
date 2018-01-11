@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": -0.15,
+      "index": "magical_damage_percent",
+      "enemy": "true"
+    },
+    {
+      "delta": -0.15,
+      "index": "physical_damage_percent",
+      "enemy": "true"
+    }
+  ],
+  "name": "fear",
+  "type": "abnormalstatus",
+  "duration": "2",
+   "idInit":18,
+  "sprite": "Buff_18"
+}

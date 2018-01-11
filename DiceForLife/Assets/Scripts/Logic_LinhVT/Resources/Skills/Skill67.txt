@@ -1,0 +1,21 @@
+{
+  "lines": [
+    {
+      "delta": "0.44 + 0.04 * ( Skill67_level - 1 )",
+      "index": "glamour_chance"
+    }
+  ],
+  "name": "Chaotic energy",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "12/14/16/24/34/46/60/76/94/114",
+  "class": "Wizard",
+  "cooldown": 4,
+  "duration": 1,
+  "aps": 5,
+  "description": "Invades the body of enemy with chaotic energy passed on from the past. All enemy HP recovered the moment instead of adding, reducing HP",
+  "value": "Glamour chance increase/44/4/%",
+  "sprite": "Skill_67",
+  "idInit": 67,
+  "prefEffect": "MagicBuffBlue"
+}

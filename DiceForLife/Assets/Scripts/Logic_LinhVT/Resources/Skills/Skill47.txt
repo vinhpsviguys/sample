@@ -1,0 +1,22 @@
+{
+  "lines": [
+    {
+      "delta": "0.002 * e_maxhealth + 0.002 * ( Skill47_level - 1 ) * e_maxhealth",
+      "index": "health_active",
+      "condition": "when_hit"
+    }
+  ],
+  "name": "Life recovery",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "12/14/16/24/34/46/60/76/94/114",
+  "class": "Cleric",
+  "cooldown": 3,
+  "duration": 1,
+  "aps": 6,
+  "description": "You bind the lifeforce of enemy. Whenever he takes damage, starting a health recovery for yourself",
+  "value": "Recover Maximum HP whenever enemy taken damage/0.2/0.2/%",
+  "sprite": "Skill_47",
+  "idInit": 47,
+  "prefEffect": "MagicBuffBlue"
+}

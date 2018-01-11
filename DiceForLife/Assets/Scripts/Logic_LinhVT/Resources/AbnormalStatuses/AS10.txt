@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": -0.1,
+      "index": "magical_defense_percent",
+      "enemy": "true"
+    },
+    {
+      "delta": "0.2 * total_damage",
+      "index": "burn_damage",
+      "enemy": "false"
+    }
+  ],
+  "name": "burn",
+  "type": "abnormalstatus",
+  "duration": "5",
+   "idInit":10,
+  "sprite": "Buff_10"
+}

@@ -1,0 +1,92 @@
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.UI;
+
+public class SceneLoader : MonoBehaviour
+{
+    public static SceneLoader _instance;
+    private bool loadScene = false;
+
+    [SerializeField]
+    private Text loadingText;
+    [SerializeField]
+    private Image imgProgess;
+    [SerializeField]
+    private GameObject loadingPanel;
+    [SerializeField]
+    private WaitingPanelScript _waitingPanel;
+    private float loadingProgess = 0;
+
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            WaitingPanelScript._instance = _waitingPanel;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else DestroyImmediate(this.gameObject);
+    }
+
+    void Update()
+    {
+        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+    }
+
+<<<<<<< HEAD
+    public void LoadScene(int idScene)
+    {
+        StartCoroutine(LoadNewScene(idScene));
+    }
+
+=======
+>>>>>>> origin/master
+    public IEnumerator LoadNewScene(int idSene)
+    {
+        loadingPanel.SetActive(true);
+        loadingProgess = 0;
+        imgProgess.fillAmount = 0;
+
+        AsyncOperation async = Application.LoadLevelAsync(idSene);
+
+        while (async.progress < 0.9f)
+        {
+            loadingProgess = async.progress;
+            imgProgess.fillAmount = loadingProgess;
+            yield return null;
+        }
+        yield return new WaitForEndOfFrame();
+        loadingPanel.SetActive(false);
+    }
+
+    public IEnumerator LoadDataProgress(WWW www)
+    {
+        loadingPanel.SetActive(true);
+        loadingProgess = 0;
+        imgProgess.fillAmount = 0;
+        while (www.progress < 0.9f)
+        {
+            loadingProgess = www.progress;
+            imgProgess.fillAmount = loadingProgess;
+            yield return null;
+        }
+        yield return new WaitForEndOfFrame();
+        loadingPanel.SetActive(false);
+
+    }
+    public IEnumerator LoadDataProgress(UnityWebRequest www)
+    {
+        loadingPanel.SetActive(true);
+        loadingProgess = 0;
+        imgProgess.fillAmount = 0;
+        while (!www.isDone)
+        {
+            loadingProgess = www.downloadProgress;
+            imgProgess.fillAmount = loadingProgess;
+            yield return null;
+        }
+        yield return new WaitForEndOfFrame();
+        loadingPanel.SetActive(false);
+    }
+}

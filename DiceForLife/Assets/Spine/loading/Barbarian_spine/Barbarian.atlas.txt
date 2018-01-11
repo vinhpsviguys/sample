@@ -1,0 +1,132 @@
+
+Barbarian.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ban chan phai
+  rotate: true
+  xy: 1870, 371
+  size: 40, 48
+  orig: 40, 48
+  offset: 0, 0
+  index: -1
+Ban chan trai
+  rotate: false
+  xy: 301, 61
+  size: 65, 45
+  orig: 65, 45
+  offset: 0, 0
+  index: -1
+Ban tay trai
+  rotate: false
+  xy: 209, 39
+  size: 90, 67
+  orig: 90, 67
+  offset: 0, 0
+  index: -1
+Bap chan phai
+  rotate: true
+  xy: 1733, 370
+  size: 126, 135
+  orig: 126, 135
+  offset: 0, 0
+  index: -1
+Bap chan trai
+  rotate: false
+  xy: 1438, 356
+  size: 141, 140
+  orig: 141, 140
+  offset: 0, 0
+  index: -1
+Bap tay trai
+  rotate: true
+  xy: 936, 124
+  size: 67, 104
+  orig: 67, 104
+  offset: 0, 0
+  index: -1
+Bap vai phai
+  rotate: false
+  xy: 1581, 365
+  size: 150, 131
+  orig: 150, 131
+  offset: 0, 0
+  index: -1
+Cang chan phai
+  rotate: false
+  xy: 1298, 220
+  size: 61, 78
+  orig: 61, 78
+  offset: 0, 0
+  index: -1
+Cang chan trai
+  rotate: false
+  xy: 1870, 413
+  size: 74, 83
+  orig: 74, 83
+  offset: 0, 0
+  index: -1
+Canh tay phai
+  rotate: false
+  xy: 1166, 193
+  size: 130, 105
+  orig: 130, 105
+  offset: 0, 0
+  index: -1
+Co tay trai
+  rotate: false
+  xy: 1042, 131
+  size: 71, 60
+  orig: 71, 60
+  offset: 0, 0
+  index: -1
+Dai nguc
+  rotate: false
+  xy: 1166, 300
+  size: 270, 196
+  orig: 270, 196
+  offset: 0, 0
+  index: -1
+Dau
+  rotate: false
+  xy: 936, 193
+  size: 228, 303
+  orig: 228, 303
+  offset: 0, 0
+  index: -1
+Kho
+  rotate: false
+  xy: 2, 17
+  size: 205, 89
+  orig: 205, 89
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: false
+  xy: 2, 2
+  size: 113, 13
+  orig: 113, 13
+  offset: 0, 0
+  index: -1
+Ria
+  rotate: false
+  xy: 1946, 456
+  size: 39, 40
+  orig: 39, 40
+  offset: 0, 0
+  index: -1
+Riu
+  rotate: false
+  xy: 2, 108
+  size: 932, 388
+  orig: 932, 388
+  offset: 0, 0
+  index: -1
+ria2
+  rotate: false
+  xy: 1438, 311
+  size: 74, 43
+  orig: 74, 43
+  offset: 0, 0
+  index: -1

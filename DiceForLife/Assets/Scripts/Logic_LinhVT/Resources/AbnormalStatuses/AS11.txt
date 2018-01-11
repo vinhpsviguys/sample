@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "delta": -0.15,
+      "index": "physical_damage_percent",
+      "enemy": "true"
+    },
+    {
+      "delta": -0.3,
+      "index": "block_chance",
+      "enemy": "true"
+    }
+  ],
+  "name": "shock",
+  "type": "abnormalstatus",
+  "duration": "5",
+   "idInit":11,
+  "sprite": "Buff_11"
+}

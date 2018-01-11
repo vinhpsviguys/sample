@@ -1,0 +1,38 @@
+{
+  "level": 2,
+  "map": 2,
+  "hp": 330,
+  "phy_dmg_min": 56.1,
+  "phy_dmg_max": 61.7,
+  "mag_dmg_min": 58.9,
+  "mag_dmg_max": 64.7,
+  "crit_chance": 0,
+  "multicast_chance": 0.05,
+  "phy_rein_min": 0.055,
+  "phy_rein_max": 0.0605,
+  "mag_rein_min": 0.0578,
+  "mag_rein_max": 0.0635,
+  "atk_rate_min": 31.4,
+  "atk_rate_max": 37.6,
+  "phy_def_min": 28.3,
+  "phy_def_max": 31.1,
+  "mag_def_min": 29.7,
+  "mag_def_max": 32.7,
+  "phy_red_min": 0.0074,
+  "phy_red_max": 0.0081,
+  "mag_red_min": 0.0077,
+  "mag_red_max": 0.0085,
+  "parry_rate_min": 31.4,
+  "parry_rate_max": 37.6,
+  "block": 0,
+  "gold": 66,
+  "exp": 23,
+  "sp": 2,
+  "skills": [
+    {
+      "idskill": 240,
+      "level": 1
+    }
+    ],
+  "type": "normal"
+}

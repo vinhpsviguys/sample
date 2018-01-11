@@ -1,0 +1,27 @@
+{
+  "lines": [
+    {
+      "delta": "0.32 + 0.02 * ( Skill5_level - 1 )",
+      "index": "bleed_chance"
+    },
+    {
+      "delta": "0.22 * total_damage + 0.02 * ( Skill5_level - 1 ) * total_damage",
+      "index": "health_buff",
+      "duration": 1
+    }
+  ],
+  "name": "Vampire kiss",
+  "type": "buff",
+  "level": 1,
+  "levelrequired": "16/18/22/30/40/52/66/82/100/120",
+  "class": "Assassin",
+  "cooldown": 4,
+  "duration": 1,
+  "aps": 8,
+  "value": "Bleed chance increase/32/2/%;Gain HP by percent Total damage done/22/2/%",
+  "description": "Assassin's vital needs are met by taking a part of enemy's power. Immediately after damaging enemy, health recovery by a certain amount of health that is equal to a portion of the total damage inflicted",
+  "sprite": "Skill_5",
+  "idInit": 5,
+  "isMove": false,
+  "prefEffect": "MagicBuffBlue"
+}
