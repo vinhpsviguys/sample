@@ -1,8 +1,0 @@
-{
-  "name": "blind",
-  "type": "abnormalstatus",
-  "duration": "1",
-  "condition": "when_ranger",
-   "idInit":15,
-  "sprite": "Buff_15"
-}

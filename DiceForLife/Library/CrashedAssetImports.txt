@@ -1,3 +1,0 @@
-Assets/Examples/Spine/Gauge/Gauge_SkeletonData.asset
-Assets/Examples/Spine/Raptor/raptor_SkeletonData.asset
-Assets/Examples/Spine/Strechyman/stretchyman_SkeletonData.asset

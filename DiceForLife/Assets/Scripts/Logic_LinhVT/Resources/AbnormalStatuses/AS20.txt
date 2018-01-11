@@ -1,7 +1,0 @@
-{
-  "name": "sleep",
-  "type": "abnormalstatus",
-  "duration": "2",
-   "idInit":20,
-  "sprite": "Buff_20"
-}
