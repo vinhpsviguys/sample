@@ -13,7 +13,7 @@
   "class": "Paladin",
   "cooldown": 4,
   "duration": 1,
-  "aps": 5,
+  "aps": 8,
   "description": "By learning how to use sword effectively, with each successful hit, you reduce enemy physical defense. This reduction will be reset each round",
   "value": "Enemy physical defense decrease each successful hit/12/2/%",
   "sprite": "Skill_25",

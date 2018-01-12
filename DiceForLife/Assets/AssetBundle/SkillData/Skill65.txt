@@ -1,11 +1,11 @@
 {
   "lines": [
     {
-      "delta": "0.11 * successful_hits + 0.01 * ( Skill65_level - 1 ) * successful_hits",
+      "delta": "0.02 * successful_hits + 0.02 * ( Skill65_level - 1 ) * successful_hits",
       "index": "magical_damage_percent"
     },
     {
-      "delta": "0.11 * successful_hits + 0.01 * ( Skill65_level - 1 ) * successful_hits",
+      "delta": "0.02 * successful_hits + 0.02 * ( Skill65_level - 1 ) * successful_hits",
       "index": "dodge_chance"
     }
   ],
@@ -18,7 +18,7 @@
   "duration": 1,
   "aps": 8,
   "description": "You perform a devastating energy that inflicts heavy damage on enemy. With each successful hit, you grow in power",
-  "value": "Magic damage increase each successful hit/11/1/%;Dodge chance increase each successful hit/11/1/%",
+  "value": "Magic damage increase each successful hit/2/2/%;Dodge chance increase each successful hit/2/2/%",
   "sprite": "Skill_65",
   "idInit": 65,
   "prefEffect": "MagicBuffBlue"

@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using SimpleJSON;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class ItemInfoStorage : MonoBehaviour, IPointerDownHandler
     [SerializeField]
     private Text _itemNameText;
     [SerializeField]
-    private Text _txtQuantity,_txtLevel;
+    private Text _txtQuantity, _txtLevel;
     [SerializeField]
     private Text _desItemText;
     [SerializeField]
@@ -54,7 +55,7 @@ public class ItemInfoStorage : MonoBehaviour, IPointerDownHandler
         //Debug.Log(_desItemText.text);
         _itemNameText.text = _itemCached.getValue("name").ToString();
         _maxQuantity = int.Parse(_itemCached.getValue("quantity").ToString());
-        _pricePerOne = int.Parse(_itemCached.getValue("price").ToString());
+        _pricePerOne = int.Parse(_itemCached.getValue("sellprice").ToString());
         _numberSell = _maxQuantity;
 
         _priceItem.text = (_pricePerOne * _numberSell).ToString();
@@ -146,13 +147,15 @@ public class ItemInfoStorage : MonoBehaviour, IPointerDownHandler
                    }
                    else
                    {
-                       Debug.Log(result);
-                       if (_numberSell == _maxQuantity)
+                       var N = JSON.Parse(result);
+                       if (N["quantity"].AsInt == 0)
                        {
                            SplitDataFromServe._listGemInBag.Remove(_itemCached);
                        }
                        else _itemCached.setValue("quantity", _maxQuantity - _numberSell);
-                       CharacterInfo._instance._baseProperties.Gold += _numberSell * _pricePerOne;
+
+                       CharacterInfo._instance._baseProperties.Gold += N["goldplus"].AsInt;
+
                        this.PostEvent(EventID.OnPropertiesChange);
 
                        _myStorage.DisplayGemInBag(true);

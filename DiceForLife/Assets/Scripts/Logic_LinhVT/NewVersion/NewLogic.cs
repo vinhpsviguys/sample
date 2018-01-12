@@ -20,6 +20,7 @@ namespace CoreLib
 		bool turnning = false;
         int secondAttack;
         private bool monitoring = true;
+        PcgRandom random = new PcgRandom();
 
         public NewLogic(CharacterPlayer _attacker, CharacterPlayer _defender)
         {
@@ -352,9 +353,9 @@ namespace CoreLib
 
         private MyDictionary<string, string> checkAbnormalStatusHappen(ArrayList saveEffects) {
             MyDictionary<string, string> happenedStatus = new MyDictionary<string, string>();
-            System.Random random = new System.Random();
+
             float chance = defStatus.calculateIndex(attStatus, Indexes.decrease_all_abnormal_1round__chance_na);
-            float p = (float)random.NextDouble();
+            float p = (float)random.GetDouble();
             bool dec_1_round = p < chance ? true : false;
             foreach (string status in attStatus.character.abDic.Keys)
             {// luu y danh gia
@@ -424,7 +425,7 @@ namespace CoreLib
             Debug.Log("oneAttack "+idSkill);
             State state = null;
 
-            System.Random random = new System.Random();
+
             MyDictionary<string, string> occuredAbs = checkAbnormalStatusHappen(savedEffects);
             // stacks
             float stacks = (float)attStatus.getMidIndex(Indexes.stacks_na);
@@ -445,9 +446,9 @@ namespace CoreLib
             bool op_glamour = defStatus.op_effects.ContainsKey(NewEffect.Glamour);
             bool op_skill78 = defStatus.op_effects.ContainsKey("Magic Tricks");
 
-            bool isDodge = random.NextDouble() < Math.Max((float)defStatus.calculateIndex(attStatus, Indexes.dOdGe_cha_na) - (float)attStatus.calculateIndex(defStatus, Indexes.accuracy_na), 0)
+            bool isDodge = random.GetDouble() < Math.Max((float)defStatus.calculateIndex(attStatus, Indexes.dOdGe_cha_na) - (float)attStatus.calculateIndex(defStatus, Indexes.accuracy_na), 0)
                 && attStatus.character.characteristic.Damage == Characteristic.DamageType.Magic;
-            bool isBlock = (random.NextDouble() < Math.Max((float)defStatus.calculateIndex(attStatus, Indexes.block_cha_na) - (float)attStatus.calculateIndex(defStatus, Indexes.brshie_na), 0))
+            bool isBlock = (random.GetDouble() < Math.Max((float)defStatus.calculateIndex(attStatus, Indexes.block_cha_na) - (float)attStatus.calculateIndex(defStatus, Indexes.brshie_na), 0))
                 && attStatus.character.characteristic.Damage != Characteristic.DamageType.Magic;
             isDodge = op_sleep ? false : isDodge;
             isBlock = op_sleep ? false : isBlock;
@@ -819,9 +820,9 @@ namespace CoreLib
             // 1 lan danh thuong
             if (isEndOfCombat()) return;
 
-            bool isReturn = random.NextDouble() < (float)defStatus.calculateIndexAndSave(attStatus, Indexes.return_chance);// calculate Index all return damage index and save
-            bool isReturnPhysical = random.NextDouble() < (float)defStatus.calculateIndexAndSave(attStatus,Indexes.physical_return_chance);
-            bool isReturnMagical = random.NextDouble() < (float)defStatus.calculateIndexAndSave(attStatus,Indexes.magical_return_chance);
+            bool isReturn = random.GetDouble() < (float)defStatus.calculateIndexAndSave(attStatus, Indexes.return_chance);// calculate Index all return damage index and save
+            bool isReturnPhysical = random.GetDouble() < (float)defStatus.calculateIndexAndSave(attStatus,Indexes.physical_return_chance);
+            bool isReturnMagical = random.GetDouble() < (float)defStatus.calculateIndexAndSave(attStatus,Indexes.magical_return_chance);
             float returnDamage = 0;
             if (isReturn)
             {
@@ -873,7 +874,7 @@ namespace CoreLib
             attStatus.setIndex(attStatus.midIndexes, Indexes.total_damage_na, 0f);
             attStatus.setIndex(attStatus.midIndexes, Indexes.pure_da_na, 0f);
             // total_damage reset
-            System.Random random = new System.Random();
+
             ArrayList states = new ArrayList();
             int successive_attacks = (int)calculateIndex(attStatus,defStatus, Indexes.successive_attacks);
             // kiem tra xem co effects lien quan den trong skill nay khong passive + buff
@@ -906,7 +907,7 @@ namespace CoreLib
                 if (isEndOfCombat()) break;
 
 
-                bool isMulticast = random.NextDouble() < (float)attStatus.calculateIndex(defStatus, Indexes.mul_ca_cha_na);
+                bool isMulticast = random.GetDouble() < (float)attStatus.calculateIndex(defStatus, Indexes.mul_ca_cha_na);
                 if (isMulticast && i == successive_attacks - 1)
                 {// them 1 lan danh nua nhung chi co hieu ung Multicast
                     Debug.Log("Multicast");
@@ -1020,8 +1021,8 @@ namespace CoreLib
                     break;
                               
             }
-            System.Random random = new System.Random();
-            float p = (float)random.NextDouble();
+
+            float p = (float)random.GetDouble();
 
             //Debug.Log("chance "+ attStatus.character.abDic[status].getName() + " "+chance+" p = "+p);
 
@@ -1035,6 +1036,8 @@ namespace CoreLib
             NewCharacterStatus vs = getStatusByPlayerID(3 - target.playerID);
             foreach (int idSkill in skills)
             {
+                Debug.Log("adddPassive skill "+idSkill+" vao targetID " +" "+target.playerID);
+
                 NewSkill skill = target.character.newSkillDic.ContainsKey("Skill" + idSkill) ? target.character.newSkillDic["Skill" + idSkill] : null;
                 ArrayList effects = skill.affect(target, vs);
 
@@ -1061,7 +1064,7 @@ namespace CoreLib
         {
 
             Console.WriteLine("++++++++++++++++++++buffBranch{0,3}+++++++++++++++++++", idSkill);
-             System.Random random = new System.Random();
+
 
             ArrayList states = new ArrayList();
             // neu trong so nhung effect cua skill co HP hoac lech thi dung ngay
@@ -1128,10 +1131,11 @@ namespace CoreLib
             defStatus.setHP(hp_Def);
             state.setHP(attStatus, defStatus);
 
-            bool remove_All_Abs = random.NextDouble() < attStatus.calculateIndex(defStatus, Indexes.remove_all_abnormal_chance_na);
+            bool remove_All_Abs = random.GetDouble() < attStatus.calculateIndex(defStatus, Indexes.remove_all_abnormal_chance_na);
             if (remove_All_Abs) {
                 NewEffect effect = new NewEffect(attStatus.playerID, "RemoveAllAbnormal","", -1, 0);
                 effects.Add(effect);
+                effect.playerID = attStatus.playerID;
 
                 // remove all abnormal op cast to me
                 foreach (string status in attStatus.character.abDic.Keys)
@@ -1168,7 +1172,7 @@ namespace CoreLib
 
             states.Clear();
            // Debug.Log("5");
-            System.Random random = new System.Random();
+
             //foreach (String index in attStatus.deltaFormulas.Keys)
             //{
             //    Debug.Log("|" + index + "|" + attStatus.deltaFormulas[index]);

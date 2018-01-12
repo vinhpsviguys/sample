@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "-0.38 + 0.02 * ( Skill38_level - 1 )",
+      "delta": "-0.18 + 0.02 * ( Skill38_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
@@ -23,9 +23,9 @@
   "class": "Paladin",
   "cooldown": 2,
   "duration": 0,
-  "aps": 2,
+  "aps": 5,
   "description": "Swing your sword twice and launch the Paladin power at the enemy",
-  "value": "Physical damge decrease/38/-2/%;Knock-back chance increase/7/2/%;Successive attacks times/2/0/float",
+  "value": "Successive attacks times/2/0/float;Physical damge decrease/18/-2/%;Knock-back chance increase/7/2/%",
   "sprite": "Skill_38",
   "idInit": 38,
   "isMove": true,

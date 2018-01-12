@@ -6,7 +6,7 @@
       "duraion": 1
     },
     {
-      "delta": "0.12 + 0.02 * ( Skill13_level - 1 )",
+      "delta": "0.3 + 0.05 * ( Skill13_level - 1 )",
       "index": "bleed_chance",
       "duration": 1
     },
@@ -23,8 +23,8 @@
   "class": "Assassin",
   "cooldown": 4,
   "duration": 0,
-  "aps": 4,
-  "value": "Physical damage decrease/28/-2/%;Bleed chance increase/12/2/float;Successive attacks times/3/0/float",
+  "aps": 8,
+  "value": "Successive attacks times/3/0/float;Physical damage decrease/28/-2/%;Bleed chance increase/30/5/float",
   "description": "Inflicts a fatal blow to an enemy by focusing your attacks on his weak spots for few times. Those failing to endure the impact of rapid attacks will get bled",
   "sprite": "Skill_13",
   "idInit": 13,

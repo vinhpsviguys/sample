@@ -25,7 +25,7 @@ class LoadingResource : MonoBehaviour
     private bool isNeedUpdateVersion;
     internal string _dataNotify;
 
-    private string[] _myAsset = new string[] { "abnormalstatusdata", "equipments", "gems", "items","monsterdatacaimpaign","monsterprefabcaimpaign", "skilldata", "character", "barbarian", "assassin", "marksman", "orc", "paladin", "sorceress", "wizard", "cleric" };
+    private string[] _myAsset = new string[] { "abnormalstatusdata", "equipments", "gems", "items", "monsterdatacaimpaign", "monsterprefabcaimpaign", "skilldata", "character", "barbarian", "assassin", "marksman", "orc", "paladin", "sorceress", "wizard", "cleric" };
 
 
     void Awake()
@@ -56,7 +56,7 @@ class LoadingResource : MonoBehaviour
             }
             else
             {
-                yield return StartCoroutine(InitData());
+                yield return StartCoroutine(LoadInitData());
                 if (isHaveError)
                 {
                     ShowPopupError(2);
@@ -135,23 +135,30 @@ class LoadingResource : MonoBehaviour
 
         }));
     }
-    IEnumerator InitData()
+    IEnumerator LoadInitData()
     {
-        _txtState.text = "Checking updates...";
-        string _curVersion = PlayerPrefabsController.GetStringData("CURRENT_VERSION_UPDATE");
-
-        yield return StartCoroutine(ServerAdapter.InitData(result =>
+        _txtState.text = "Loading game init data...";
+        if (!PlayerPrefs.HasKey(Constant.AllINIT))
         {
-            if (result.StartsWith("Error"))
-            {
-                isHaveError = true;
-                dataError = result;
-            }
-            else
-            {
-                SplitDataFromServe.ReadInitData(result);
-            }
-        }));
+            yield return StartCoroutine(ServerAdapter.LoadInitData(result =>
+             {
+                 if (result.StartsWith("Error"))
+                 {
+                     Debug.LogError("Load Init data failed!");
+                 }
+                 else
+                 {
+                     PlayerPrefs.SetString(Constant.AllINIT, result);
+                     SplitDataFromServe.ReadInitData(result);
+
+                 }
+             }));
+        }
+        else
+        {
+            SplitDataFromServe.ReadInitData((PlayerPrefs.GetString(Constant.AllINIT)));
+
+        }
         yield return null;
     }
 
@@ -160,10 +167,12 @@ class LoadingResource : MonoBehaviour
         if (!LoadingResourceController._instance.isLoaded)
         {
             countLoadedmyAsset = 0;
-            Debug.Log("load game resource");
+            //Debug.Log("load game resource");
             _txtState.text = "Loading game resources...";
             yield return new WaitForSeconds(1);
             int totalAsset = _myAsset.Length;
+
+            StartCoroutine(ControllerItemsInGame._instance.GetIconRareItem());
             for (int i = 0; i < totalAsset; i++)
             {
                 StartCoroutine(LoadingResourceController._instance.DownloadAndCache(_myAsset[i], result =>
@@ -218,36 +227,7 @@ class LoadingResource : MonoBehaviour
             }
         }
         Adapter.abs = SplitDataFromServe.absInit;
-        LoadGameInitData();
-    }
-    private void LoadGameInitData()
-    {
-        _txtState.text = "Loading game init data...";
-        if (!PlayerPrefs.HasKey(Constant.AllINIT))
-        {
-            StartCoroutine(ServerAdapter.LoadInitData(result =>
-            {
-                if (result.StartsWith("Error"))
-                {
-                    Debug.LogError("Load Init data failed!");
-                }
-                else
-                {
-                    PlayerPrefs.SetString(Constant.AllINIT, result);
-                    SplitDataFromServe.ReadItemInitData(result);
-                    LoadEquippedData();
-                }
-            }));
-        }
-        else
-        {
-            SplitDataFromServe.ReadItemInitData((PlayerPrefs.GetString(Constant.AllINIT)));
-            LoadEquippedData();
-#if UNITY_EDITOR
-            Debug.Log(System.Text.ASCIIEncoding.Unicode.GetByteCount(PlayerPrefs.GetString(Constant.AllINIT)));
-            Debug.Log("All init file exist!");
-#endif
-        }
+        LoadEquippedData();
     }
     private void LoadEquippedData()
     {
@@ -408,7 +388,6 @@ class LoadingResource : MonoBehaviour
             }
         }));
 
-        StartCoroutine(ControllerItemsInGame._instance.GetIconRareItem());
 
         yield return StartCoroutine(ServerAdapter.LoadDetailHero(_idcode, _idhero, result =>
         {

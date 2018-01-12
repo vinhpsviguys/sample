@@ -329,9 +329,9 @@ public class CharacterPlayer : MonoBehaviour {
     public static void LoadCharacterMonster(CharacterPlayer monster, JSONNode dataMonster)
     {
         monster._baseProperties = new CharacterProperties(-1, "",-1,"", dataMonster["level"]
-       , dataMonster["exp"].AsDouble,0,0,0, dataMonster["sp"].AsDouble, 0, 0, dataMonster["gold"], 0, dataMonster["type"].AsInt, dataMonster["hp"].AsInt,
-       dataMonster["str"].AsInt, dataMonster["int"].AsInt, dataMonster["vit"].AsInt,0, 0, 0,
-       0, 0,0, dataMonster["typemonster"].Value);
+       , dataMonster["exp"].AsDouble,0,0,0, dataMonster["sp"].AsDouble, 0, 0, dataMonster["gold"],0,0, dataMonster["type"].AsInt, dataMonster["hp"].AsInt,
+       dataMonster["str"].AsInt, dataMonster["int"].AsInt, dataMonster["vit"].AsInt,0,0,0,
+       0,0, dataMonster["typemonster"].Value);
         EquipmentItem _weaponItemMonster = new EquipmentItem(-1, -1, TypeEquipmentCharacter.Weapon, ClassCharacterItem.None, -1, -1, "", -1, -1, -1, -1);
         _weaponItemMonster.setValue("1", dataMonster["phy_dmg_min"].AsFloat);
         _weaponItemMonster.setValue("2", dataMonster["phy_dmg_max"].AsFloat);

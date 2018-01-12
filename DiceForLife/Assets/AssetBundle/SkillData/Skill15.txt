@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.02 + 0.02 * ( Skill15_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill15_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill15_level - 1 )",
+      "delta": "0.04 + 0.04 * ( Skill15_level - 1 )",
       "index": "poisoning_chance",
       "duration": 1
     }
@@ -18,8 +18,8 @@
   "class": "Assassin",
   "cooldown": 2,
   "duration": 0,
-  "aps": 2,
-  "value": "Physical damage increase/2/2/%;Poisoned chance increase/22/2/%",
+  "aps": 6,
+  "value": "Physical damage increase/5/5/%;Poisoned chance increase/4/4/%",
   "description": "Musters up energy from your HP and internal strength and transfers it into a dagger to stab weak spots of an enemy with force. The enemy who fail to endure the impact will get poisoned",
   "sprite": "Skill_15",
   "idInit": 15,

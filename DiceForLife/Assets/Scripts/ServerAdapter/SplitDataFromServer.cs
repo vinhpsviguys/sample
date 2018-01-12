@@ -216,7 +216,7 @@ public class SplitDataFromServe
             item.setValue("26", N["equipped"][i]["maxphyabsorb"].AsFloat);
             item.setValue("27", N["equipped"][i]["minmagicabsorb"].AsFloat);
             item.setValue("28", N["equipped"][i]["maxmagicabsorb"].AsFloat);
-
+            item.priceItem = N["equipped"][i]["sellprice"].AsInt;
             string _valueProperty = N["equipped"][i]["listidproperty"].Value;
             item.setValue("listidproperty", _valueProperty);
 
@@ -300,8 +300,7 @@ public class SplitDataFromServe
             int templevelRequired = 1;
             int templevelUpgrade = int.Parse(N["buff"][i]["level"].Value.ToString());
             int tempidSet = 0;
-            //TypeEquipmentCharacter tempType = TypeEquipmentCharacter.Buff;
-            int priceItem = 0;
+            int priceItem = N["buff"][i]["sellprice"].AsInt;
             int rare = 0;
             EquipmentItem item = new EquipmentItem(tempIdItem, tempIdInit, TypeEquipmentCharacter.Buff, ClassCharacterItem.None, 0, tempidSet, tempnameItem, templevelRequired, templevelUpgrade, priceItem, rare);
 
@@ -380,23 +379,23 @@ public class SplitDataFromServe
         return item;
     }
 
-    public static void ReadItemInitData(string data)
-    {
-        var N = CoreLib.JSON.Parse(data);
+    //public static void ReadItemInitData(string data)
+    //{
+    //    var N = CoreLib.JSON.Parse(data);
 
-        var _dataItemInit = N["item"];
-        int numberItemInit = _dataItemInit.Count;
-        for (int i = 0; i < numberItemInit; i++)
-        {
-            _InitItems.Add(new Item(_dataItemInit[i]));
-        }
-        var _dataGemInit = N["gem"];
-        int numberGemInit = _dataGemInit.Count;
-        for (int i = 0; i < numberGemInit; i++)
-        {
-            _InitGems.Add(new Item(_dataGemInit[i]));
-        }
-    }
+    //    var _dataItemInit = N["item"];
+    //    int numberItemInit = _dataItemInit.Count;
+    //    for (int i = 0; i < numberItemInit; i++)
+    //    {
+    //        _InitItems.Add(new Item(_dataItemInit[i]));
+    //    }
+    //    var _dataGemInit = N["gem"];
+    //    int numberGemInit = _dataGemInit.Count;
+    //    for (int i = 0; i < numberGemInit; i++)
+    //    {
+    //        _InitGems.Add(new Item(_dataGemInit[i]));
+    //    }
+    //}
     public static void ReadShopInitData(string data)
     {
         var N = CoreLib.JSON.Parse(data);
@@ -531,6 +530,21 @@ public class SplitDataFromServe
             _heroInits[i] = JsonUtility.FromJson<HeroInit>(N["hero"][i].ToString());
         }
         _eventInGame = new EventInGame(N["event"]["event_lucky"].Value);
+
+
+        var N1 = CoreLib.JSON.Parse(data);
+        var _dataItemInit = N1["item"];
+        int numberItemInit = _dataItemInit.Count;
+        for (int i = 0; i < numberItemInit; i++)
+        {
+            _InitItems.Add(new Item(_dataItemInit[i]));
+        }
+        var _dataGemInit = N1["gem"];
+        int numberGemInit = _dataGemInit.Count;
+        for (int i = 0; i < numberGemInit; i++)
+        {
+            _InitGems.Add(new Item(_dataGemInit[i]));
+        }
     }
 
     public static string GetNameClass(int id)

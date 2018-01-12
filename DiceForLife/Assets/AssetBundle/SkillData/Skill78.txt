@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "-0.09 + 0.01 * ( Skill78_level - 1 )",
+      "delta": "0.02 + 0.02 * ( Skill78_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
@@ -18,9 +18,9 @@
   "class": "Wizard",
   "cooldown": 1,
   "duration": 1,
-  "aps": 1,
+  "aps": 4,
   "description": "Causes damage to enemy and decreases the amount of healing enemy receives by 100% for 1 round",
-  "value": "Magical damage decrease/9/-1/%;Prevents regeneration or healing 1 round/1/0/float",
+  "value": "Magical damage increase/2/2/%;Prevents regeneration or healing 1 round/1/0/float",
   "sprite": "Skill_78",
   "idInit": 78,
   "prefEffect": "Wizard_Active3",

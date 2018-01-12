@@ -258,7 +258,7 @@ public class UpgradeCombine : MonoBehaviour
             }
             if (!isExistRunestone)
             {
-                SplitDataFromServe._listGemInBag.Add(new Item(N["idhg"].AsInt, _idigRunestone, _numberCombine, _levelMainRunestone));
+                SplitDataFromServe._listGemInBag.Add(new Item(N["idhg"].AsInt, _idigRunestone, _numberCombine, _levelMainRunestone, N["sellprice"].AsInt, N["uplevel"].AsInt));
             }
 
             _myBag.LoadRunestones(-1);//reaload bag

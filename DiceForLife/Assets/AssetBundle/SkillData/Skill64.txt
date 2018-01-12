@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.01 * total_damage * Skill64_level",
+      "delta": "0.02 * total_damage * Skill64_level",
       "index": "health_passive"
     }
   ],
@@ -11,7 +11,7 @@
   "levelrequired": "0/4/8/12/16/20/24/28/32/36",
   "class": "Wizard",
   "description": "Through training of assimilation in the dark, your recovery ability increases by learning a special skill that allows you gain life based on the amounts of damage you have done on enemies",
-  "value": "Recover HP by percent total damage done/1/1/%",
+  "value": "Recover HP by percent total damage done/2/2/%",
   "sprite": "Skill_64",
   "idInit": 64,
   "prefEffect": "\"\""

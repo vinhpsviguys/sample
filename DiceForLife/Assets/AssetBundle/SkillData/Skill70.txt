@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.42 + 0.02 * ( Skill70_level - 1 )",
+      "delta": "0.44 + 0.04 * ( Skill70_level - 1 )",
       "index": "decrease_all_abnormal_1round__chance"
     },
     {
@@ -17,10 +17,10 @@
   "class": "Wizard",
   "cooldown": 1,
   "duration": 1,
-  "aps": 3,
+  "aps": 5,
   "condition": "health > 0.05 * maxhealth",
   "description": "Increases your power with smaller consumption of HP. This skill increases defensive power against abnormal status",
-  "value": "Chance to decrease all of abnormal status 1 round/42/2/%;Lost maximum HP/5/0/%",
+  "value": "Chance to decrease all of abnormal status 1 round/44/4/%;Lost maximum HP/5/0/%",
   "sprite": "Skill_70",
   "idInit": 70,
   "prefEffect": "MagicBuffBlue"

@@ -12,7 +12,7 @@
       "duration": 1
     },
     {
-      "delta": "-0.2 * maxhealth - 0.02 * ( Skill74_level - 1 ) * maxhealth",
+      "delta": "-0.005 * maxhealth - 0.005 * ( Skill74_level - 1 ) * maxhealth",
       "index": "health_active",
       "duration": 1
     }
@@ -24,10 +24,10 @@
   "class": "Wizard",
   "cooldown": 2,
   "duration": 0,
-  "aps": 4,
-  "condition": "health > 0.2 * maxhealth",
+  "aps": 8,
+  "condition": "health > 0.005 * maxhealth + 0.005 * ( Skill74_level - 1 ) * maxhealth",
   "description": "Using some of your vitality, making amplified energy by fastly circulating within the body. Maximum HP decreases for a certain period of time, but magical damage increases according to your loss",
-  "value": "Magical damage increase/10/10/%;Enemy Magical defense decrease/5/5/%;Your Maximum HP lost/2/2/%",
+  "value": "Magical damage increase/10/10/%;Enemy Magical defense decrease/5/5/%;Your Maximum HP lost/0.5/0.5/%",
   "sprite": "Skill_74",
   "idInit": 74,
   "prefEffect": "Wizard_Active7",

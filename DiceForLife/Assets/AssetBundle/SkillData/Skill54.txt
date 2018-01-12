@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.02 + 0.02 * ( Skill54_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill54_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
@@ -18,10 +18,10 @@
   "levelrequired": "13/15/19/27/37/49/63/79/97/117",
   "class": "Cleric",
   "cooldown": 3,
-  "duration": 3,
-  "aps": 4,
+  "duration": 0,
+  "aps": 6,
   "description": "Directly attacks a powerful attack and simultaneously takes a significant amount of enemy's HP",
-  "value": "Magical damage increase/2/2/%;Enemy remaining percent of HP decrease/1/1/%",
+  "value": "Magical damage increase/3/3/%;Enemy remaining percent of HP decrease/1/1/%",
   "sprite": "Skill_54",
   "idInit": 54,
   "prefEffect": "BloodBleed"

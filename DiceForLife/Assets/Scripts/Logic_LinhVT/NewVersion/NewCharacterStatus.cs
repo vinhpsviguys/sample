@@ -33,6 +33,7 @@ namespace CoreLib
 
         public int playerID { get; set; }
         public ConditionManager conManager;
+        PcgRandom random = new PcgRandom();
 
 
 
@@ -649,9 +650,9 @@ namespace CoreLib
             //*(100 % - % ENarmor) 
             //* (100 % + ∑% Avatar) 
             //*(100 % + % Sách)
-            System.Random random = new System.Random();
+
             float Critical_Chance = (float)calculateIndexAndSave(vs, Indexes.cri_cha_na);
-            float CM = random.NextDouble() < Critical_Chance ? 1 + (float)calculateIndexAndSave(vs, Indexes.crid_da_na) : 1;
+            float CM = random.GetDouble() < Critical_Chance ? 1 + (float)calculateIndexAndSave(vs, Indexes.crid_da_na) : 1;
             if (CM > 1)
             {
                 enableCondition(ConditionManager.Critical);
@@ -738,7 +739,7 @@ namespace CoreLib
             midIndexes.Add(Indexes.total_magical_damage_na, Magical_Damage);
             Magical_Damage = calculateIndexAndSave(vs, Indexes.total_magical_damage_na);
             float double_magical_damage_chance = calculateIndexAndSave(vs, Indexes.double_magical_damage_chance_na);
-            bool double_magical_damage = random.NextDouble() < double_magical_damage_chance;
+            bool double_magical_damage = random.GetDouble() < double_magical_damage_chance;
             Magical_Damage = double_magical_damage ? Magical_Damage * 2 : Magical_Damage;
 
             Console.WriteLine(" Total Magical Damage " + Magical_Damage + " double damage " + double_magical_damage);
@@ -1044,9 +1045,9 @@ namespace CoreLib
             // tinh lai theo cong thuc cac chi so thuc su thay doi
             foreach (String index in deltaFormulas.Keys)
             {
-                //Console.WriteLine("|" + index + "|"+ deltaFormulas[index]);
+                Debug.Log("|" + index + "|"+ deltaFormulas[index]);
                 String formula = index + (deltaFormulas[index] != "" ? " + " + deltaFormulas[index] : ""); // luong truoc deltaFormulas la rong
-                //Console.WriteLine(formula);
+                Debug.Log(formula);
                 float result = calcuateExpression(formula, vs);
                 curIndexes.Add(index, result);
             }

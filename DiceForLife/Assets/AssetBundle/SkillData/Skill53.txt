@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "-0.38 + 0.02 * ( Skill53_level - 1 )",
+      "delta": "-0.23 + 0.02 * ( Skill53_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.12 + 0.02 * ( Skill53_level - 1 )",
+      "delta": "0.2 + 0.05 * ( Skill53_level - 1 )",
       "index": "burn_chance",
       "duration": 1
     },
@@ -23,9 +23,9 @@
   "class": "Cleric",
   "cooldown": 4,
   "duration": 0,
-  "aps": 4,
+  "aps": 6,
   "description": "Emits in a row, Helios breath made by burning the energy inside the body with flame energy. Enemy exposed to the breath will be damaged greatly. Those who cannot tolerate the heat will get burned",
-  "value": "Weapon damage decrease/38/-2/%;Burn chance increase/12/2/%;Successive attacks times/3/0/float",
+  "value": "Successive attacks times/3/0/float;Weapon damage decrease/23/-2/%;Burn chance increase/20/5/%",
   "sprite": "Skill_53",
   "idInit": 53,
   "prefEffect": "Cleric_Active8",

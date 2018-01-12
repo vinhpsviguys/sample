@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.5 * shield_physical_defense + 0.5 * ( Skill29_level - 1 ) * shield_physical_defense",
+      "delta": "0.3 * shield_physical_defense + 0.3 * ( Skill29_level - 1 ) * shield_physical_defense",
       "index": "total_damage"
     }
   ],
@@ -14,7 +14,7 @@
   "duration": 1,
   "aps": 3,
   "description": "When enemy attacks you, your shield has a chance to generate a defensive bubble around you that prevents magical damage. The amount of magical damage this shield can absorb is equal to a certain percentage of the magical defense value of the equipped shield",
-  "value": "Total damage absorb increase/50/50/%",
+  "value": "Total damage absorb increase/30/30/%",
   "sprite": "Skill_29",
   "idInit": 29,
   "isMove": false,

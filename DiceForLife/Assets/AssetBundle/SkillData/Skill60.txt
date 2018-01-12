@@ -13,7 +13,7 @@
   "class": "Cleric",
   "cooldown": 1,
   "duration": 0,
-  "aps": 2,
+  "aps": 4,
   "description": "Summons a shield of light made from the anger at dawn, around yourself at a fixed time. The shield damages enemies and ignores their defense during the time it is summoned",
   "value": "Inflict pure damage multiple times with your level/11/1/float",
   "sprite": "Skill_60",

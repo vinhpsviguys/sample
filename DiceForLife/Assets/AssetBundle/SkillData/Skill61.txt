@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.22 + 0.02 * ( Skill61_level - 1 )",
+      "delta": "0.04 + 0.04 * ( Skill61_level - 1 )",
       "index": "physical_defense_percent",
       "condition": "health < 0.3 * maxhealth"
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill61_level - 1 )",
+      "delta": "0.04 + 0.04 * ( Skill61_level - 1 )",
       "index": "magical_defense_percent",
       "condition": "health < 0.3 * maxhealth"
     }
@@ -17,7 +17,7 @@
   "levelrequired": "60/64/68/72/76/80/84/88/92/96",
   "class": "Wizard",
   "description": "When HP is lower than 30%, physical defense and magical defense increases",
-  "value": "Health threshold of maximum HP/30/0/%;Physical defense increase/22/2/%;Magical defense increase/22/2/%",
+  "value": "Health threshold of maximum HP/30/0/%;Physical defense increase/4/4/%;Magical defense increase/4/4/%",
   "sprite": "Skill_61",
   "idInit": 61,
   "prefEffect": "\"\""

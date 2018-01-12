@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.62 + 0.02 * ( Skill68_level - 1 )",
+      "delta": "0.3 + 0.05 * ( Skill68_level - 1 )",
       "index": "pain_chance"
     }
   ],
@@ -10,11 +10,11 @@
   "level": 1,
   "levelrequired": "10/12/16/24/34/46/60/76/94/114",
   "class": "Wizard",
-  "cooldown": 4,
+  "cooldown": 3,
   "duration": 1,
-  "aps": 4,
+  "aps": 5,
   "description": "Invades the mind of enemy with curse energy made from hatred, resulting in magical defense 40% decrease for a fixed time",
-  "value": "Pain chance increase/62/2/%",
+  "value": "Pain chance increase/30/5/%",
   "sprite": "Skill_68",
   "idInit": 68,
   "prefEffect": "MagicBuffBlue"

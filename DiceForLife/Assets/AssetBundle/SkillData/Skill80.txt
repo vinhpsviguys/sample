@@ -13,7 +13,7 @@
   "class": "Wizard",
   "cooldown": 1,
   "duration": 0,
-  "aps": 1,
+  "aps": 4,
   "description": "Inflicts great damage to enemy by infusing healing power surpassing enemies vitality. This skill disregards the defensive power of enemies",
   "value": "Inflicts pure damage multiple with your level/11/1/float",
   "sprite": "Skill_80",

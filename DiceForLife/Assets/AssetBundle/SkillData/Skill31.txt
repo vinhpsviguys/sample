@@ -1,11 +1,15 @@
 {
   "lines": [
     {
-      "delta": "-1 * shield_physical_defense",
+      "delta": "-0.8 * shield_physical_defense",
       "index": "shield_physical_defense"
     },
     {
-      "delta": "1.25 * shield_physical_defense + 0.25 * ( Skill31_level - 1 ) * shield_physical_defense",
+      "delta": "-0.8 * shield_magical_defense",
+      "index": "shield_magical_defense"
+    },
+    {
+      "delta": "1.75 * shield_physical_defense + 0.25 * ( Skill31_level - 1 ) * shield_physical_defense",
       "index": "physical_damage"
     }
   ],
@@ -18,7 +22,7 @@
   "duration": 1,
   "aps": 4,
   "description": "Converts 100% of the physical defense value of the equipped shield into a number certain of physical damage for the equipped weapon.",
-  "value": "Physical defense of shield decrease/100/0/%;Physical damage increase by percent of shield physical defense/125/25/%",
+  "value": "Physical defense and magical denfense of shield decrease/80/0/%;Physical damage increase by percent of shield physical defense/175/25/%",
   "sprite": "Skill_31",
   "idInit": 31,
   "isMove": false,

@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.03 + 0.03 * ( Skill14_level - 1 )",
+      "delta": "0.02 + 0.02 * ( Skill14_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.44 + 0.04 * ( Skill14_level - 1 )",
+      "delta": "0.3 + 0.05 * ( Skill14_level - 1 )",
       "index": "stun_chance",
       "duration": 1
     }
@@ -16,10 +16,10 @@
   "level": 1,
   "levelrequired": "13/15/19/27/37/49/63/79/97/117",
   "class": "Assassin",
-  "cooldown": 2,
+  "cooldown": 4,
   "duration": 0,
-  "aps": 2,
-  "value": "Physical damage increase/3/3/%;Stun chance increase/44/4/%",
+  "aps": 8,
+  "value": "Physical damage increase/2/2/%;Stun chance increase/3/5/%",
   "description": "Enables you to storm into the enemy and attack it at lightning speed with a nimble body made by muscle training that enhances reflective nerves. The enemy who are not ready for sudden attacks will get stunned",
   "sprite": "Skill_14",
   "idInit": 14,

@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.62 + ( Skill26_level - 1 ) * 0.02",
+      "delta": "0.3 + ( Skill26_level - 1 ) * 0.05",
       "index": "sleep_chance"
     }
   ],
@@ -10,11 +10,11 @@
   "level": 1,
   "levelrequired": "14/16/20/28/38/50/64/80/98/118",
   "class": "Paladin",
-  "cooldown": 4,
+  "cooldown": 3,
   "duration": 1,
   "aps": 4,
   "description": "Spreads the powder of sleep made from a deep dark fantasy on enemy, causing enemy to sleep for a fixed time",
-  "value": "Sleep chance increase/62/2/%",
+  "value": "Sleep chance increase/30/5/%",
   "sprite": "Skill_26",
   "idInit": 26,
   "isMove": false,

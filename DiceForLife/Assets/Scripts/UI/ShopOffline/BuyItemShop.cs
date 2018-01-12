@@ -17,6 +17,9 @@ public class BuyItemShop : MonoBehaviour, IPointerDownHandler
     int qtt = 1;
     private Transform _border;
 
+    private int idCurrency, price;
+    private bool isRunestone;
+
     private void Awake()
     {
         _border = transform.GetChild(0);
@@ -29,14 +32,20 @@ public class BuyItemShop : MonoBehaviour, IPointerDownHandler
         _numberItemBound.SetActive(true);
         _acceptItemBound.SetActive(false);
         cachedItem = ShopUI._instance.LoadItemFromId(ShopUI._instance._cachedIDItemBuy);
+
         if (cachedItem.getValue("type").ToString() == "Gold")
         {
+            idCurrency = 0;
             _typePriceImg.sprite = _goldSprite;
         }
         else if ((cachedItem.getValue("type").ToString() == "Gem"))
         {
+            idCurrency = 1;
             _typePriceImg.sprite = _diamondSprite;
         }
+        price = int.Parse(cachedItem.getValue("price").ToString());
+
+
         StartCoroutine(loadInfoItem());
         _numberItemBuy.onValueChanged.AddListener(delegate { ChangeQtt(); });
         _numberItemBuy.onEndEdit.AddListener(delegate { ChangeQttWhenEndEdit(); });
@@ -64,26 +73,25 @@ public class BuyItemShop : MonoBehaviour, IPointerDownHandler
             _numberItemBuy.text = qtt.ToString();
         }
     }
-
     void ChangeQtt()
     {
         if (!string.IsNullOrEmpty(_numberItemBuy.text))
         {
-            if (int.Parse(_numberItemBuy.text) == 0)
+            qtt = int.Parse(_numberItemBuy.text);
+            if (qtt <= 0)
             {
                 qtt = 1;
-                _numberItemBuy.text = qtt.ToString();
             }
-            qtt = int.Parse(_numberItemBuy.text);
-            priceItem.text = (int.Parse(cachedItem.getValue("price").ToString()) * qtt).ToString();
-
+            _numberItemBuy.text = qtt.ToString();
+            priceItem.text = (price * qtt).ToString();
         }
     }
+
     void AddQtt()
     {
         qtt++;
         _numberItemBuy.text = qtt.ToString();
-        priceItem.text = (int.Parse(cachedItem.getValue("price").ToString()) * qtt).ToString();
+        priceItem.text = (price * qtt).ToString();
     }
     void SubQtt()
     {
@@ -91,52 +99,46 @@ public class BuyItemShop : MonoBehaviour, IPointerDownHandler
         {
             qtt--;
         }
-        else
-        {
-            qtt = 1;
-        }
         _numberItemBuy.text = qtt.ToString();
-        priceItem.text = (int.Parse(cachedItem.getValue("price").ToString()) * qtt).ToString();
+        priceItem.text = (price * qtt).ToString();
     }
 
     IEnumerator loadInfoItem()
     {
-        priceItem.text = cachedItem.getValue("price").ToString();
-        if (int.Parse(cachedItem.getValue("typeid").ToString()) == 1)
+        priceItem.text = price.ToString(); if (int.Parse(cachedItem.getValue("typeitem").ToString()) == 0)//gem
         {
-            yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForItemByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => { _itemImgNumber.sprite = value; _itemImgAccept.sprite = value; }));
-        }
-        else if (int.Parse(cachedItem.getValue("typeid").ToString()) == 2)
-        {
+            isRunestone = true;
             yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForGemsByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => { _itemImgNumber.sprite = value; _itemImgAccept.sprite = value; }));
         }
-
+        else
+        {
+            isRunestone = false;
+            yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForItemByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => { _itemImgNumber.sprite = value; _itemImgAccept.sprite = value; }));
+        }
     }
 
 
     void BuyItemFuction()
     {
-        if (cachedItem.getValue("type").ToString() == "Gold" && CharacterInfo._instance._baseProperties.Gold >= int.Parse(cachedItem.getValue("price").ToString()) * qtt)
+        if (idCurrency == 0)
         {
-            ExecuteBuyItemFuction("Gold");
+            if (CharacterInfo._instance._baseProperties.Gold >= price * qtt)
+                ExecuteBuyItemFuction();
+            else ShopUI._instance.OpenWarningPanel("You haven't enought gold to buy this item");
         }
-        else if (cachedItem.getValue("type").ToString() == "Gold" && CharacterInfo._instance._baseProperties.Gold < int.Parse(cachedItem.getValue("price").ToString()) * qtt)
+        else if (idCurrency == 1)
         {
-            ShopUI._instance.OpenWarningPanel("You haven't enought gold to buy this item");
+            if (CharacterInfo._instance._baseProperties.Diamond >= price * qtt)
+                ExecuteBuyItemFuction();
+            else ShopUI._instance.OpenWarningPanel("You haven't enought diamond to buy this item");
         }
-        else if ((cachedItem.getValue("type").ToString() == "Gem") && CharacterInfo._instance._baseProperties.Diamond >= int.Parse(cachedItem.getValue("price").ToString()) * qtt)
-        {
-            ExecuteBuyItemFuction("Gem");
-        }
-        else if ((cachedItem.getValue("type").ToString() == "Gem") && CharacterInfo._instance._baseProperties.Diamond < int.Parse(cachedItem.getValue("price").ToString()) * qtt)
-        {
-            ShopUI._instance.OpenWarningPanel("You haven't enought diamond to buy this item");
-        }
-
     }
 
-    void ExecuteBuyItemFuction(string typePrice)
+    void ExecuteBuyItemFuction()
     {
+#if UNITY_EDITOR
+        Debug.Log("BUY item " + ShopUI._instance._cachedIDItemBuy);
+#endif
         StartCoroutine(ServerAdapter.BuyItemInShop(CharacterInfo._instance._baseProperties.idHero, CharacterInfo._instance._baseProperties.idCodeHero, ShopUI._instance._cachedIDItemBuy, qtt, result =>
         {
             if (result.StartsWith("Error"))
@@ -147,33 +149,32 @@ public class BuyItemShop : MonoBehaviour, IPointerDownHandler
             {
                 var N = JSON.Parse(result);
 
-                if (typePrice == "Gold")
+                if (idCurrency == 0)
                 {
-                    CharacterInfo._instance._baseProperties.Gold -= int.Parse(cachedItem.getValue("price").ToString()) * qtt;
+                    CharacterInfo._instance._baseProperties.Gold -= price * qtt;
                 }
-                else if (typePrice == "Gem")
+                else if (idCurrency == 1)
                 {
-                    CharacterInfo._instance._baseProperties.Diamond -= int.Parse(cachedItem.getValue("price").ToString()) * qtt;
+                    CharacterInfo._instance._baseProperties.Diamond -= price * qtt;
                 }
 
                 if (N["typeid"].Value == "gem")//đây là runstone
                 {
-                    //Item _boughtItem = Item.createItemWithQtt(N["idht"].AsInt, N["idit"].AsInt, int.Parse(cachedItem.getValue("idtemp").ToString()), N["quantity"].AsInt);
-                    //bool existedItem = false;
-                    //foreach (Item _temp in SplitDataFromServe._listGemInBag)
-                    //{
-                    //    if (int.Parse(_temp.getValue("idig").ToString()) == int.Parse(_boughtItem.getValue("idit").ToString()))
-                    //    {
-                    //        _temp.setValue("quantity", int.Parse(_boughtItem.getValue("quantity").ToString()));
-                    //        existedItem = true;
-                    //        break;
-                    //    }
-                    //}
-                    //if (!existedItem)
-                    //{
-                    //    SplitDataFromServe._listGemInBag.Add(_boughtItem);
-                    //}
-
+                    Item _boughtItem = new Item(N["idhg"].AsInt, N["idig"].AsInt, N["quantity"].AsInt, 1, N["sellprice"].AsInt, N["uplevel"].AsInt);
+                    bool existedItem = false;
+                    foreach (Item _temp in SplitDataFromServe._listGemInBag)
+                    {
+                        if (int.Parse(_temp.getValue("idig").ToString()) == int.Parse(_boughtItem.getValue("idit").ToString()))
+                        {
+                            _temp.setValue("quantity", int.Parse(_boughtItem.getValue("quantity").ToString()));
+                            existedItem = true;
+                            break;
+                        }
+                    }
+                    if (!existedItem)
+                    {
+                        SplitDataFromServe._listGemInBag.Add(_boughtItem);
+                    }
                 }
                 else if (N["typeid"].Value == "item")// đây là item
                 {

@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "-0.38 + 0.03 * ( Skill76_level - 1 )",
+      "delta": "-0.23 + 0.02 * ( Skill76_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
@@ -14,11 +14,6 @@
       "delta": 2,
       "index": "successive_attacks",
       "duration": 1
-    },
-    {
-      "delta": "-0.01 * maxhealth * Skill76_level",
-      "index": "health_active",
-      "duration": 1
     }
   ],
   "name": "Fire Energy",
@@ -28,10 +23,10 @@
   "class": "Wizard",
   "cooldown": 1,
   "duration": 0,
-  "aps": 4,
-  "condition": "health > 0.01 * maxhealth * Skill76_level",
+  "aps": 6,
+  "condition": "",
   "description": "Unleashes a flurry of 2 fireballs that seek out nearby enemy. Each ball has a chance to cause a burn status effect on its target",
-  "value": "Magical damage decrease/38/-3/%;Successive attack times/2/0/float;Burn chance increase/4/4/%;Your Maximum HP lost/1/1/%",
+  "value": "Successive attack times/2/0/float;Magical damage decrease/23/-2/%;Burn chance increase/4/4/%",
   "sprite": "Skill_76",
   "idInit": 76,
   "prefEffect": "Wizard_Active5",

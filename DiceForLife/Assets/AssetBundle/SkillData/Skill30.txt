@@ -1,8 +1,12 @@
 {
   "lines": [
     {
-      "delta": "1.25 * shield_block_chance + 0.05 * ( Skill30_level - 1 ) * shield_block_chance",
+      "delta": "1.1 * shield_block_chance + 0.1 * ( Skill30_level - 1 ) * shield_block_chance",
       "index": "physical_defense"
+    },
+    {
+      "delta": "1.1 * shield_block_chance + 0.1 * ( Skill30_level - 1 ) * shield_block_chance",
+      "index": "magical_defense"
     }
   ],
   "name": "Divine Fortress",
@@ -14,7 +18,7 @@
   "duration": 1,
   "aps": 3,
   "description": "Physical defense is increased by a percent equal to your shield's block chance.",
-  "value": "Physical defense increase by percent of shield's blocking chance/125/5/%",
+  "value": "Physical defense and magical defense increase by percent of shield's blocking chance/110/10/%",
   "sprite": "Skill_30",
   "idInit": 30,
   "isMove": false,

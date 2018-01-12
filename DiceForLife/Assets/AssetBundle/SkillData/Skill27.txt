@@ -6,7 +6,7 @@
       "enemy": true
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill27_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill27_level - 1 )",
       "index": "block_chance"
     }
   ],
@@ -19,7 +19,7 @@
   "duration": 1,
   "aps": 4,
   "description": "You can no longer dodge, but your block chance is increased ",
-  "value": "Dodge chance decrease/100/0/%;Blocking chance increase/22/2/%",
+  "value": "Dodge chance decrease/100/0/%;Blocking chance increase/5/5/%",
   "sprite": "Skill_27",
   "idInit": 27,
   "isMove": false,

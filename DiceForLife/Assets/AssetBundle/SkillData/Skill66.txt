@@ -1,11 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.02 * successful_hits * Skill66_level",
-      "index": "magical_damage_percent"
-    },
-    {
-      "delta": "0.03 * e_critical_hits * Skill66_level",
+      "delta": "0.03 * successful_hits * Skill66_level",
       "index": "magical_damage_percent"
     }
   ],
@@ -18,7 +14,7 @@
   "duration": 1,
   "aps": 6,
   "description": "You enter an enraged state during which your damage is amplified based on the number of attacks you do on an enemy and the number of critical hit you are taken in previous round",
-  "value": "Magic damage increase for each successful attack/2/2/%;Magical damage increase for each critical hit taken/3/3/%",
+  "value": "Magic damage increase for each successful attack/3/3/%",
   "sprite": "Skill_66",
   "idInit": 66,
   "prefEffect": "MagicBuffBlue"

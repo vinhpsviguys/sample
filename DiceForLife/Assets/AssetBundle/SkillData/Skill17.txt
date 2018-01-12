@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.05 + 0.05 * ( Skill17_level - 1 )",
+      "delta": "0.04 + 0.04 * ( Skill17_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
@@ -12,7 +12,7 @@
       "duration": 1
     },
     {
-      "delta": "-0.01 * maxhealth - 0.01 * ( Skill17_level - 1 ) * maxhealth",
+      "delta": "-0.005 * maxhealth - 0.005 * ( Skill17_level - 1 ) * maxhealth",
       "index": "health_active",
       "duration": 1
     }
@@ -24,9 +24,9 @@
   "class": "Assassin",
   "cooldown": 1,
   "duration": 0,
-  "aps": 2,
-  "condition": "health > 0.01 * maxhealth + 0.01 * ( Skill17_level - 1 ) * maxhealth",
-  "value": "Physical damage increase/5/5/%;Abnormal status damage increase/5/5/%;Lost maximum hp/1/1/%",
+  "aps": 4,
+  "condition": "health > 0.005 * maxhealth + 0.005 * ( Skill17_level - 1 ) * maxhealth",
+  "value": "Physical damage increase/4/4/%;Abnormal status damage increase/5/5/%;Lost maximum hp/0.5/0.5/%",
   "description": "Temporarily increases the Critical hit rate and physical damage by consuming your maximum HP. This skill is only effective when enemy is under abnormal status. You cannot use the skill when your HP is below 5%",
   "sprite": "Skill_17",
   "idInit": 17,

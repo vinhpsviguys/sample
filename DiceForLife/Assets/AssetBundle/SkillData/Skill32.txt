@@ -2,11 +2,15 @@
 {
   "lines": [
     {
-      "delta": "-1 * shield_magical_defense",
+      "delta": "-0.6 * shield_magical_defense",
       "index": "shield_magical_defense"
     },
     {
-      "delta": "0.02 + ( Skill32_level - 1 ) * 0.02",
+      "delta": "-0.6 * shield_physical_defense",
+      "index": "shield_physical_defense"
+    },
+    {
+      "delta": "0.25 + ( Skill32_level - 1 ) * 0.05",
       "index": "physical_damage_percent"
     }
   ],
@@ -17,9 +21,9 @@
   "class": "Paladin",
   "cooldown": 2,
   "duration": 1,
-  "aps": 2,
+  "aps": 6,
   "description": "Decreases the magical defense of the shield and increases the physical damage for a period of time",
-  "value": "Magical defense of shield decrease/100/0/%;Physical damage increase/2/2/%",
+  "value": "Magical defense and physical defense of shield decrease/60/0/%;Physical damage increase/25/5/%",
   "sprite": "Skill_32",
   "idInit": 32,
   "isMove": false,

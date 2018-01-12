@@ -58,7 +58,7 @@ public class CharacterManager : MonoBehaviour {
                 monsterObj.transform.localScale = new Vector3(-0.8f,0.8f,0.8f);
                 _enemyCharacter = monsterObj.AddComponent<CharacterPlayer>();
                 CharacterPlayer.LoadCharacterMonster(_enemyCharacter,dataMonster);
-                monsterObj.AddComponent<AnimationController>();
+                //monsterObj.AddComponent<AnimationController>();
                 ReadMonsterSkillData(dataMonster);
                 break;
             case "DailyChallenge":
@@ -75,10 +75,10 @@ public class CharacterManager : MonoBehaviour {
         {
             foreach (NewSkill _tempSkill in SplitDataFromServe.skillInit.Values)
             {
-
-                if (dataMonster[i]["idskill"].AsInt == _tempSkill.data["idInit"].AsInt && !SplitDataFromServe._enemySkill.Contains(_tempSkill))
+                JSONNode dataMonsterSkill = JSON.Parse(dataMonster["skills"][i].ToString());
+                if (dataMonsterSkill["idskill"].AsInt == _tempSkill.data["idInit"].AsInt && !SplitDataFromServe._enemySkill.Contains(_tempSkill))
                 {
-                    _tempSkill.addField("level", dataMonster[i]["level"].AsInt);
+                    _tempSkill.addField("level", dataMonsterSkill["level"].AsInt);
                     SplitDataFromServe._enemySkill.Add(_tempSkill);
 
                 }
@@ -124,7 +124,7 @@ public class CharacterManager : MonoBehaviour {
             enemy.transform.localScale = new Vector3(-1f, 1f, 1f);
             _enemyCharacter = enemy.AddComponent<CharacterPlayer>();
            CharacterPlayer.LoadCharacterEnemy(_enemyCharacter);
-            enemy.AddComponent<AnimationController>();
+            //enemy.AddComponent<AnimationController>();
             enemy.SetActive(false);
             WaitingRoomUI.Instance.SetLog("Load data nhan vat thanh cong");
             if (!SocketIOController.Instance.isReconnect)

@@ -33,7 +33,7 @@ public class ServerAdapter
             result(DataReturn(www.text));
         }
     }
-
+    
     public static IEnumerator Login(string username, string password, string namePlayer, string deviceID, int typeOS, System.Action<string> result)
     {
         WWWForm form = new WWWForm();
@@ -57,6 +57,7 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
+
     public static IEnumerator SignUpAccount(string username, string password, string deviceID, System.Action<string> result)
     {
         WaitingPanelScript._instance.ShowWaiting(true);
@@ -122,12 +123,34 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
+    public static IEnumerator ChangeName(string newName, string idCode, int idHero, System.Action<string> result)
+    {
+        WaitingPanelScript._instance.ShowWaiting(true);
+        WWWForm form = new WWWForm();
+
+        form.AddField("idh", idHero);
+        form.AddField("idcode", idCode);
+        form.AddField("name", newName);
+        // Upload to a cgi script
+        WWW w = new WWW(serverURL + "/api/hero/changename", form);
+        yield return w;
+
+        WaitingPanelScript._instance.ShowWaiting(false);
+        if (!string.IsNullOrEmpty(w.error))
+        {
+            result("Error Code: " + w.error);
+        }
+        else
+        {
+            result(DataReturn(w.text));
+        }
+    }
 
     public static IEnumerator LoadInitData(System.Action<string> result)
     {
         WWWForm form = new WWWForm();
         form.AddField("", "");
-        WWW w = new WWW(Constant.urlRequest + "/api/initload/allinit", form);
+        WWW w = new WWW(serverURL + "/api/initload/allinit", form);
         yield return w;
         if (!string.IsNullOrEmpty(w.error))
         {
@@ -138,12 +161,16 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
-
-    public static IEnumerator LoadShopInit(System.Action<string> result)
+    public static IEnumerator LoadDetailHero(string idcode, int idh, System.Action<string> result)
     {
         WWWForm form = new WWWForm();
-        form.AddField("", "");
-        WWW w = new WWW(Constant.urlRequest + "/api/shop/listshop", form);
+        form.AddField("idh", idh);
+        form.AddField("idcode", idcode);
+        // Upload to a cgi script
+        WWW w = new WWW(serverURL + "/api/hero/detail", form);
+#if UNITY_EDITOR
+        Debug.Log(string.Format("LOAD DETAIL! idh:{0} idcode:{1}", idh, idcode));
+#endif
         yield return w;
         if (!string.IsNullOrEmpty(w.error))
         {
@@ -154,23 +181,7 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
-
-    public static IEnumerator LoadEquippedData(System.Action<string> result)
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("", "");
-        WWW w = new WWW(Constant.urlRequest + "/api/initload/equipped", form);
-        yield return w;
-        if (!string.IsNullOrEmpty(w.error))
-        {
-            result("Error Code: " + w.error);
-        }
-        else
-        {
-            result(DataReturn(w.text));
-        }
-    }
-
+    
     public static IEnumerator CheckNameCreateHero(string tempName, System.Action<string> result)
     {
         WWWForm form = new WWWForm();
@@ -214,68 +225,6 @@ public class ServerAdapter
         }
     }
 
-
-    public static IEnumerator LoadDetailHero(string idcode, int idh, System.Action<string> result)
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("idh", idh);
-        form.AddField("idcode", idcode);
-        // Upload to a cgi script
-        WWW w = new WWW(serverURL + "/api/hero/detail", form);
-#if UNITY_EDITOR
-        Debug.Log(string.Format("LOAD DETAIL! idh:{0} idcode:{1}", idh, idcode));
-#endif
-        yield return w;
-        if (!string.IsNullOrEmpty(w.error))
-        {
-            result("Error Code: " + w.error);
-        }
-        else
-        {
-            result(DataReturn(w.text));
-        }
-    }
-
-
-
-    public static IEnumerator ChangeName(string newName, string idCode, int idHero, System.Action<string> result)
-    {
-        WaitingPanelScript._instance.ShowWaiting(true);
-        WWWForm form = new WWWForm();
-
-        form.AddField("idh", idHero);
-        form.AddField("idcode", idCode);
-        form.AddField("name", newName);
-        // Upload to a cgi script
-        WWW w = new WWW(serverURL + "/api/hero/changename", form);
-        yield return w;
-
-        WaitingPanelScript._instance.ShowWaiting(false);
-        if (!string.IsNullOrEmpty(w.error))
-        {
-            result("Error Code: " + w.error);
-        }
-        else
-        {
-            result(DataReturn(w.text));
-        }
-    }
-    public static IEnumerator InitData(System.Action<string> result)
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("deviceid", "");
-        // Upload to a cgi script
-        WWW w = new WWW(serverURL + "/api/initload/allinit", form);
-        yield return w;
-        if (!string.IsNullOrEmpty(w.error))
-        {
-            result("Error Code: " + w.error);
-        }
-        else
-        {
-            result(DataReturn(w.text));
-        }
-    }
     public static IEnumerator ListSkillOfHero(int _idh, string _idcode, System.Action<string> result)
     {
         WWWForm form = new WWWForm();
@@ -296,8 +245,6 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
-
-
     public static IEnumerator EquipSkill(int _idh, string _idcode, int _idhk, System.Action<string> result)
     {
         WaitingPanelScript._instance.ShowWaiting(true);
@@ -383,12 +330,11 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
-
-    public static IEnumerator ListItemInShop(System.Action<string> result)
+    
+    public static IEnumerator LoadShopInit(System.Action<string> result)
     {
         WWWForm form = new WWWForm();
         form.AddField("", "");
-        // Upload to a cgi script
         WWW w = new WWW(serverURL + "/api/shop/listshop", form);
         yield return w;
         if (!string.IsNullOrEmpty(w.error))
@@ -400,39 +346,57 @@ public class ServerAdapter
             result(DataReturn(w.text));
         }
     }
-    public static IEnumerator BuyItemInShop(int _idh, int _idcode, int _iditem, int _qtt, System.Action<string> result)
+    public static IEnumerator BuyItemInShop(int _idh, string _idcode, int _ids, int _qtt, System.Action<string> result)
     {
+        WaitingPanelScript._instance.ShowWaiting(true);
         WWWForm form = new WWWForm();
         form.AddField("idh", _idh);
         form.AddField("idcode", _idcode);
-        form.AddField("ids", _iditem);
+        form.AddField("ids", _ids);
         form.AddField("quantity", _qtt);
-        // Upload to a cgi script
-        WWW w = new WWW(serverURL + "/api/shop/addtiemshop", form);
-        yield return w;
-        if (!string.IsNullOrEmpty(w.error))
-        {
-            result("Error Code: " + w.error);
-        }
-        else
-        {
-            result(DataReturn(w.text));
-        }
-    }
-
-    public static IEnumerator GetVersion(System.Action<string> result)
-    {
-        WWW www = new WWW(serverURL + "/api/initload/getversion");
+        WWW www = new WWW(serverURL + "/api/shop/addtiemshop", form);
         yield return www;
+#if UNITY_EDITOR
+        Debug.Log("idh:" + _idh + " | idcode:" + _idcode + " | ids:" + _ids + " | quantity:" + _qtt);
+        Debug.Log(www.text);
+#endif
+        WaitingPanelScript._instance.ShowWaiting(false);
         if (!string.IsNullOrEmpty(www.error))
         {
             result("Error Code: " + www.error);
         }
         else
         {
+
             result(DataReturn(www.text));
         }
     }
+    public static IEnumerator UseItemInShop(int idh, string idcode, int idht, int quantity, System.Action<string> result)
+    {
+        WaitingPanelScript._instance.ShowWaiting(true);
+        WWWForm form = new WWWForm();
+        form.AddField("idh", idh);
+        form.AddField("idcode", idcode);
+        form.AddField("idht", idht);
+        form.AddField("quantity", quantity);
+        WWW www = new WWW(serverURL + "/api/items/useitem", form);
+        yield return www;
+#if UNITY_EDITOR
+        Debug.Log("**USE ITEM** idh:" + idh + " | idcode:" + idcode + " | idht:" + idht + " | quantity:" + quantity);
+        Debug.Log(www.text);
+#endif
+        WaitingPanelScript._instance.ShowWaiting(false);
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            result("Error Code: " + www.error);
+        }
+        else
+        {
+
+            result(DataReturn(www.text));
+        }
+    }
+
 
     public static IEnumerator GetListPet(int _idh, int _idcode, System.Action<string> result)
     {
@@ -487,7 +451,6 @@ public class ServerAdapter
             result(DataReturn(www.text));
         }
     }
-
     public static IEnumerator ReduceCustomValue(int _idh, string _idcode, string type, int _qtt, System.Action<string> result)
     {
 
@@ -529,57 +492,6 @@ public class ServerAdapter
         }
     }
 
-    public static IEnumerator BuyItemInShop(int _idh, string _idcode, int _ids, int _qtt, System.Action<string> result)
-    {
-        WaitingPanelScript._instance.ShowWaiting(true);
-        WWWForm form = new WWWForm();
-        form.AddField("idh", _idh);
-        form.AddField("idcode", _idcode);
-        form.AddField("ids", _ids);
-        form.AddField("quantity", _qtt);
-        WWW www = new WWW(serverURL + "/api/shop/addtiemshop", form);
-        yield return www;
-#if UNITY_EDITOR
-        Debug.Log("idh:" + _idh + " | idcode:" + _idcode + " | ids:" + _ids + " | quantity:" + _qtt);
-        Debug.Log(www.text);
-#endif
-        WaitingPanelScript._instance.ShowWaiting(false);
-        if (!string.IsNullOrEmpty(www.error))
-        {
-            result("Error Code: " + www.error);
-        }
-        else
-        {
-
-            result(DataReturn(www.text));
-        }
-    }
-
-    public static IEnumerator UseItemInShop(int idh, string idcode, int idht, int quantity, System.Action<string> result)
-    {
-        WaitingPanelScript._instance.ShowWaiting(true);
-        WWWForm form = new WWWForm();
-        form.AddField("idh", idh);
-        form.AddField("idcode", idcode);
-        form.AddField("idht", idht);
-        form.AddField("quantity", quantity);
-        WWW www = new WWW(serverURL + "/api/items/useitem", form);
-        yield return www;
-#if UNITY_EDITOR
-        Debug.Log("**USE ITEM** idh:" + idh + " | idcode:" + idcode + " | idht:" + idht + " | quantity:" + quantity);
-        Debug.Log(www.text);
-#endif
-        WaitingPanelScript._instance.ShowWaiting(false);
-        if (!string.IsNullOrEmpty(www.error))
-        {
-            result("Error Code: " + www.error);
-        }
-        else
-        {
-
-            result(DataReturn(www.text));
-        }
-    }
 
     public static IEnumerator SellItem(int _idh, string _idcode, int _idht, int _qtt, System.Action<string> result)
     {
@@ -604,6 +516,9 @@ public class ServerAdapter
     }
     public static IEnumerator SellGem(int _idh, string _idcode, int _idhg, int _qtt, System.Action<string> result)
     {
+#if UNITY_EDITOR
+        Debug.Log("**SELL GEM** idh:" + _idh + " | idcode:" + _idcode + " | idhg:" + _idhg + " | quantity:" + _qtt);
+#endif
         WaitingPanelScript._instance.ShowWaiting(true);
         WWWForm form = new WWWForm();
         form.AddField("idh", _idh);
@@ -613,7 +528,6 @@ public class ServerAdapter
         WWW www = new WWW(serverURL + "/api/gem/sellgem", form);
         yield return www;
 #if UNITY_EDITOR
-        Debug.Log("idh:" + _idh + " | idcode:" + _idcode + " | idhg:" + _idhg);
         Debug.Log(www.text);
 #endif
         WaitingPanelScript._instance.ShowWaiting(false);
@@ -629,15 +543,46 @@ public class ServerAdapter
     }
     public static IEnumerator SellEquipment(int _idh, string _idcode, int _ide, System.Action<string> result)
     {
+#if UNITY_EDITOR
+        Debug.Log("**SELL EQUIP** idh:" + _idh + " | idcode:" + _idcode + " | ide:" + _ide);
+#endif
         WaitingPanelScript._instance.ShowWaiting(true);
         WWWForm form = new WWWForm();
         //Debug.Log(_idh);
         form.AddField("idh", _idh);
         form.AddField("idcode", _idcode);
         form.AddField("ide", _ide);
-        //Debug.Log(_ide);
         WWW www = new WWW(serverURL + "/api/equipped/sellequipped", form);
         yield return www;
+#if UNITY_EDITOR
+        Debug.Log(www.text);
+#endif
+        WaitingPanelScript._instance.ShowWaiting(false);
+
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            result("Error Code: " + www.error);
+        }
+        else
+        {
+            result(DataReturn(www.text));
+        }
+    }
+    public static IEnumerator SellBuff(int _idh, string _idcode, int idbf, System.Action<string> result)
+    {
+#if UNITY_EDITOR
+        Debug.Log("**SELL BUFF** idh:" + _idh + " | idcode:" + _idcode + " | idbf:" + idbf);
+#endif
+        WaitingPanelScript._instance.ShowWaiting(true);
+        WWWForm form = new WWWForm();
+        form.AddField("idh", _idh);
+        form.AddField("idcode", _idcode);
+        form.AddField("idbf", idbf);
+        WWW www = new WWW(serverURL + "/api/buff/sellbuff", form);
+        yield return www;
+#if UNITY_EDITOR
+        Debug.Log(www.text);
+#endif
         WaitingPanelScript._instance.ShowWaiting(false);
 
         if (!string.IsNullOrEmpty(www.error))

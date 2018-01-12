@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.02 + 0.02 * ( Skill57_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill57_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill57_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill57_level - 1 )",
       "index": "stun_chance",
       "duration": 1
     }
@@ -16,11 +16,11 @@
   "level": 1,
   "levelrequired": "7/9/13/21/31/43/57/73/91/111",
   "class": "Cleric",
-  "cooldown": 1,
+  "cooldown": 3,
   "duration": 0,
-  "aps": 2,
+  "aps": 6,
   "description": "Injects strong healing breath to you to recover your HP significantly",
-  "value": "Magical damage increase/2/2/%;Stun chance increase/22/2/%",
+  "value": "Magical damage increase/5/5/%;Stun chance increase/5/5/%",
   "sprite": "Skill_57",
   "idInit": 57,
   "prefEffect": "Cleric_Active4",

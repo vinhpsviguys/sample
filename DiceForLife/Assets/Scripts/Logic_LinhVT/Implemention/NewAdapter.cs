@@ -413,9 +413,9 @@ class NewAdapter : Adapter
                 //Debug.Log(tag + " : " + status);
                 if (content != null)
                 {
-                    GameObject obj = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity);
-                    obj.transform.SetParent(content.transform, false);
-                    obj.GetComponent<Text>().text = tag + " : " + status;
+                    //GameObject obj = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity);
+                    //obj.transform.SetParent(content.transform, false);
+                    //obj.GetComponent<Text>().text = tag + " : " + status;
                 }
 
             });

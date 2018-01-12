@@ -5,11 +5,11 @@
       "index": "damage_return_chance"
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill46_level - 1 )",
+      "delta": "0.25 + 0.05 * ( Skill46_level - 1 )",
       "index": "physical_damage_return_ratio"
     },
     {
-      "delta": "0.22 + 0.02 * ( Skill46_level - 1 )",
+      "delta": "0.25 + 0.05 * ( Skill46_level - 1 )",
       "index": "magical_damage_return_ratio"
     }
   ],
@@ -20,9 +20,9 @@
   "class": "Cleric",
   "cooldown": 3,
   "duration": 1,
-  "aps": 8,
+  "aps": 6,
   "description": "Burst out angry power after being attacked by the enemy, counteract a part of damage that dealt by the enemy in the previous turn",
-  "value": "Damage return chance/100/0/%;Physical Damage return ratio/22/2/%;Magical Damage return ratio/22/2/%",
+  "value": "Damage return chance/100/0/%;Physical Damage return ratio/25/5/%;Magical Damage return ratio/25/5/%",
   "sprite": "Skill_46",
   "idInit": 46,
   "prefEffect": "MagicBuffBlue"
