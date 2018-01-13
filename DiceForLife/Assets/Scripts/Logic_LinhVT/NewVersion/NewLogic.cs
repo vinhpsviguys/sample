@@ -91,7 +91,7 @@ namespace CoreLib
             foreach (string skill in status.character.newSkillDic.Keys) {
                 float aps = Math.Max(1.0f, status.calculateIndex(getStatusByPlayerID(3 - status.playerID), skill + "_aps"));
                 status.setIndex(status.curIndexes, skill + "_aps", aps);
-                //Debug.Log(skill + "_aps"+" "+aps);
+                Debug.Log(skill + "_aps"+" "+aps);
             }
         }
 
@@ -1057,6 +1057,38 @@ namespace CoreLib
                 }
 
             }
+
+            string str = "";
+
+            foreach (string key in attStatus.effects.Keys)
+            {
+                str += "|" + key;
+            }
+
+            Debug.Log(str);
+
+            str = "";
+
+            foreach (string key in attStatus.op_effects.Keys)
+            {
+                str += "|" + key;
+            }
+            Debug.Log(str);
+
+            str = "";
+
+            foreach (string key in defStatus.effects.Keys)
+            {
+                str += "|" + key;
+            }
+            Debug.Log(str);
+
+            str = "";
+
+            foreach (string key in defStatus.op_effects.Keys) {
+                str += "|" + key;
+            }
+            Debug.Log(str);
         }
 
 

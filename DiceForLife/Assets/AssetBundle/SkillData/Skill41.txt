@@ -1,8 +1,8 @@
 {
   "lines": [
     {
-      "delta": "-0.5 * aps",
-      "index": "aps",
+      "delta": "-0.5 * allaps",
+      "index": "allaps",
       "condition": "health < 0.2 * maxhealth"
     },
     {

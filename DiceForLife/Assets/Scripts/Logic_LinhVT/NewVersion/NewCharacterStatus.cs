@@ -387,7 +387,7 @@ namespace CoreLib
                         total += (float)value;
                         initIndexes.Add(key, total);
                     }
-                    Debug.Log(key+":"+staticIndexes[key]);
+                    //Debug.Log(key+":"+staticIndexes[key]);
 
                 }
             }
@@ -883,7 +883,7 @@ namespace CoreLib
             {
                 bool result = checkCondition(condition);
                 ArrayList atomics = enableAtomics[condition];
-                Console.WriteLine("rebuildFormulaOfIndexes condition " + condition + " = " + result);
+                
                 foreach (AtomicEffect atomic in atomics)
                 {
                     atomic.enabled = result;
@@ -906,6 +906,7 @@ namespace CoreLib
                 }
 
                 // ghi lai cong thuc
+                Debug.Log("rebuildFormulaOfIndexes index " + index + " = " + formula);
                 deltaFormulas.Add(index, formula);
             }
 
@@ -1117,21 +1118,21 @@ namespace CoreLib
         public float calculateIndex(NewCharacterStatus def, string index)
         {
             string fomulas = index + (deltaFormulas.ContainsKey(index) && deltaFormulas[index] != "" ? " + " + deltaFormulas[index] : "");
-            if (!index.Contains("aps"))
-                Console.WriteLine("calculateIndex " + index + " formulas = " + fomulas); // de log Ishappen Stun
+            if (index.Contains("aps"))
+                Debug.Log("calculateIndex " + index + " formulas = " + fomulas); // de log Ishappen Stun
             try
             {
                 float digit = Convert.ToSingle(fomulas);
-                if (!index.Contains("aps"))
-                    Console.WriteLine("value = " + digit);
+                if (index.Contains("aps"))
+                    Debug.Log("value = " + digit);
                 return digit;
             }
             catch
             {
                 // khong phai la digit
                 float digit = calcuateExpression(fomulas, def);
-                if (!index.Contains("aps"))
-                    Console.WriteLine("value = " + digit);
+                if (index.Contains("aps"))
+                    Debug.Log("value = " + digit);
                 return digit;
             }
         }
@@ -1402,6 +1403,11 @@ namespace CoreLib
         public bool haveAbnomarlStatusByName(string name)
         {
             return op_effects.ContainsKey(name);
+        }
+
+        public int getApsOfSkill(int id)
+        {
+            return Mathf.RoundToInt((float)getCurrentIndex("Skill" + id + "_aps"));
         }
 
         public void clear()

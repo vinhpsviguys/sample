@@ -604,10 +604,16 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             return me;
         }
 
+        public NewCharacterStatus getStatusOfMe() {
+            return logic.getStatusByPlayerID(me.playerId);
+        }
+
         //public Character getMe()
         //{
         //    return me;
         //}
+
+        
 
         public int getTurnTimes()
         {
@@ -1741,6 +1747,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
 
 
             bytes = null;
+            if (selectedSkills != null)
             foreach (int skill in selectedSkills)
             {
                 bytes = bytes == null ? Utilities.convertToByteArr((ushort)skill) : Utilities.Concat<byte>(bytes, Utilities.convertToByteArr((ushort)skill));

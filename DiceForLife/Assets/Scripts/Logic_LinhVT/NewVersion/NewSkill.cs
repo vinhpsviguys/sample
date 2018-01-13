@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 
 namespace CoreLib
 {
@@ -49,7 +49,7 @@ namespace CoreLib
             NewCharacterStatus target = player1.character.newSkillDic.ContainsKey("Skill" + id) && player1.character.newSkillDic["Skill" + id] == this ? player1 : null;
             if (target == null) target = player2.character.newSkillDic.ContainsKey("Skill" + id) && player2.character.newSkillDic["Skill" + id] == this ? player2 : null;
             if (target == null) return getActionPoints();
-            else return (int)target.getCurrentIndex("Skill" + id + "_aps");
+            else return Mathf.RoundToInt((float)target.getCurrentIndex("Skill" + id + "_aps"));
 
         }
 

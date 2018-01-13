@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine;
 //using UnityEngine;
 
 namespace CoreLib
@@ -160,7 +161,7 @@ namespace CoreLib
                         string delta = atomic.delta;
                         index = index.Replace("allaps", skill+"_aps");
                         delta = delta.Replace("allaps", skill+"_aps");
-                        //Console.WriteLine(atomic.index+" "+atomic.index+" "+atomic.delta + " "+index+" "+delta);
+                        Debug.Log(atomic.index+" "+atomic.index+" "+atomic.delta + " "+index+" "+delta);
                         AtomicEffect newAtomic = new AtomicEffect((NewEffect)atomic.parent, delta, index, atomic.enemy, atomic.condition, atomic.duration);
                         list.Add(newAtomic);
                     }

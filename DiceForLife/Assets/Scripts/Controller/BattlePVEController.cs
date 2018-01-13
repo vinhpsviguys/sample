@@ -71,7 +71,7 @@ public class BattlePVEController : MonoBehaviour {
         ArrayList _passiveSkillMe = new ArrayList();
         foreach (NewSkill _tempSkill in SplitDataFromServe._heroSkill)
         {
-            if (_tempSkill.data["type"] == "passive") _passiveSkillMe.Add(_tempSkill);
+            if (_tempSkill.data["type"].Value == "passive") _passiveSkillMe.Add(_tempSkill.getID());
         }
 
         logic.addPassiveSkills(_passiveSkillMe, attStatus);
@@ -79,7 +79,7 @@ public class BattlePVEController : MonoBehaviour {
         ArrayList _passiveSkilMonster = new ArrayList();
         foreach (NewSkill _tempSkill in SplitDataFromServe._enemySkill)
         {
-            if (_tempSkill.data["type"] == "passive") _passiveSkilMonster.Add(_tempSkill);
+            if (_tempSkill.data["type"].Value == "passive") _passiveSkilMonster.Add(_tempSkill.getID());
         }
 
         logic.addPassiveSkills(_passiveSkilMonster, defStatus);

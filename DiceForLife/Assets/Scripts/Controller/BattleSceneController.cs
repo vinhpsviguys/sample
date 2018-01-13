@@ -86,7 +86,7 @@ public class BattleSceneController : MonoBehaviour
         ArrayList _passiveSkillMe = new ArrayList();
         foreach (NewSkill _tempSkill in SplitDataFromServe._heroSkill)
         {
-            if (_tempSkill.data["type"] == "passive") _passiveSkillMe.Add(_tempSkill);
+            if (_tempSkill.data["type"].Value == "passive") _passiveSkillMe.Add(_tempSkill.getID());
         }
 
         adapter.addPassiveSkills(_passiveSkillMe, adapter.logic.getStatusByPlayerID(me.playerId));
@@ -94,7 +94,7 @@ public class BattleSceneController : MonoBehaviour
         ArrayList _passiveSkillYou = new ArrayList();
         foreach (NewSkill _tempSkill in SplitDataFromServe._enemySkill)
         {
-            if (_tempSkill.data["type"] == "passive") _passiveSkillYou.Add(_tempSkill);
+            if (_tempSkill.data["type"].Value == "passive") _passiveSkillYou.Add(_tempSkill.getID());
         }
 
         adapter.addPassiveSkills(_passiveSkillYou, adapter.logic.getStatusByPlayerID(you.playerId));
@@ -355,7 +355,8 @@ public class BattleSceneController : MonoBehaviour
     {
         foreach (NewSkill tempSkill in playerskillwithObjectDictionary.Keys)
         {
-            playerskillwithObjectDictionary[tempSkill].transform.GetChild(2).GetChild(0).GetComponent<Text>().text = tempSkill.getActionPoints().ToString();
+            NewCharacterStatus myStatus = adapter.logic.getStatusByPlayerID(adapter.me.playerId);
+            playerskillwithObjectDictionary[tempSkill].transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Mathf.RoundToInt((float)myStatus.getCurrentIndex("Skill" + tempSkill.getID() + "_aps")).ToString();//tempSkill.getActionPoints().ToString();
         }
     }
 
@@ -937,7 +938,7 @@ public class BattleSceneController : MonoBehaviour
                     _thisButton.GetChild(1).gameObject.SetActive(true);
                     //_thisButton.GetChild(1).GetComponent<Text>().text = (_action.index).ToString();
                     _thisButton.DOLocalMoveY(150f, 0.1f);
-                    me._actionPoints -= skill.data["aps"].AsInt;
+                    me._actionPoints -= adapter.getStatusOfMe().getApsOfSkill(skill.getID());//skill.data["aps"].AsInt;
                     BattleSceneUI.Instance.UpdateDisplayBar(BattleSceneUI.Instance.actionPointBarPlayer, me._actionPoints, 18f);
                     BattleSceneUI.Instance._meCharacterActionPoint.text = "Action Point: " + me._actionPoints.ToString();
                 }
@@ -959,7 +960,7 @@ public class BattleSceneController : MonoBehaviour
                     //}
                     _thisButton.GetChild(1).gameObject.SetActive(true);
                     _thisButton.DOLocalMoveY(0f, 0.1f);
-                    me._actionPoints += skill.data["aps"].AsInt;
+                    me._actionPoints += adapter.getStatusOfMe().getApsOfSkill(skill.getID()); //skill.data["aps"].AsInt;
                     BattleSceneUI.Instance.UpdateDisplayBar(BattleSceneUI.Instance.actionPointBarPlayer, CharacterManager.Instance._meCharacter._actionPoints, 18f);
                     BattleSceneUI.Instance._meCharacterActionPoint.text = "Action Point: " + me._actionPoints.ToString();
                 }
@@ -1094,11 +1095,35 @@ public class BattleSceneController : MonoBehaviour
 
 
 
-    public void UpdateSkillState()
+    public void UpdateSkillState()// Update action
     {
         int actionPointMe = 0;
 
         actionPointMe = me._actionPoints;
+        //skillObj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = skill.data["aps"].ToString();
+        //playerSkillDatawithObjectKey.Add(skillObj, skill.data["aps"].AsInt);
+        //playerSkillDatawithSkillKey.Add("Skill" + skill.data["idInit"].AsInt.ToString(), skillObj);
+        //playerskillwithObjectDictionary.Add(skill, skillObj);
+
+        foreach (NewSkill skill in SplitDataFromServe._heroSkill)
+        {
+
+            if (skill.data["typewear"].AsInt == 1 && skill.data["type"].Value != "passive")
+            {
+                
+                GameObject skillObj = playerSkillDatawithSkillKey["Skill" + skill.getID()];
+                playerSkillDatawithObjectKey.Remove(skillObj);
+                
+                playerSkillDatawithObjectKey.Add(skillObj, adapter.getStatusOfMe().getApsOfSkill(skill.getID()));
+                skillObj.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = playerSkillDatawithObjectKey[skillObj].ToString();
+                Debug.Log(skill.getNick() + "_aps" + " Update Skill" + skill.getID() + " " + adapter.getStatusOfMe().getApsOfSkill(skill.getID()) + " "+ playerSkillDatawithObjectKey[skillObj]);
+            }
+            else if (skill.data["type"].Value == "passive")
+            {
+
+            }
+        }
+
         foreach (Transform child in BattleSceneUI.Instance._panelSkill.transform)
         {
             try
