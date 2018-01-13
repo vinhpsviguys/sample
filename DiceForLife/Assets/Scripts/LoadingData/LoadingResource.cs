@@ -172,7 +172,6 @@ class LoadingResource : MonoBehaviour
             yield return new WaitForSeconds(1);
             int totalAsset = _myAsset.Length;
 
-            StartCoroutine(ControllerItemsInGame._instance.GetIconRareItem());
             for (int i = 0; i < totalAsset; i++)
             {
                 StartCoroutine(LoadingResourceController._instance.DownloadAndCache(_myAsset[i], result =>
