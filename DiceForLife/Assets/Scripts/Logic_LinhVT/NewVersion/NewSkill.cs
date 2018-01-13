@@ -238,7 +238,6 @@ namespace CoreLib
             if (target == null) return true;
             
             bool canAttack = target.canAttack();
-
             return  (getType() == SkillType.Buff && target.checkCondition(getCondition()))
                 || (getType() == SkillType.Active && target.checkCondition(getCondition()) && canAttack);
         }

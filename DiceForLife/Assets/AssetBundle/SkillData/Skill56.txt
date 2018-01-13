@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.23 + 0.03 * ( Skill56_level - 1 )",
+      "delta": "0.55 + 0.05 * ( Skill56_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
@@ -22,12 +22,12 @@
   "level": 1,
   "levelrequired": "9/11/15/23/33/45/59/75/93/113",
   "class": "Cleric",
-  "cooldown": 1,
+  "cooldown": 3,
   "duration": 0,
-  "aps": 2,
-  "condition": "health > 0.1 * maxhealth",
+  "aps": 8,
+  "condition": "health > 0.01 * maxhealth + 0.01 * ( Skill56_level - 1 ) * maxhealth",
   "description": "Sweep your weapon in a large motion to attack the enemy",
-  "value": "Weapon damage increase/23/3/%;Abnormal status damage increase/5/5/%;Lost Maximum HP/1/1/%",
+  "value": "Magical damage increase/55/5/%;Abnormal status damage increase/5/5/%;Lost Maximum HP/1/1/%",
   "sprite": "Skill_56",
   "idInit": 56,
   "prefEffect": "Cleric_Active5",

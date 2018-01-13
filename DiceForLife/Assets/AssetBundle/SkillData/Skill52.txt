@@ -1,11 +1,11 @@
 {
   "lines": [
     {
-      "delta": "0.24 * shield_magical_defense + 0.04 * ( Skill52_level - 1 ) * shield_magical_defense",
+      "delta": "0.1 * shield_magical_defense + 0.1 * ( Skill52_level - 1 ) * shield_magical_defense",
       "index": "shield_magical_defense"
     },
     {
-      "delta": "0.24 * shield_physical_defense + 0.04 * ( Skill52_level - 1 ) * shield_physical_defense",
+      "delta": "0.1 * shield_physical_defense + 0.1 * ( Skill52_level - 1 ) * shield_physical_defense",
       "index": "shield_physical_defense"
     }
   ],
@@ -16,9 +16,9 @@
   "class": "Cleric",
   "cooldown": 2,
   "duration": 1,
-  "aps": 4,
+  "aps": 2,
   "description": "Increases the shield defense by infusing energy into the shield",
-  "value": "Shield physical defense increase/24/4/%;Shield magical defense increase/24/4/%",
+  "value": "Shield physical defense increase/10/10/%;Shield magical defense increase/10/10/%",
   "sprite": "Skill_52",
   "idInit": 52,
   "prefEffect": "MagicBuffBlue"

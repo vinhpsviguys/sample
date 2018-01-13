@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "-0.23 + 0.02 * ( Skill36_level - 1 )",
+      "delta": "-0.18 + 0.02 * ( Skill36_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
@@ -16,11 +16,11 @@
   "level": 1,
   "levelrequired": "9/11/15/23/33/45/59/75/93/113",
   "class": "Paladin",
-  "cooldown": 2,
+  "cooldown": 3,
   "duration": 0,
-  "aps": 2,
+  "aps": 4,
   "description": "This is a successive attack skill. You give a deep slash in the lower part of the body with a one-hand sword",
-  "value": "Physical damage decrease/23/-2/%;Successive attacks time/2/0/float",
+  "value": "Successive attacks time/2/0/float;Physical damage decrease/18/-2/%",
   "sprite": "Skill_36",
   "idInit": 36,
   "isMove": true,

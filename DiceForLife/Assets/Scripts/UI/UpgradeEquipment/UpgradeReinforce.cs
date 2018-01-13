@@ -347,9 +347,9 @@ public class UpgradeReinforce : MonoBehaviour
         else
         {
             var N = JSON.Parse(result);
-            if (N["result"].Value.Equals("success"))
+            //if (N["result"].Value.Equals("success"))
             {
-                _effectPatternUpgrade.ShowParticleSuccess();
+                _effectPatternUpgrade.ShowEffectUpgrade(N["result"].Value.Equals("success"));
             }
             if (isSpecialUpgrade)
             {

@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.44 + 0.04 * ( Skill69_level - 1 )",
+      "delta": "0.3 + 0.05 * ( Skill69_level - 1 )",
       "index": "bleed_chance"
     }
   ],
@@ -10,11 +10,11 @@
   "level": 1,
   "levelrequired": "8/10/14/22/32/44/58/74/92/112",
   "class": "Wizard",
-  "cooldown": 4,
+  "cooldown": 3,
   "duration": 1,
-  "aps": 4,
+  "aps": 5,
   "description": "Makes the enemy tremble in fear with ominous phantoms, removing their will for cure, and putting them into bleed status that removes their recovery. Under bleed status, there will  be no effective regeneration ",
-  "value": "Bleed chance increase/44/4/%",
+  "value": "Bleed chance increase/30/5/%",
   "sprite": "Skill_69",
   "idInit": 69,
   "prefEffect": "MagicBuffBlue"

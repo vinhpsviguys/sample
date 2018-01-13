@@ -328,7 +328,27 @@ public class StorageUI : MonoBehaviour
         else if (param.Equals("UpdateEquipment")) { DisplayEquipmentInBag(); }
         else if (param.Equals("SellEquipment"))//Chọn đồ
         {
-            StartCoroutine(ServerAdapter.SellEquipment(CharacterInfo._instance._baseProperties.idHero, CharacterInfo._instance._baseProperties.idCodeHero, SplitDataFromServe._listEquipmentInBag[idItemSelected].idItem,
+            if(SplitDataFromServe._listEquipmentInBag[idItemSelected].typeItem == TypeEquipmentCharacter.Buff)
+            {
+                StartCoroutine(ServerAdapter.SellBuff(CharacterInfo._instance._baseProperties.idHero, CharacterInfo._instance._baseProperties.idCodeHero, SplitDataFromServe._listEquipmentInBag[idItemSelected].idItem,
+                  result =>
+                  {
+                      if (result.StartsWith("Error"))
+                      {
+                          TextNotifyScript.instance.SetData(result);
+                      }
+                      else
+                      {
+                          var N = SimpleJSON.JSON.Parse(result);
+                          CharacterInfo._instance._baseProperties.Gold += N["plusgold"].AsInt;
+                          this.PostEvent(EventID.OnPropertiesChange);
+
+                          SplitDataFromServe._listEquipmentInBag.RemoveAt(idItemSelected);
+                          DisplayEquipmentInBag();
+                      }
+                  }));
+            }
+           else StartCoroutine(ServerAdapter.SellEquipment(CharacterInfo._instance._baseProperties.idHero, CharacterInfo._instance._baseProperties.idCodeHero, SplitDataFromServe._listEquipmentInBag[idItemSelected].idItem,
                   result =>
                   {
                       if (result.StartsWith("Error"))

@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.33 + 0.03 * ( Skill23_level - 1 )",
+      "delta": "0.08 + 0.08 * ( Skill23_level - 1 )",
       "index": "critical_chance",
       "condition": "when_shield_block_in_1_round"
     }
@@ -12,7 +12,7 @@
   "levelrequired": "20/24/28/32/36/40/44/48/52/56",
   "class": "Paladin",
   "description": "Blocking an attack gives a chance to cause all of your attacks to be critical for 1 round",
-  "value": "Critical chance increase when successful blocking/33/3/%",
+  "value": "Critical chance increase when successful blocking/8/8/%",
   "sprite": "Skill_23",
   "idInit": 23,
   "prefEffect": "\"\""

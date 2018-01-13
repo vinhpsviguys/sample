@@ -32,7 +32,7 @@ public class AnimationController : MonoBehaviour {
 
     public void MeeleAttack(CharacterPlayer atk, CharacterPlayer def, int playerId, int indexState, int health, bool isnormalAtk,NewSkill useSkill )
     {
-
+        Debug.Log("melee atack");
         //skeletonAnimation.AnimationName = moveAnimation;
         skeletonAnimator.Skeleton.FlipX = false;
         Vector3 oldPos = this.transform.position;

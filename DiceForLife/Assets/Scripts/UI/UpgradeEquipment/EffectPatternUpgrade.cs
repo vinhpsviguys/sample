@@ -2,7 +2,9 @@
 
 public class EffectPatternUpgrade : MonoBehaviour
 {
-    [SerializeField] private GameObject _fireCircleEff,_maskObject,_parSuccess;
+    [SerializeField] private GameObject _fireCircleEff, _maskObject;
+
+    [SerializeField] private GameObject _effSuccess, _effFailed;
     [SerializeField] private Transform _totalPattern, _1stPattern, _2ndPattern;
     private bool isRolling;
     private Vector3 _1stTarget = new Vector3(0, 0, 360 * 2.5f);
@@ -15,9 +17,9 @@ public class EffectPatternUpgrade : MonoBehaviour
     private bool isRollUp;
     private bool isRollDown;
 
-    private bool isShowSuccess;
+    private bool isShowEffectResult, isSuccess;
     private float _timeShowSuccess;
-    public  float _timeRolling = 2f;
+    public float _timeRolling = 2f;
     void Start()
     {
         ResetPattern();
@@ -47,14 +49,15 @@ public class EffectPatternUpgrade : MonoBehaviour
             _1stPattern.Rotate(0, 0, _giatocQuay * 1.2f);
             _2ndPattern.Rotate(0, 0, -_giatocQuay * 1.5f);
         }
-        if(isShowSuccess)
+        if (isShowEffectResult)
         {
-            _timeShowSuccess += Time.deltaTime;
+            _timeShowSuccess -= Time.deltaTime;
             //_parSuccess.transform.Rotate(0, 0, 3);
-            if (_timeShowSuccess >= 1f)
+            if (_timeShowSuccess <= 0f)
             {
-                isShowSuccess = false;
-                _parSuccess.SetActive(false);
+                isShowEffectResult = false;
+                if (isSuccess) _effSuccess.SetActive(false);
+                else _effFailed.SetActive(false);
             }
         }
     }
@@ -78,15 +81,24 @@ public class EffectPatternUpgrade : MonoBehaviour
 
         _fireCircleEff.SetActive(true);
         _maskObject.SetActive(true);
-    }    
+    }
     internal void EndRolling()
     {
         isRollDown = true;
     }
-    internal void ShowParticleSuccess()
+    internal void ShowEffectUpgrade(bool isSuccess)
     {
-        isShowSuccess = true;
-        _parSuccess.SetActive(true);
-        _timeShowSuccess = 0;
+        this.isShowEffectResult = true;
+        this.isSuccess = isSuccess;
+        if (isSuccess)
+        {
+            _timeShowSuccess = 0.9f;
+            _effSuccess.SetActive(true);
+        }
+        else
+        {
+            _timeShowSuccess = 0.9f;
+            _effFailed.SetActive(true);
+        }
     }
 }

@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.26 + 0.06 * ( Skill18_level - 1 )",
+      "delta": "0.06 + 0.06 * ( Skill18_level - 1 )",
       "index": "critical_chance",
       "duration": 1
     },
     {
-      "delta": "-0.01 * maxhealth - 0.01 * ( Skill18_level - 1 ) * maxhealth",
+      "delta": "-0.005 * maxhealth - 0.005 * ( Skill18_level - 1 ) * maxhealth",
       "index": "health_active",
       "duration": 1
     }
@@ -18,9 +18,9 @@
   "class": "Assassin",
   "cooldown": 1,
   "duration": 0,
-  "aps": 2,
-  "condition": "health > 0.01 * maxhealth + 0.01 * ( Skill18_level - 1 ) * maxhealth",
-  "value": "Critical chance increase/26/6/%;Lost Maximum HP/1/1/%",
+  "aps": 4,
+  "condition": "health > 0.005 * maxhealth + 0.005 * ( Skill18_level - 1 ) * maxhealth",
+  "value": "Critical chance increase/6/6/%;Lost Maximum HP/0.5/0.5/%",
   "description": "Rush forward knocking back and inflicting a Critical hit to enemy along your path",
   "sprite": "Skill_18",
   "idInit": 18,

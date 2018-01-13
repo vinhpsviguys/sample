@@ -1,17 +1,17 @@
 {
   "lines": [
     {
-      "delta": "-0.38 + 0.02 * ( Skill75_level - 1 )",
+      "delta": "-0.18 + 0.02 * ( Skill75_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.07 + 0.02 * ( Skill75_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill75_level - 1 )",
       "index": "dull_chance",
       "duration": 1
     },
     {
-      "delta": 3,
+      "delta": 2,
       "index": "successive_attacks",
       "duration": 1
     }
@@ -23,9 +23,9 @@
   "class": "Wizard",
   "cooldown": 2,
   "duration": 0,
-  "aps": 2,
+  "aps": 6,
   "description": "Attacks the lower body part of an enemy for few times. The impact is so huge that he slows down",
-  "value": "Magical damage decrease/38/-2/%;Dull chance increase/7/2/%;Successive attacks times/3/0/float",
+  "value": "Successive attacks times/2/0/float;Magical damage decrease/18/-2/%;Dull chance increase/3/3/%",
   "sprite": "Skill_75",
   "idInit": 75,
   "prefEffect": "Wizard_Active6",

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 internal class RewardDismantle : MonoBehaviour
 {
     [SerializeField] private Transform _border;
-    [SerializeField] private Image _iconImg;
+    [SerializeField] private Image _iconImg, _rareBorder;
     [SerializeField] private Text _txtNumberItem, _txtNumberGem;
     [SerializeField] private Transform _itemTransform;
     [SerializeField] private GameObject _gemObject;
@@ -22,7 +22,7 @@ internal class RewardDismantle : MonoBehaviour
         this.idItem = idItem;
         this.quantityItem = quantity;
         this.numberGem = numberGem;
-
+        _rareBorder.sprite = ControllerItemsInGame._instance._rareBorderItems[0];
         if (numberGem == 0)
         {
             _gemObject.SetActive(false);

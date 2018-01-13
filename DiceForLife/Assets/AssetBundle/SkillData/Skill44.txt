@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.002 * maxhealth + 0.002 * ( Skill44_level - 1 ) * maxhealth",
+      "delta": "0.004 * maxhealth + 0.004 * ( Skill44_level - 1 ) * maxhealth",
       "index": "health_buff",
       "condition": "when_e_is_abnormal"
     }
@@ -12,7 +12,7 @@
   "levelrequired": "0/4/8/12/16/20/24/28/32/36",
   "class": "Cleric",
   "description": "When you put enemy into any abnormal status, you regain a certain number of your maximum HP",
-  "value": "Maximum HP recover each round/0.2/0.2/%",
+  "value": "Maximum HP recover each round/0.4/0.4/%",
   "sprite": "Skill_44",
   "idInit": 44,
   "prefEffect": "\"\""

@@ -6,7 +6,7 @@
       "duration": 1
     },
     {
-      "delta": "0.12 + 0.02 * ( Skill20_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill20_level - 1 )",
       "index": "critical_chance",
       "duration": 1
     }
@@ -18,9 +18,9 @@
   "class": "Assassin",
   "cooldown": 1,
   "duration": 0,
-  "aps": 1,
+  "aps": 3,
   "description": "A sudden attack gives Assassin a chance to inflict Critical hit on this attack",
-  "value": "Physical damage increase/2/2/%;Critical chance increase/12/2/%",
+  "value": "Physical damage increase/2/2/%;Critical chance increase/3/3/%",
   "sprite": "Skill_20",
   "idInit": 20,
   "isMove": true,

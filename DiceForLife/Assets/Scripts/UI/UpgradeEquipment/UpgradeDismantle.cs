@@ -173,7 +173,7 @@ public class UpgradeDismantle : MonoBehaviour
                     );
                 if (!isExistThisGem)
                 {
-                    SplitDataFromServe._listGemInBag.Add(new Item(N["gem"]["idhg"].AsInt, N["gem"]["idig"].AsInt, N["gem"]["quantity"].AsInt, N["gem"]["level"].AsInt));
+                    SplitDataFromServe._listGemInBag.Add(new Item(N["gem"]["idhg"].AsInt, N["gem"]["idig"].AsInt, N["gem"]["quantity"].AsInt, N["gem"]["level"].AsInt, N["gem"]["sellprice"].AsInt, N["gem"]["uplevel"].AsInt));
                 }
             }
             if (N["item"]["idit"] != null)
@@ -186,7 +186,7 @@ public class UpgradeDismantle : MonoBehaviour
                 SplitDataFromServe._listItemInBag.ForEach(
                     Item =>
                     {
-                        Debug.Log(Item.getValue("idit").ToString() + "&" + N["item"]["idit"]);
+                        //Debug.Log(Item.getValue("idit").ToString() + "&" + N["item"]["idit"]);
                         if (Item.getValue("idit").ToString() == N["item"]["idit"].Value)
                         {
                             Debug.Log("Tồn tại item");

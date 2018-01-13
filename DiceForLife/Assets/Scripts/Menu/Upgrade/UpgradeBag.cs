@@ -238,7 +238,9 @@ public class UpgradeBag : MonoBehaviour
 
         foreach (EquipmentItem tempItem in PlayerBag._instance._myItems)
         {
-            _myItemEquipments.Add(tempItem);
+            if (IDLOAD == 2 && tempItem.typeItem == TypeEquipmentCharacter.Buff)//buff không dismantle được
+            { }
+            else _myItemEquipments.Add(tempItem);
         }
     }
     private void CalculateListRunestoneAcepted(int _group)
@@ -248,7 +250,7 @@ public class UpgradeBag : MonoBehaviour
         switch (_group)
         {
             case -1://load runestone to combine
-                for (int i = 1; i <= 15; i++)
+                for (int i = 1; i <= 15; i++) //15 ngọc này mới được ép level
                     _listIdRunestoneAcepted.Add(i);
                 break;
             case 0://load all runestone

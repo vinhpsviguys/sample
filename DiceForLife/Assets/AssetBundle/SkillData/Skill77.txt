@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.32 + 0.02 * ( Skill77_level - 1 )",
+      "delta": "0.15 + 0.05 * ( Skill77_level - 1 )",
       "index": "double_magical_damage_chance",
       "duration": 1
     }
@@ -13,9 +13,9 @@
   "class": "Wizard",
   "cooldown": 2,
   "duration": 0,
-  "aps": 3,
+  "aps": 4,
   "description": "Gives Wizard a chance to deal double magical damage on this attack",
-  "value": "Chance to deal double magical damage/32/2/%",
+  "value": "Chance to deal double magical damage/15/5/%",
   "sprite": "Skill_77",
   "idInit": 77,
   "prefEffect": "Wizard_Active4",

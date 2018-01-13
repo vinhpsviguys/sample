@@ -36,13 +36,13 @@ public class ItemInfoShop : MonoBehaviour, IPointerDownHandler
         numberRow = _descript.Length / 50;
         _border.sizeDelta = new Vector2(_border.sizeDelta.x, numberRow < 3 ? _minHeigh : _minHeigh + numberRow * 50);
 
-        if (int.Parse(cachedItem.getValue("typeid").ToString()) == 1)
-        {
-            yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForItemByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => _imgItem.sprite = value));
-        }
-        else if (int.Parse(cachedItem.getValue("typeid").ToString()) == 2)
+        if (int.Parse(cachedItem.getValue("typeitem").ToString()) == 0)//gem
         {
             yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForGemsByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => _imgItem.sprite = value));
+        }
+        else
+        {
+            yield return StartCoroutine(ControllerItemsInGame._instance.GetIconForItemByID(int.Parse(cachedItem.getValue("idtemp").ToString()), value => _imgItem.sprite = value));
         }
     }
 

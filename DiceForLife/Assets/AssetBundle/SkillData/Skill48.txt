@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.62 + 0.02 * ( Skill48_level - 1 )",
+      "delta": "0.30 + 0.05 * ( Skill48_level - 1 )",
       "index": "impotent_chance"
     }
   ],
@@ -10,11 +10,11 @@
   "level": 1,
   "levelrequired": "10/12/16/24/34/46/60/76/94/114",
   "class": "Cleric",
-  "cooldown": 4,
+  "cooldown": 3,
   "duration": 1,
   "aps": 6,
   "description": "The use of powerful curse energy of darkness put into the enemy, resulting in physical and magical damage 25% decrease for a fixed time",
-  "value": "Impotent chance increase/62/2/%",
+  "value": "Impotent chance increase/30/5/%",
   "sprite": "Skill_48",
   "idInit": 48,
   "prefEffect": "MagicBuffBlue"

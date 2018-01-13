@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.02 * Skill72_level",
+      "delta": "0.03 * Skill72_level",
       "index": "magical_defense_percent"
     }
   ],
@@ -14,7 +14,7 @@
   "duration": 1,
   "aps": 3,
   "description": "Translate internal spirit into the commitment to fighting against the enemy's magical attacks, protecting your skin with energy and enhancing your magical defensive power",
-  "value": "Magical defense increase/2/2/%",
+  "value": "Magical defense increase/3/3/%",
   "sprite": "Skill_72",
   "idInit": 72,
   "prefEffect": "MagicBuffBlue"

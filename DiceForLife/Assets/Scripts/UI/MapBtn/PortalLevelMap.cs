@@ -24,6 +24,12 @@ public class PortalLevelMap : MonoBehaviour {
     public UnityEngine.Object _portalLvlBtn;
 
     int levelMapChoosed = -1;
+
+    private void Start()
+    {
+        _battleBtn.onClick.AddListener(GoToBattleSceneMonster);
+    }
+
     private void OnEnable()
     {
         if (CharacterManager.Instance._meCharacter == null)
@@ -202,6 +208,11 @@ public class PortalLevelMap : MonoBehaviour {
              }
 
         }));
+    }
+
+    void GoToBattleSceneMonster()
+    {
+        SceneLoader._instance.LoadScene(8);
     }
 
 }

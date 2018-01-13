@@ -158,10 +158,13 @@ public class SkillCharacterUI : MonoBehaviour
         }
         if (skillData.data["level"].AsInt < 10)
         {
-            Debug.Log("skill class" + skillData.data["class"].Value);
-            Debug.Log("character class " + CharacterInfo._instance._baseProperties._classCharacter.ToString());
-            Debug.Log("level character " + CharacterInfo._instance._baseProperties.Level);
-            Debug.Log("level require to learn " + levelRequiredToLearn);
+            if (WaitingRoomUI.Instance != null)
+            {
+                WaitingRoomUI.Instance.SetLog("skill class" + skillData.data["class"].Value);
+                WaitingRoomUI.Instance.SetLog("character class " + CharacterInfo._instance._baseProperties._classCharacter.ToString());
+                WaitingRoomUI.Instance.SetLog("level character " + CharacterInfo._instance._baseProperties.Level);
+                WaitingRoomUI.Instance.SetLog("level require to learn " + levelRequiredToLearn);
+            }
             if ((skillData.data["class"].Value == CharacterInfo._instance._baseProperties._classCharacter.ToString()) && CharacterInfo._instance._baseProperties.Level >= levelRequiredToLearn)
             {
                 _learnSkill.gameObject.SetActive(true);

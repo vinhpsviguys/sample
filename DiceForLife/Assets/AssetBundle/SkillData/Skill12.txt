@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.22 + 0.02 * ( Skill12_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill12_level - 1 )",
       "index": "poisoning_chance"
     }
   ],
@@ -10,10 +10,10 @@
   "level": 1,
   "levelrequired": "2/4/8/16/26/38/52/68/86/106",
   "class": "Assassin",
-  "cooldown": 4,
-  "duration": 2,
-  "aps": 6,
-  "value": "Poison chance increase/22/2/%",
+  "cooldown": 2,
+  "duration": 1,
+  "aps": 3,
+  "value": "Poison chance increase/5/5/%",
   "description": "Enhances the effectiveness of the toxin energy by using curse energy and blowing it on enemies to cause pure damge to them for a while. Enemies who fail to overcome the power of toxin and curse energy will become poisoned",
   "sprite": "Skill_12",
   "idInit": 12,

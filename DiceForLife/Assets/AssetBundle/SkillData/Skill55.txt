@@ -13,7 +13,7 @@
       "duration": 1
     },
     {
-      "delta": -1,
+      "delta": "-0.1 - 0.1 * ( Skill55_level - 1 )",
       "index": "dodge_chance",
       "enemy": true,
       "duration": 1
@@ -24,11 +24,11 @@
   "level": 1,
   "levelrequired": "11/13/17/25/35/47/61/77/95/115",
   "class": "Cleric",
-  "cooldown": 4,
-  "duration": 1,
+  "cooldown": 2,
+  "duration": 0,
   "aps": 4,
   "description": "Emits powerful energy, reducing both the enemy's defense ability and dodge ability",
-  "value": "Enemy total defense decrease/10/10/%;Enemy dodge chance decrease/100/0/%",
+  "value": "Enemy total defense decrease/10/10/%;Enemy dodge chance decrease/10/10/%",
   "sprite": "Skill_55",
   "idInit": 55,
   "prefEffect": "ExplosionNovaPink"

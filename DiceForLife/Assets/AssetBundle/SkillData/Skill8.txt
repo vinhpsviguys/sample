@@ -1,11 +1,11 @@
 {
   "lines": [
     {
-      "delta": "0.22 + 0.02 * ( Skill8_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill8_level - 1 )",
       "index": "physical_defense_percent"
     },
     {
-      "delta": "-0.22 - 0.02 * ( e_Skill8_level - 1 )",
+      "delta": "-0.03 - 0.03 * ( e_Skill8_level - 1 )",
       "index": "physical_defense_percent",
       "enemy": true
     }
@@ -17,8 +17,8 @@
   "class": "Assassin",
   "cooldown": 4,
   "duration": 1,
-  "aps": 4,
-  "value": "Steal enemy's Physical defense/22/2/%",
+  "aps": 6,
+  "value": "Steal enemy's Physical defense/3/3/%",
   "description": "Your inner savagery rips into your enemies' armor, leaving them more vulnerable with each hit, while at the same time stealing some of their physical defense for yourself",
   "sprite": "Skill_8",
   "idInit": 8,

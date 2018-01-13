@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "-0.09 + 0.01 * ( Skill79_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill79_level - 1 )",
       "index": "magical_damage_percent",
       "duration": 1
     },
@@ -19,9 +19,9 @@
   "class": "Wizard",
   "cooldown": 1,
   "duration": 0,
-  "aps": 1,
+  "aps": 4,
   "description": "Produces a wall of fire around enemy. Any unit that's not immune to its effect, cannot pass through it",
-  "value": "Magical damage decrease/9/-1/%;Enemy dodge chance decrease/100/0/%",
+  "value": "Magical damage decrease/3/3/%;Enemy dodge chance decrease/100/0/%",
   "sprite": "Skill_79",
   "idInit": 79,
   "prefEffect": "Wizard_Active2",

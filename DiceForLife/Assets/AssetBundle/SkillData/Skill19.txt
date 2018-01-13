@@ -1,12 +1,12 @@
 {
   "lines": [
     {
-      "delta": "0.02 + 0.02 * ( Skill19_level - 1 )",
+      "delta": "0.03 + 0.03 * ( Skill19_level - 1 )",
       "index": "physical_damage_percent",
       "duration": 1
     },
     {
-      "delta": "0.16 + 0.01 * ( Skill19_level - 1 )",
+      "delta": "0.07 + 0.02 * ( Skill19_level - 1 )",
       "index": "bleed_chance",
       "duration": 1
     }
@@ -18,8 +18,8 @@
   "class": "Assassin",
   "cooldown": 1,
   "duration": 0,
-  "aps": 1,
-  "value": "Physical damage increase/2/2/%;Bleed chance increase/16/1/%",
+  "aps": 3,
+  "value": "Physical damage increase/3/3/%;Bleed chance increase/7/2/%",
   "description": "This is about approaching an enemy with a dagger, twisting your hand and thrusting it into him.Those failing to endure the impact will get bled",
   "sprite": "Skill_19",
   "idInit": 19,

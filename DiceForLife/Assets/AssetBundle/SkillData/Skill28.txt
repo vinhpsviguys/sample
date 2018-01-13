@@ -1,7 +1,7 @@
 {
   "lines": [
     {
-      "delta": "0.02 + 0.02 * ( Skill28_level - 1 )",
+      "delta": "0.05 + 0.05 * ( Skill28_level - 1 )",
       "index": "physical_damage_percent"
     }
   ],
@@ -12,9 +12,9 @@
   "class": "Paladin",
   "cooldown": 3,
   "duration": 1,
-  "aps": 4,
+  "aps": 5,
   "description": "A cry that improves your commitment to battle so that your physical damage can be enhanced temporarily",
-  "value": "Physical damage increase/2/2/%",
+  "value": "Physical damage increase/5/5/%",
   "sprite": "Skill_28",
   "idInit": 28,
   "isMove": false,

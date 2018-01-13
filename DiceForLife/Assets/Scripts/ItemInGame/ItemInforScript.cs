@@ -406,7 +406,7 @@ public class ItemInforScript : MonoBehaviour
                 propertyString.Add(string.Format("Magical Absorption: {0}% - {1}%", _fixValue(27, true), _fixValue(28, true)));
                 break;
             case TypeEquipmentCharacter.Avatar:
-                propertyString.Add(string.Format("Heal: {0}%", _fixValue(39, true)));
+                propertyString.Add(string.Format("Health: {0}%", _fixValue(39, true)));
                 propertyString.Add(string.Format("Physical damage: {0}%", _fixValue(98, true)));
                 propertyString.Add(string.Format("Magical damamge: {0}%", _fixValue(99, true)));
                 propertyString.Add(string.Format("Physical absoption: {0}%", _fixValue(100, true)));
@@ -418,7 +418,7 @@ public class ItemInforScript : MonoBehaviour
 
                 int _idRate = MappingData.ConvertIdBuffToAttribute(_myEquipment.idItemInit);
                 string _valueRate = _fixValue(_idRate, true);
-                switch (_item.idItem)
+                switch (_item.idItemInit)
                 {
                     case 1: propertyString.Add(string.Format("Damage against Assassin: {0}%", _valueRate)); break;
                     case 2: propertyString.Add(string.Format("Damage against Paladin: {0}%", _valueRate)); break;
@@ -444,13 +444,12 @@ public class ItemInforScript : MonoBehaviour
                     case 22: propertyString.Add(string.Format("Bleed resistance: {0}%", _valueRate)); break;
                     case 23: propertyString.Add(string.Format("Crazy resistance: {0}%", _valueRate)); break;
                     case 24: propertyString.Add(string.Format("Dull resistance: {0}%", _valueRate)); break;
+                    default: Debug.Log("Sao không có cái nào trùng"); break;
                 }
                 break;
         }
-        //propertyString.Add("  ");
         try
         {
-            //Debug.Log(_item.getValue("listidproperty").ToString());
             var N = SimpleJSON.JSON.Parse(_item.getValue("listidproperty").ToString());
             foreach (KeyValuePair<string, JSONNode> _temp in N.AsObject)
             {
@@ -461,6 +460,8 @@ public class ItemInforScript : MonoBehaviour
         {
 
         }
+
+        propertyString.Add(string.Format("Sell price: {0}", _item.priceItem));
     }
 
     private string _fixValue(int _att, bool isPercent = false)
@@ -484,5 +485,5 @@ public class ItemInforScript : MonoBehaviour
         }
         return "Unknown";
     }
-    
+
 }

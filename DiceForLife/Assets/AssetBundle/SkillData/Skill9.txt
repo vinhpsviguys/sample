@@ -1,13 +1,13 @@
 {
   "lines": [
     {
-      "delta": "0.32 * total_damage + 0.02 * ( Skill9_level - 1 ) * total_damage",
+      "delta": "0.05 * total_damage + 0.05 * ( Skill9_level - 1 ) * total_damage",
       "index": "health_active",
       "condition": "when_hit",
       "duration": 1
     },
     {
-      "delta": -0.6,
+      "delta": -0.4,
       "index": "magical_defense_percent"
     }
   ],
@@ -16,10 +16,10 @@
   "level": 1,
   "levelrequired": "8/10/14/22/32/44/58/74/92/112",
   "class": "Assassin",
-  "cooldown": 4,
+  "cooldown": 3,
   "duration": 1,
   "aps": 4,
-  "value": "Gain HP by total damage done/32/2/%;Magic defense decrease/60/0/%",
+  "value": "Gain HP by total damage done/5/5/%;Magic defense decrease/40/0/%",
   "description": "Immediately after damaging the enemy. Heals the attacker for a certain percentage of attack damage dealt but significantly decreases the amount of the defense",
   "sprite": "Skill_9",
   "idInit": 9,

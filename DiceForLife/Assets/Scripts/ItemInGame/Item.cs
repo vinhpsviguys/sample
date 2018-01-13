@@ -26,36 +26,31 @@ public class Item
         */
     }
 
-    public Item(int idhg, int idig, int quantity, int level, int price = 0)
+    public Item(int idhg, int idig, int quantity, int level, int sellprice, int upLevel)//gem
     {
-        //"idhg": "48",
-        //        "idh": "126",
-        //        "idcode": "5KO7V15",
-        //        "idig": "10",
-        //        "quantity": "5",
-        //        "level": "2",
-        //        "sellprice": "1",
-        //        "timemili": "1515041436",
-        //        "name": "Runestones of Iron Shield",
-        //        "description": "Chance to be strucked by Critical Hit decreased",
         setValue("idhg", idhg);
         setValue("idig", idig);
+
         setValue("quantity", quantity);
         setValue("level", level);
-        setValue("price", price);
+
+        setValue("sellprice", sellprice);
+        setValue("uplevel", upLevel);
         foreach (Item _gem in SplitDataFromServe._InitGems)
         {
             if (idig == int.Parse(_gem.getValue("idig").ToString()))
             {
-                setValue("sellprice", _gem.getValue("sellprice").ToString());
                 setValue("name", _gem.getValue("name").ToString());
+                setValue("price", _gem.getValue("price").ToString());
                 setValue("description", _gem.getValue("description").ToString());
                 setValue("attribute", _gem.getValue("attribute").ToString());
+
+
                 break;
             }
         }
-        //phải đọc thêm các trường khác
-    }//gem
+    }
+
     public Item(int idht, int idit, string nameI, int quantity, int sellPrice, int levelRequired, string des = "", int price = 0)
     {
         setValue("idht", idht);
@@ -76,10 +71,12 @@ public class Item
                     setValue("name", _gem.getValue("name").ToString());
                     setValue("descripton", _gem.getValue("descripton").ToString());
                     setValue("price", _gem.getValue("price").ToString());
+                    setValue("sellprice", _gem.getValue("sellprice").ToString());
                     break;
                 }
             }
         }
+        //Debug.Log(getValue("price").ToString());
 
     }//item
     public Item(JSONNode _node)
@@ -93,8 +90,8 @@ public class Item
         }
         catch (Exception e)
         {
-            Debug.Log(e.ToString());
-            Debug.Log(_node.ToString());
+            //Debug.Log(e.ToString());
+            //Debug.Log(_node.ToString());
         }
     }
     public Item(Item _archetypeItem)

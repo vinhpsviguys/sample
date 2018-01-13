@@ -15,7 +15,7 @@ public class ControllerItemsInGame : MonoBehaviour
     private const string nameAssetBundleItem = "items";
     private const string nameAssetBundleGems = "gems";
     public static bool isLoadedXML = false;
-    internal Sprite[] _rareBorderItems;
+    public Sprite[] _rareBorderItems;
     private bool isFoundImg = false;
 
     void Awake()
@@ -35,12 +35,12 @@ public class ControllerItemsInGame : MonoBehaviour
 
     internal IEnumerator GetIconRareItem()
     {
-        if (_rareBorderItems == null)
-        {
-            _rareBorderItems = new Sprite[7];
-            for (int i = 0; i < 7; i++)
-                yield return StartCoroutine(LoadingResourceController._instance.LoadAssetBundleSpriteAsync(nameAssetBundleItem, "ItemUIRare" + (i + 1), value => _rareBorderItems[i] = value));
-        }
+        //if (_rareBorderItems == null)
+        //{
+        _rareBorderItems = new Sprite[7];
+        for (int i = 0; i < 7; i++)
+            yield return StartCoroutine(LoadingResourceController._instance.LoadAssetBundleSpriteAsync(nameAssetBundleItem, "ItemUIRare" + (i + 1), value => _rareBorderItems[i] = value));
+        //}
     }
 
     internal IEnumerator GetIconForGems(Item _item, System.Action<Sprite> result)
