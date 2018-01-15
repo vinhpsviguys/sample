@@ -186,6 +186,7 @@ namespace CoreLib
         public const string brshie_na = "breaks_shield";
 
         public const string remove_all_abnormal_chance_na = "remove_all_abnormal_chance";
+        public const string remove_a_abnormal_chance_na = "remove_a_abnormal_chance";
 
         public const string decrease_all_abnormal_1round__chance_na = "decrease_all_abnormal_1round__chance";
 

@@ -276,6 +276,21 @@ public class WaitingRoomUI : MonoBehaviour {
         SceneLoader._instance.LoadScene(3);
         //Application.LoadLevel("FindMatch");
     }
+
+    public static void LogInUI(string content) {
+        if (Instance != null) {
+            try
+            {
+                UnityMainThreadDispatcher.Instance().Enqueue(() => {
+                    Instance.SetLog(content);
+                });
+            }
+            catch (Exception e) {
+            }
+            
+            
+        }
+    }
    
     public void SetLog(string content)
     {

@@ -43,17 +43,17 @@ namespace CoreLib
             this.playerID = character.playerId;
 
             loadCharacteristic();
-            //Console.WriteLine("loadCharacteristic");
+            //WaitingRoomUI.LogInUI("loadCharacteristic");
             loadStaticEquipmentIndexes();
-            //Console.WriteLine("loadStaticEquipmentIndexes");
+            //WaitingRoomUI.LogInUI("loadStaticEquipmentIndexes");
             loadStaticSkillIndexes();
             loadAbnormalStatusIndex();
-            //Console.WriteLine("loadAbnormalStatusIndex");
+            //WaitingRoomUI.LogInUI("loadAbnormalStatusIndex");
             recomputeIndexes();
-            //Console.WriteLine("recomputeIndexes");
+            //WaitingRoomUI.LogInUI("recomputeIndexes");
             loadStaticIndexFromInitToMid();
-            //Console.WriteLine("loadStaticIndexFromInitToMid");
-            Console.WriteLine("loadStaticIndexFromInitToMid");
+            //WaitingRoomUI.LogInUI("loadStaticIndexFromInitToMid");
+            WaitingRoomUI.LogInUI("loadStaticIndexFromInitToMid");
         }
 
 
@@ -196,16 +196,16 @@ namespace CoreLib
         //    this.playerID = character.playerId;
 
         //    loadCharacteristic();
-        //    //Console.WriteLine("loadCharacteristic");
+        //    //WaitingRoomUI.LogInUI("loadCharacteristic");
         //    loadStaticEquipmentIndexes();
-        //    //Console.WriteLine("loadStaticEquipmentIndexes");
+        //    //WaitingRoomUI.LogInUI("loadStaticEquipmentIndexes");
         //    loadStaticSkillIndexes();
         //    loadAbnormalStatusIndex();
-        //    //Console.WriteLine("loadAbnormalStatusIndex");
+        //    //WaitingRoomUI.LogInUI("loadAbnormalStatusIndex");
         //    recomputeIndexes();
-        //    //Console.WriteLine("recomputeIndexes");
+        //    //WaitingRoomUI.LogInUI("recomputeIndexes");
         //    loadStaticIndexFromInitToMid();
-        //    //Console.WriteLine("loadStaticIndexFromInitToMid");
+        //    //WaitingRoomUI.LogInUI("loadStaticIndexFromInitToMid");
         //}
 
         //public NewCharacterStatus(Character character)
@@ -224,7 +224,7 @@ namespace CoreLib
         //    recomputeIndexes();
         //    // transfer init to mid to prepare to compute
         //    loadStaticIndexFromInitToMid();
-        //    //Console.WriteLine("loadStaticIndexFromInitToMid");
+        //    //WaitingRoomUI.LogInUI("loadStaticIndexFromInitToMid");
         //}
 
 
@@ -532,7 +532,7 @@ namespace CoreLib
 
         //    //         foreach (string index in initIndexes.Keys)
         //    //{
-        //    //            Console.WriteLine("initIndexes  " + index + " = " + initIndexes[index]);
+        //    //            WaitingRoomUI.LogInUI("initIndexes  " + index + " = " + initIndexes[index]);
         //    //}
         //}
 
@@ -541,7 +541,7 @@ namespace CoreLib
         {
             float Level = character.characteristic.Level;
 
-            Console.WriteLine("recomputeIndexes " + Level + " " + Constants.DAMAGE_PER_TIMES[(int)Level - 1] + " " + Constants.DEFEND_PER_TIMES[(int)Level - 1]);
+            WaitingRoomUI.LogInUI("recomputeIndexes " + Level + " " + Constants.DAMAGE_PER_TIMES[(int)Level - 1] + " " + Constants.DEFEND_PER_TIMES[(int)Level - 1]);
 
             float Strength = (float)getIndex(initIndexes, Indexes.str_na, 0f);
             float Intelligence = (float)getIndex(initIndexes, Indexes.int_na, 0f);
@@ -574,7 +574,7 @@ namespace CoreLib
 
             Max_Health += (float)getIndex(initIndexes, Indexes.max_hp_na, 0f);
             initIndexes.Add(Indexes.max_hp_na, Max_Health);
-            //UnityEngine.Console.WriteLine("max health " + Max_Health +" level charater: "+ character.characteristic.Level+" vitality char: "+ character.characteristic.Vitality+" total vit: "+ Vitality);
+            //UnityEngine.WaitingRoomUI.LogInUI("max health " + Max_Health +" level charater: "+ character.characteristic.Level+" vitality char: "+ character.characteristic.Vitality+" total vit: "+ Vitality);
 
             float Health = Max_Health;
             initIndexes.Add(Indexes.hp_na, Health);
@@ -602,7 +602,7 @@ namespace CoreLib
 
             //         foreach (string index in initIndexes.Keys)
             //{
-            //            Console.WriteLine("initIndexes  " + index + " = " + initIndexes[index]);
+            //            WaitingRoomUI.LogInUI("initIndexes  " + index + " = " + initIndexes[index]);
             //}
         }
 
@@ -612,7 +612,7 @@ namespace CoreLib
          //public const string echar_mda_na = "echar_magical_damage";
          //public const string echar_pde_na = "echar_physical_defense";
          //public const string echar_mde_na = "echar_magical_defense";
-            Console.WriteLine("+++++++++++++++++++++++++preProcessBeforeDamaging id " + playerID);
+            WaitingRoomUI.LogInUI("+++++++++++++++++++++++++preProcessBeforeDamaging id " + playerID);
             float echar_pda = (float)getCurrentIndex(Indexes.char_pda_na);
             float echar_mda = (float)getCurrentIndex(Indexes.char_mda_na);
             echar_pda += ((float)calculateIndex(vs, "weapon_" + Indexes.pda_na)) * (1 + (float)getCurrentIndex("weapon_" + Indexes.pre_na));
@@ -673,32 +673,33 @@ namespace CoreLib
             float ENarmor = (float)vs.getCurrentIndex(Indexes.endura_na);
             float Avatar = (float)getCurrentIndex("avatar_physical_damage_percent");
             float Sach = (float)getCurrentIndex("damage_against_"+vs.character.characteristic.Class.ToString());
-            Console.WriteLine(" Physical VK " + (float)getCurrentIndex("weapon_physical_damage") + " ");
-            Console.WriteLine(" Physical VK2 " + (float)getCurrentIndex("weapon2_physical_damage") + " ");
+         
+            WaitingRoomUI.LogInUI(" Physical VK " + (float)getCurrentIndex("weapon_physical_damage") + " ");
+            WaitingRoomUI.LogInUI(" Physical VK2 " + (float)getCurrentIndex("weapon2_physical_damage") + " ");
 
-            Console.WriteLine(" Physical Critical Chance " + Critical_Chance + " ");
+            WaitingRoomUI.LogInUI(" Physical Critical Chance " + Critical_Chance + " ");
 
-            Console.WriteLine(" Physical NVATK " + (float)getCurrentIndex(Indexes.char_pda_na) + " ");
-            Console.WriteLine(" Physical GT " + (float)getCurrentIndex("weapon_" + Indexes.pre_na) + " ");
-            Console.WriteLine(" Physical GT2 " + (float)getCurrentIndex("weapon2_" + Indexes.pre_na) + " ");
-            Console.WriteLine(" Physical VK_NVATK_GT " + VK_NVATK_GT + " ");
+            WaitingRoomUI.LogInUI(" Physical NVATK " + (float)getCurrentIndex(Indexes.char_pda_na) + " ");
+            WaitingRoomUI.LogInUI(" Physical GT " + (float)getCurrentIndex("weapon_" + Indexes.pre_na) + " ");
+            WaitingRoomUI.LogInUI(" Physical GT2 " + (float)getCurrentIndex("weapon2_" + Indexes.pre_na) + " ");
+            WaitingRoomUI.LogInUI(" Physical VK_NVATK_GT " + VK_NVATK_GT + " ");
 
-            Console.WriteLine(" Physical SKactive " + SKactive + " ");
-            Console.WriteLine(" Physical CM " + CM + " ");
-            Console.WriteLine(" Physical PT " + PT + " ");
-            Console.WriteLine(" Physical SKpassive " + SKpassive + " ");
-            Console.WriteLine(" Physical HTts " + HTts + " ");
-            Console.WriteLine(" Physical HTskill " + HTskill + " ");
-            Console.WriteLine(" Physical ENarmor " + ENarmor + " ");
-            Console.WriteLine(" Physical Avatar " + Avatar + " ");
-            Console.WriteLine(" Physical Sach " + Sach + " ");
+            WaitingRoomUI.LogInUI(" Physical SKactive " + SKactive + " ");
+            WaitingRoomUI.LogInUI(" Physical CM " + CM + " ");
+            WaitingRoomUI.LogInUI(" Physical PT " + PT + " ");
+            WaitingRoomUI.LogInUI(" Physical SKpassive " + SKpassive + " ");
+            WaitingRoomUI.LogInUI(" Physical HTts " + HTts + " ");
+            WaitingRoomUI.LogInUI(" Physical HTskill " + HTskill + " ");
+            WaitingRoomUI.LogInUI(" Physical ENarmor " + ENarmor + " ");
+            WaitingRoomUI.LogInUI(" Physical Avatar " + Avatar + " ");
+            WaitingRoomUI.LogInUI(" Physical Sach " + Sach + " ");
 
             float Physical_Damage = (VK_NVATK_GT * CM + SKactive - PT) * (1 + SKpassive) * (1 - HTts) * (1 - HTskill) * (1 - ENarmor) * (1 + Avatar) * (1 + Sach);
             Physical_Damage = Math.Max(0, Physical_Damage);
-            Console.WriteLine(" Physical Damage " + Physical_Damage + " ");
+            WaitingRoomUI.LogInUI(" Physical Damage " + Physical_Damage + " ");
             midIndexes.Add(Indexes.total_physical_damage_na, Physical_Damage);
             Physical_Damage = calculateIndexAndSave(vs, Indexes.total_physical_damage_na);
-            Console.WriteLine(" Total Physical Damage " + Physical_Damage + " ");
+            WaitingRoomUI.LogInUI(" Total Physical Damage " + Physical_Damage + " ");
 
             VK_NVATK_GT = calculateIndexAndSave(vs, Indexes.echar_mda_na);
             SKactive = (float)calculateIndexAndSave(vs, Indexes.mda_na) - (float)vs.calculateIndexAndSave(this, Indexes.mde_na);
@@ -711,29 +712,29 @@ namespace CoreLib
             Avatar = (float)getCurrentIndex("avatar_magical_damage_percent");
             Sach = (float)getCurrentIndex("damage_against_" + vs.character.characteristic.Class.ToString());
 
-            Console.WriteLine(" Magical VK " + (float)getCurrentIndex("weapon_magical_damage") + " ");
-            Console.WriteLine(" Magical VK2 " + (float)getCurrentIndex("weapon2_magical_damage") + " ");
-            Console.WriteLine(" Magical NVATK " + (float)getCurrentIndex(Indexes.char_mda_na) + " ");
-            Console.WriteLine(" Magical GT " + (float)getCurrentIndex("weapon_" + Indexes.mre_na) + " ");
-            Console.WriteLine(" Magical GT2 " + (float)getCurrentIndex("weapon2_" + Indexes.mre_na) + " ");
+            WaitingRoomUI.LogInUI(" Magical VK " + (float)getCurrentIndex("weapon_magical_damage") + " ");
+            WaitingRoomUI.LogInUI(" Magical VK2 " + (float)getCurrentIndex("weapon2_magical_damage") + " ");
+            WaitingRoomUI.LogInUI(" Magical NVATK " + (float)getCurrentIndex(Indexes.char_mda_na) + " ");
+            WaitingRoomUI.LogInUI(" Magical GT " + (float)getCurrentIndex("weapon_" + Indexes.mre_na) + " ");
+            WaitingRoomUI.LogInUI(" Magical GT2 " + (float)getCurrentIndex("weapon2_" + Indexes.mre_na) + " ");
 
-            Console.WriteLine(" Magical VK_NVATK_GT " + VK_NVATK_GT + " ");
+            WaitingRoomUI.LogInUI(" Magical VK_NVATK_GT " + VK_NVATK_GT + " ");
 
-            Console.WriteLine(" Magical SKactive " + SKactive + " ");
-            Console.WriteLine(" Magical PT " + PT + " ");
-            Console.WriteLine(" Magical SKpassive " + SKpassive + " ");
-            Console.WriteLine(" Magical HTts " + HTts + " ");
-            Console.WriteLine(" Magical HTskill " + HTskill + " ");
-            Console.WriteLine(" Magical ENarmor " + ENarmor + " ");
-            Console.WriteLine(" Magical Avatar " + Avatar + " ");
-            Console.WriteLine(" Magical Sach " + Sach + " ");
+            WaitingRoomUI.LogInUI(" Magical SKactive " + SKactive + " ");
+            WaitingRoomUI.LogInUI(" Magical PT " + PT + " ");
+            WaitingRoomUI.LogInUI(" Magical SKpassive " + SKpassive + " ");
+            WaitingRoomUI.LogInUI(" Magical HTts " + HTts + " ");
+            WaitingRoomUI.LogInUI(" Magical HTskill " + HTskill + " ");
+            WaitingRoomUI.LogInUI(" Magical ENarmor " + ENarmor + " ");
+            WaitingRoomUI.LogInUI(" Magical Avatar " + Avatar + " ");
+            WaitingRoomUI.LogInUI(" Magical Sach " + Sach + " ");
 
 
             float Magical_Damage = (VK_NVATK_GT + SKactive - PT) * (1 + SKpassive) * (1 - HTts) * (1 - HTskill) * (1 - ENarmor) * (1 + Avatar) * (1 + Sach);
             Magical_Damage = Math.Max(0, Magical_Damage);
 
 
-            Console.WriteLine(" Magical Damage " + Magical_Damage + " ");
+            WaitingRoomUI.LogInUI(" Magical Damage " + Magical_Damage + " ");
             //setIndex(midIndexes, "pure_damage", 0f);
 
             midIndexes.Add(Indexes.total_magical_damage_na, Magical_Damage);
@@ -742,7 +743,7 @@ namespace CoreLib
             bool double_magical_damage = random.GetDouble() < double_magical_damage_chance;
             Magical_Damage = double_magical_damage ? Magical_Damage * 2 : Magical_Damage;
 
-            Console.WriteLine(" Total Magical Damage " + Magical_Damage + " double damage " + double_magical_damage);
+            WaitingRoomUI.LogInUI(" Total Magical Damage " + Magical_Damage + " double damage " + double_magical_damage);
 
 
 
@@ -751,11 +752,11 @@ namespace CoreLib
             setIndex(midIndexes, "pure_damage", Pure_Damage);
 
 
-            Console.WriteLine(" Pure Damage " + Pure_Damage + " ");
+            WaitingRoomUI.LogInUI(" Pure Damage " + Pure_Damage + " ");
 
             setIndex(midIndexes, "total_damage", Physical_Damage + Magical_Damage + Pure_Damage);
             setIndex(curIndexes, "total_damage", Physical_Damage + Magical_Damage + Pure_Damage);
-            Console.WriteLine("All Damage" + midIndexes["total_damage"]);
+            WaitingRoomUI.LogInUI("All Damage" + midIndexes["total_damage"]);
 
             logMyDictinary("curIndexes ", curIndexes);
 
@@ -792,7 +793,7 @@ namespace CoreLib
                             formula += count == 0 ? atomic.delta : " + " + atomic.delta;
                         }
                     }
-                    Console.WriteLine("player " + playerID + " enable Condition:" + condition + " recompute " + index + "|" + deltaFormulas[index] + "|" + formula + "|");
+                    WaitingRoomUI.LogInUI("player " + playerID + " enable Condition:" + condition + " recompute " + index + "|" + deltaFormulas[index] + "|" + formula + "|");
 
                     // ghi lai cong thuc
                     deltaFormulas.Add(index, formula);
@@ -829,7 +830,7 @@ namespace CoreLib
                             formula += count == 0 ? atomic.delta : " + " + atomic.delta;
                         }
                     }
-                    Console.WriteLine("player " + playerID + " disable Condition:" + condition + " recompute " + index + "|" + deltaFormulas[index] + "|" + formula + "|");
+                    //WaitingRoomUI.LogInUI("player " + playerID + " disable Condition:" + condition + " recompute " + index + "|" + deltaFormulas[index] + "|" + formula + "|");
 
                     // ghi lai cong thuc
                     deltaFormulas.Add(index, formula);
@@ -855,11 +856,11 @@ namespace CoreLib
                     formula += count == 0 ? atomic.delta : " + " + atomic.delta;
                 }
             }
-            //Console.WriteLine("ghi lai|" + index + "|" + deltaFormulas[index]+"|"+formula+"|");
+            //WaitingRoomUI.LogInUI("ghi lai|" + index + "|" + deltaFormulas[index]+"|"+formula+"|");
 
             // ghi lai cong thuc
             deltaFormulas.Add(index, formula);
-            Console.WriteLine(index + " deltaFormula =" + formula);
+            //WaitingRoomUI.LogInUI(index + " deltaFormula =" + formula);
         }
 
 
@@ -926,7 +927,7 @@ namespace CoreLib
             NewEffect effect = effects[name];
 
             // loai bo o atomic
-            Console.WriteLine(playerID + " removeEffect " + name);
+            WaitingRoomUI.LogInUI(playerID + " removeEffect " + name);
 
             foreach (AtomicEffect atomic in effect.atomicEffects)
             {
@@ -947,7 +948,7 @@ namespace CoreLib
 
             if (effect.condition != "")
             {
-                Console.WriteLine(effect.condition + " playerID =  " + effect.playerID + " origin =  " + effect.originID + " in newCharacterStatus by " + playerID);
+                //WaitingRoomUI.LogInUI(effect.condition + " playerID =  " + effect.playerID + " origin =  " + effect.originID + " in newCharacterStatus by " + playerID);
                 if (enableSkills.ContainsKey(effect.condition))
                 {
                     ArrayList enableLine = enableSkills[effect.condition];
@@ -969,7 +970,7 @@ namespace CoreLib
             NewEffect effect = effects[name];
 
             // loai bo o atomic
-            Console.WriteLine(playerID + " removeEffect " + name);
+            WaitingRoomUI.LogInUI(playerID + " removeEffect " + name);
 
             foreach (AtomicEffect atomic in effect.atomicEffects)
             {
@@ -1001,10 +1002,10 @@ namespace CoreLib
         {
             //foreach (String index in deltaFormulas.Keys)
             //{
-            //   Console.WriteLine("|" + index + "|" + deltaFormulas[index]);
+            //   WaitingRoomUI.LogInUI("|" + index + "|" + deltaFormulas[index]);
             //}
             // tinh lai dieu kien
-            Console.WriteLine(playerID + "recomputeIndexesBeforeActive index+++++++++++++++++++++++++++++++");
+            WaitingRoomUI.LogInUI(playerID + "recomputeIndexesBeforeActive index+++++++++++++++++++++++++++++++");
             foreach (String condition in enableAtomics.Keys)
             {
                 bool result = checkCondition(condition);
@@ -1030,14 +1031,14 @@ namespace CoreLib
                         formula += count == 0 ? atomic.delta : " + " + atomic.delta;
                     }
                 }
-                //Console.WriteLine("ghi lai|" + index + "|" + deltaFormulas[index]+"|"+formula+"|");
+                //WaitingRoomUI.LogInUI("ghi lai|" + index + "|" + deltaFormulas[index]+"|"+formula+"|");
 
                 // ghi lai cong thuc
                 deltaFormulas.Add(index, formula);
 
 
-                //Console.WriteLine(playerID+"recomputeIndexesBeforeActive index" + index + " " + formula);
-                //Console.WriteLine("ghi lai ket qua|" + index + "|" + deltaFormulas[index] + "|" + formula+"|");
+                //WaitingRoomUI.LogInUI(playerID+"recomputeIndexesBeforeActive index" + index + " " + formula);
+                //WaitingRoomUI.LogInUI("ghi lai ket qua|" + index + "|" + deltaFormulas[index] + "|" + formula+"|");
 
 
             }
@@ -1053,7 +1054,7 @@ namespace CoreLib
                 curIndexes.Add(index, result);
             }
 
-            Console.WriteLine(playerID + "recomputeIndexesBeforeActive index+++++++++++++++++++++++++++++++");
+            WaitingRoomUI.LogInUI(playerID + "recomputeIndexesBeforeActive index+++++++++++++++++++++++++++++++");
 
         }
 
@@ -1097,11 +1098,11 @@ namespace CoreLib
         public float calculateIndexAndSave(NewCharacterStatus def, string index)
         {
             string fomulas = index + (deltaFormulas.ContainsKey(index) && deltaFormulas[index] != "" ? " + " + deltaFormulas[index] : "");
-            Console.WriteLine("calculateIndex " + index + " formulas = " + fomulas); // de log Ishappen Stun
+            WaitingRoomUI.LogInUI("calculateIndex " + index + " formulas = " + fomulas); // de log Ishappen Stun
             try
             {
                 float digit = Convert.ToSingle(fomulas);
-                Console.WriteLine("save value = " + digit);
+                WaitingRoomUI.LogInUI("save value = " + digit);
                 curIndexes.Add(index, digit);
                 return digit;
             }
@@ -1109,7 +1110,7 @@ namespace CoreLib
             {
                 // khong phai la digit
                 float digit = calcuateExpression(fomulas, def);
-                Console.WriteLine("save value = " + digit);
+                WaitingRoomUI.LogInUI("save value = " + digit);
                 curIndexes.Add(index, digit);
                 return digit;
             }
@@ -1189,7 +1190,7 @@ namespace CoreLib
 
             //for (int i = 0; i < postfixEx.Count; i++) 
             //    Console.Write(postfixEx[i]+" ");
-            //Console.WriteLine();
+            //WaitingRoomUI.LogInUI();
             // tinh
             for (int i = 0; i < postfixEx.Count; i++)
             {
@@ -1219,7 +1220,7 @@ namespace CoreLib
                             opstack.Add(x / y);
                             break;
                         default:
-                            Console.WriteLine("toan tu khong biet " + postfixEx[i]);
+                            WaitingRoomUI.LogInUI("toan tu khong biet " + postfixEx[i]);
                             break;
                     }
                 }
@@ -1269,7 +1270,7 @@ namespace CoreLib
                     if (conManager.checkCondition(atomic.condition))
                     {
                         atomic.decDuration();
-                        Console.WriteLine("decDuration " + atomic.index + " " + atomic.delta + " " + atomic.condition + " " + atomic.duration);
+                        WaitingRoomUI.LogInUI("decDuration " + atomic.index + " " + atomic.delta + " " + atomic.condition + " " + atomic.duration);
                     }
 
                 }
@@ -1303,7 +1304,7 @@ namespace CoreLib
         {// co the khong co se tinh
             if (!curIndexes.ContainsKey(index))
             {
-                //Console.WriteLine("Not found Index " + index + " in curIndexes");
+                //WaitingRoomUI.LogInUI("Not found Index " + index + " in curIndexes");
                 return getMidIndex(index);
                 //throw new Exception("Not found Index " + index);
             }
@@ -1323,7 +1324,7 @@ namespace CoreLib
         {
             if (!midIndexes.ContainsKey(index))
             {
-                //Console.WriteLine("Not found Index " + index + " in midIndexes");
+                //WaitingRoomUI.LogInUI("Not found Index " + index + " in midIndexes");
                 return 0f;
             }
             return midIndexes.ContainsKey(index) ? midIndexes[index] : null;
@@ -1343,12 +1344,12 @@ namespace CoreLib
 
         private void logMyDictinary(string tag, MyDictionary<string, object> dic)
         {
-            //        Console.WriteLine("+++++++++++++++++++++++++++++++++++++++begin "+tag);
+            //        WaitingRoomUI.LogInUI("+++++++++++++++++++++++++++++++++++++++begin "+tag);
             //foreach (string index in dic.Keys)
             //{
-            //            Console.WriteLine(tag+" : " + index + " = " + dic[index]);
+            //            WaitingRoomUI.LogInUI(tag+" : " + index + " = " + dic[index]);
             //}
-            //Console.WriteLine("+++++++++++++++++++++++++++++++++++++++end "+tag);
+            //WaitingRoomUI.LogInUI("+++++++++++++++++++++++++++++++++++++++end "+tag);
         }
 
         public byte[] convertToByteArrOfPlayerID(int playerID)

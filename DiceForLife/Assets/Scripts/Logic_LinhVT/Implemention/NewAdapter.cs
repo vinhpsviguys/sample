@@ -14,6 +14,8 @@ class NewAdapter : Adapter
     private Socket socket;
     private GameObject content;
     private GameObject prefab;
+    public static bool isLog = true;
+    
 
 
     // public NewAdapter(Socket socket, Character me, Character you, int firstID = 1, bool isMaster = true, bool isOffline = false) : base(me, you, firstID, isMaster, isOffline)
@@ -405,20 +407,19 @@ class NewAdapter : Adapter
 
     public override void Log(string tag, string status)
     {
+        if (!isLog) return;
         Debug.Log(tag + " : " + status);
-        if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WindowsEditor)
-            UnityMainThreadDispatcher.Instance().Enqueue(() =>
+        UnityMainThreadDispatcher.Instance().Enqueue(() =>
+        {
+            if (content != null)
             {
-                Debug.Log("why not log " + (content == null));
-                //Debug.Log(tag + " : " + status);
-                if (content != null)
-                {
-                    //GameObject obj = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity);
-                    //obj.transform.SetParent(content.transform, false);
-                    //obj.GetComponent<Text>().text = tag + " : " + status;
-                }
+                //GameObject obj = GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity);
+                //obj.transform.SetParent(content.transform, false);
+                //obj.GetComponent<Text>().text = tag + " : " + status;
+            }
 
-            });
+        });
+
     }
 
     public void processNewPacInSlave()

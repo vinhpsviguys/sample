@@ -624,7 +624,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
         {
             Console.WriteLine("type" + type);
             int messageID = Convert.ToInt32(data["messageID"]);
-            Log("processPacketOfMeInMaster", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
+            //Log("processPacketOfMeInMaster", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
             if (isOffline)
             {// ghi nhan co goi tin den trong luc offline cho xu ly o cac luc BEGIN_TURN,END_TURN,IN_TURN
                 ArrayList list = !delayedPacQueue.ContainsKey(type) ? new ArrayList() : delayedPacQueue[type];
@@ -688,7 +688,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
         public void processPacketOfYouInMaster(string type, MyDictionary<string, object> data)
         {
             int messageID = Convert.ToInt32(data["messageID"]);
-            Log("processPacketOfYouInMaster", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
+            //Log("processPacketOfYouInMaster", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
             if (isOffline)
             {// ghi nhan co goi tin den trong luc offline cho xu ly o cac luc BEGIN_TURN,END_TURN,IN_TURN
                 ArrayList list = !delayedPacQueue.ContainsKey(type) ? new ArrayList() : delayedPacQueue[type];
@@ -701,7 +701,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             {
                 /// khong hop le ma online thi khong xet vi den tre
                 /// vi du action cua doi phuong
-                Log("processPacketOfYouInMaster", "vao khong hop le");
+                //Log("processPacketOfYouInMaster", "vao khong hop le");
                 return;
             }
             switch (status)
@@ -745,7 +745,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                             {
                                 byte[] part = Utilities.SubArray<byte>(bytes, 2 * i, 2);
                                 ushort skillID = BitConverter.ToUInt16(part, 0);
-                                Log("processPacketOfYouInMaster", "skills " + skillID);
+                                //Log("processPacketOfYouInMaster", "skills " + skillID);
                                 actionHandles.Add(new ActionHandle(-1, skillID, 0, 0));
                                 attStatus.character.newSkillDic["Skill" + skillID].use();
                             }
@@ -814,7 +814,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
 
 
             // truye sang ben kia
-            Log("processPacketOfMeInSlave", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
+            //Log("processPacketOfMeInSlave", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
             switch (type)
             {
                 case RESTORING_REQUEST:
@@ -849,7 +849,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
         public void processPacketOfYouInSlave(string type, MyDictionary<string, object> data)
         {
             // xet xem co phai goi 
-            Log("processPacketOfYouInSlave", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
+            //Log("processPacketOfYouInSlave", type + " messageID" + messageID + " in (" + " " + msgAnchorID + "," + (msgAnchorID + msgSheet) + " ), isOffline = " + isOffline);
 
 
             switch (type)
@@ -958,7 +958,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
 
         public Timeouter createTimeouterForSendingData(Status beforeTimeout, Status afterTimeout, runnable sendData, long timeoutInMS, int maxTimes, bool network)
         {
-            Log("create Timeout", beforeTimeout.ToString() + " " + afterTimeout.ToString() + " " + timeoutInMS + " " + maxTimes);
+            //Log("create Timeout", beforeTimeout.ToString() + " " + afterTimeout.ToString() + " " + timeoutInMS + " " + maxTimes);
             status = beforeTimeout;
             Timeouter timeouter = new Timeouter(timeoutInMS, maxTimes, (long times, int timesLimit) => { // gui du lieu 3 lan voi goi tin msgAnchorID- > msgAnchorID + 2
 
@@ -1121,7 +1121,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                         if (isOffline)
                         {
                             if (eventsTimeouter != null) return; // chua thuc hien khi chua cho het eventsTimouter
-                            Log("UpdateMeMaster", "Update when offfline " + (delayedPacQueue.Count > 0));
+                            //Log("UpdateMeMaster", "Update when offfline " + (delayedPacQueue.Count > 0));
                             if (delayedPacQueue.Count > 0)
                             {
                                 isOffline = false;
@@ -1133,7 +1133,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                             else
                             {
                                 status = Status.IN_TURN_RENDER;
-                                Log("UpdateMeMaster", "status " + status.ToString() + " " + isMaster);
+                                //Log("UpdateMeMaster", "status " + status.ToString() + " " + isMaster);
                             }
                         }
                         else
@@ -1165,10 +1165,10 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                 case Status.END_TURN:
                     endResult = logic.endTurn(attStatus, defStatus);
                     int result = endResult.combatResult;
-                    Log("mau player att UpdateMeInMaster", "" + attStatus.getCurrentIndex(Indexes.hp_na));
-                    Log("mau player def UpdateMeInMaster", "" + defStatus.getCurrentIndex(Indexes.hp_na));
+                    //Log("mau player att UpdateMeInMaster", "" + attStatus.getCurrentIndex(Indexes.hp_na));
+                    //Log("mau player def UpdateMeInMaster", "" + defStatus.getCurrentIndex(Indexes.hp_na));
                     ArrayList effectResleased = endResult.releasedState;
-                    Log("deo hieu", "tai sao1");
+                  
                     if (effectResleased != null)
                     {
                         foreach (NewEffect effect in effectResleased)
@@ -1179,7 +1179,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
 
                     if (isOffline)
                     {
-                        Log("deo hieu", "tai sao2");
+                       
                         if (delayedPacQueue.Count > 0)
                         {
                             isOffline = false;
@@ -1191,12 +1191,12 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                     }
                     else
                     {
-                        Log("deo hieu", "tai sao3");
+                        
                         status = Status.END_TURN_WAITING;
                         resultTimeouter = createTimeouterForSendingData(Status.END_TURN_WAITING, Status.END_TURN_RENDER, () => { SendGameDataEndTurn(); }, timeoutInMS, timeoutLimits, true);
 
                     }
-                    Log("deo hieu", "tai sao4");
+                   
                     break;
                 case Status.END_TURN_RENDER:
                     // gui
@@ -1350,8 +1350,8 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                 case Status.END_TURN:
                     endResult = logic.endTurn(attStatus, defStatus);
                     int result = endResult.combatResult;
-                    Log("mau player att UpdateYouInMaster", "" + attStatus.getCurrentIndex(Indexes.hp_na));
-                    Log("mau player def UpdateYouInMaster", "" + defStatus.getCurrentIndex(Indexes.hp_na));
+                    //Log("mau player att UpdateYouInMaster", "" + attStatus.getCurrentIndex(Indexes.hp_na));
+                    //Log("mau player def UpdateYouInMaster", "" + defStatus.getCurrentIndex(Indexes.hp_na));
                     ArrayList effectResleased = endResult.releasedState;
                     if (effectResleased != null)
                     {
@@ -1517,7 +1517,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("send Ask Status", "create msg " + messageID + " " + type);
+            //Log("send Ask Status", "create msg " + messageID + " " + type);
         }
 
         public void ConfirmRollDiceOfSlave()
@@ -1527,7 +1527,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("confirm RollDice Of Slave", "create msg " + messageID + " " + type);
+            //Log("confirm RollDice Of Slave", "create msg " + messageID + " " + type);
         }
 
         private void ParseInTurnData(MyDictionary<string, object> data)
@@ -1631,13 +1631,15 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                         // remove All abnormal
 
                         NewCharacterStatus att = logic.getStatusByPlayerID(turn);
+                        NewCharacterStatus def = logic.getStatusByPlayerID(3 - turn);
 
                         foreach (string status in att.character.abDic.Keys)
                         {// luu y danh gia
                             AbnormalStatus ab = att.character.abDic[status];
                             if (att.op_effects.ContainsKey(ab.getName()))
                             {
-                                att.removeEffect(ab.getName(), 3 - attStatus.playerID);
+                                att.removeEffect(ab.getName(), 3 - att.playerID);
+                                def.removeEffect(ab.getName(), 3 - att.playerID);
                             }
                         }
                     }
@@ -1667,7 +1669,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("confirm", "create msg " + messageID + " " + type);
+            //Log("confirm", "create msg " + messageID + " " + type);
         }
 
         public void ConfirmGameDataBeginTurn()
@@ -1677,7 +1679,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("confirm", "create msg " + messageID + " " + type);
+            //Log("confirm", "create msg " + messageID + " " + type);
         }
 
         public void ConfirmGameDataEndTurn()
@@ -1689,7 +1691,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
 
             sendingQueue.Add(new Pac(type, data));
 
-            Log("confirm", "create msg " + messageID + " " + type);
+            //Log("confirm", "create msg " + messageID + " " + type);
         }
 
 
@@ -1713,7 +1715,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             }
 
             sendingQueue.Add(new Pac(type, data));
-            Log("sendSkill", "create msg " + messageID + " " + type);
+            //Log("sendSkill", "create msg " + messageID + " " + type);
         }
 
         // request from Master to Slave
@@ -1725,7 +1727,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("confirm RollDice Of Master", "create msg " + messageID + " " + type);
+            //Log("confirm RollDice Of Master", "create msg " + messageID + " " + type);
         }
 
 
@@ -1764,7 +1766,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             data.Add("p2_conditions", two.conManager.convertToString());
 
             sendingQueue.Add(new Pac(type, data));
-            Log("send In Turn", "create msg " + messageID + " " + type + " " + inResult.states.Count + " " + data.Keys.Count);
+            //Log("send In Turn", "create msg " + messageID + " " + type + " " + inResult.states.Count + " " + data.Keys.Count);
         }
 
         public void SendGameDataBeginTurn()
@@ -1780,7 +1782,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             data.Add("turn", attStatus.playerID);
             data.Add("continued", beginResult.continued);
             sendingQueue.Add(new Pac(type, data));
-            Log("send Begin Turn", "create msg " + messageID + " " + type);
+            //Log("send Begin Turn", "create msg " + messageID + " " + type);
         }
 
         private void ParseBeginTurnData(MyDictionary<string, object> data)
@@ -1822,7 +1824,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                 else
                 {
                     i--;
-                    Log("processPacketOf" + (isMyTurn(attStatus) ? "Me" : "You") + "InSlave BEGIN_TURN_REQUEST", "Number of States " + (i + 1));
+                    //Log("processPacketOf" + (isMyTurn(attStatus) ? "Me" : "You") + "InSlave BEGIN_TURN_REQUEST", "Number of States " + (i + 1));
                     break;
                 }
             }
@@ -1830,7 +1832,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             beginResult = new BeginTurnResult(turn, continued);
             beginResult.states = states;
             status = Status.BEGIN_TURN_RENDER;
-            Log("processPacketOf" + (isMyTurn(attStatus) ? "Me" : "You") + "InSlave", "beginTurn " + beginResult.continued);
+            //Log("processPacketOf" + (isMyTurn(attStatus) ? "Me" : "You") + "InSlave", "beginTurn " + beginResult.continued);
             foreach (State sate in beginResult.states)
             {
                 Log("", "state =" + sate.toJSON().ToString());
@@ -1866,7 +1868,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                 else
                 {
                     i--;
-                    Log("Number of effects", "" + (i + 1));
+                    //Log("Number of effects", "" + (i + 1));
                     break;
                 }
 
@@ -1917,7 +1919,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             data.Add("p1_conditions", one.conManager.convertToString());
             data.Add("p2_conditions", two.conManager.convertToString());
             sendingQueue.Add(new Pac(type, data));
-            Log("send End Turn", "create msg " + messageID + " " + type);
+            //Log("send End Turn", "create msg " + messageID + " " + type);
         }
 
         private void ParseRestoringData(MyDictionary<string, object> data)
@@ -2217,7 +2219,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
                 data.Add("slaveCooldown", Utilities.convertByteArrToString(bytes));
 
             sendingQueue.Add(new Pac(type, data));
-            Log("send Restore Data", "create msg " + messageID + " " + type);
+            //Log("send Restore Data", "create msg " + messageID + " " + type);
 
         }
 
@@ -2231,7 +2233,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             data.Add("messageID", messageID);
             data.Add("masterStatus", status.ToString());
             sendingQueue.Add(new Pac(type, data));
-            Log("send Answer Status", "create msg " + messageID + " " + type);
+            //Log("send Answer Status", "create msg " + messageID + " " + type);
         }
 
 
@@ -2242,7 +2244,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             MyDictionary<string, object> data = new MyDictionary<string, object>();
             data.Add("messageID", messageID);
             sendingQueue.Add(new Pac(type, data));
-            Log("send Status Confirm", "create msg " + messageID + " " + type + " isReadyNewPac" + isReadyToNewPac);
+            //Log("send Status Confirm", "create msg " + messageID + " " + type + " isReadyNewPac" + isReadyToNewPac);
         }
 
         public void SendRollDice()
@@ -2255,7 +2257,7 @@ namespace CoreLib // loi sendSkillINTurn truyen 6 byte ma nhan duoc la 8 byte
             data.Add("dice2", (byte)diceResult.dice2);
             data.Add("dice3", (byte)diceResult.dice3);
             sendingQueue.Add(new Pac(type, data));
-            Log("send RollDice", "create msg " + messageID + " " + type);
+            //Log("send RollDice", "create msg " + messageID + " " + type);
         }
 
         private void parseRollDiceData()

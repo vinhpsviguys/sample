@@ -1164,8 +1164,9 @@ namespace CoreLib
             state.setHP(attStatus, defStatus);
 
             bool remove_All_Abs = random.GetDouble() < attStatus.calculateIndex(defStatus, Indexes.remove_all_abnormal_chance_na);
-            if (remove_All_Abs) {
-                NewEffect effect = new NewEffect(attStatus.playerID, "RemoveAllAbnormal","", -1, 0);
+            if (remove_All_Abs)
+            {
+                NewEffect effect = new NewEffect(attStatus.playerID, "RemoveAllAbnormal", "", -1, 0);
                 effects.Add(effect);
                 effect.playerID = attStatus.playerID;
 
@@ -1173,14 +1174,43 @@ namespace CoreLib
                 foreach (string status in attStatus.character.abDic.Keys)
                 {// luu y danh gia
                     AbnormalStatus ab = attStatus.character.abDic[status];
-                    if (attStatus.op_effects.ContainsKey(ab.getName())) {
+                    if (attStatus.op_effects.ContainsKey(ab.getName()))
+                    {
                         attStatus.removeEffect(ab.getName(), 3 - attStatus.playerID);
+                        defStatus.removeEffect(ab.getName(), 3 - attStatus.playerID);
                     }
                 }
             }
+            else {
+                bool remove_a_abs = random.GetDouble() < attStatus.calculateIndex(defStatus, Indexes.remove_a_abnormal_chance_na);
 
 
-			if (state != null)
+                // remove a abnormal op cast to me
+                if (remove_a_abs) {
+                    string result = "";
+                    foreach (string status in attStatus.character.abDic.Keys)
+                    {// luu y danh gia
+                        AbnormalStatus ab = attStatus.character.abDic[status];
+                        if (attStatus.op_effects.ContainsKey(ab.getName()))
+                        {
+                            attStatus.removeEffect(ab.getName(), 3 - attStatus.playerID);
+                            result = ab.getName();
+                            break;
+                        }
+                    }
+                    if (result != "") {
+                        NewEffect effect = new NewEffect(attStatus.playerID, "Remove"+result, "", -1, 0);
+                        effects.Add(effect);
+                        effect.playerID = attStatus.playerID;
+                    }
+                    
+                }
+                
+            }
+
+
+
+            if (state != null)
 			{
 			    state.setEffects(effects);
 				states.Add(state);
